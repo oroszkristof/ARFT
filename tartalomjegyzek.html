@@ -6,13 +6,54 @@
     <title>Tartalomjegyzék</title>
     <style>
         h1 {
-            text-align: center;
+            text-align: left;
+        }
+        .link {
+            font-size: 24px;
+        }
+        .link a {
+            text-decoration: none;
+            color: black;
+        }
+        p {
+            font-size: 16px;
+        }
+
+        @media (max-width: 1024px) {
+            h1 {
+                font-size: 5vw;
+            }
+            .link {
+                font-size: 5vw;
+            }
+            p {
+                font-size: 4vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 6vw;
+            }
+            .link {
+                font-size: 6vw;
+            }
+            p {
+                font-size: 5vw;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Tartalomjegyzék</h1>
-    
+    <h1>Tartalomjegyzék:</h1>
+
+    <div class="link">
+        <ul>
+            <a href="bevezetes.html"> I. &nbsp; Bevezetés </a> 
+            <p>A dokumentum részletesen bemutatja a fejlesztendő alkalmazás koncepcióját, annak funkcióit, technológiai megoldásait.</p>
+        </ul>   
+    </div>
+
 </body>
 </html>
