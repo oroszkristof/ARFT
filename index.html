@@ -63,9 +63,11 @@
             }
             .bottom-center {
                 left: 42%;
+                display: block !important;
             }
             .bottom-right {
                 left: 58%;
+                display: block !important;
             }
             .bottom-center a, .bottom-right a {
                 font-size: 20px;
@@ -132,21 +134,29 @@
     </div>
 
     <script>
-        window.addEventListener("scroll", function() {
+        function handleScroll() {
             let scrollPosition = window.innerHeight + window.scrollY;
             let documentHeight = document.body.offsetHeight;
             let tocButton = document.getElementById("tocButton");
             let nextButton = document.getElementById("nextButton");
             
-            if (scrollPosition >= documentHeight - 10) {
+            if (window.innerWidth > 600) { // Csak ha nem mobil
+                if (scrollPosition >= documentHeight - 10) {
+                    tocButton.style.display = "block";
+                    nextButton.style.display = "block";
+                } else {
+                    tocButton.style.display = "none";
+                    nextButton.style.display = "none";
+                }
+            } else {
                 tocButton.style.display = "block";
                 nextButton.style.display = "block";
-            } else {
-                tocButton.style.display = "none";
-                nextButton.style.display = "none";
             }
-        });
+        }
+        
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
+        handleScroll(); 
     </script>
 </body>
 </html>
-
