@@ -30,7 +30,6 @@
             left: 45%;
             transform: translateX(-50%);
             text-align: center;
-            display: none;
         }
         .bottom-center a {
             text-decoration: none;
@@ -47,7 +46,6 @@
             left: 55%;
             transform: translateX(-50%);
             text-align: center;
-            display: none;
         }
         .bottom-right a {
             text-decoration: none;
@@ -58,16 +56,12 @@
             display: block;
             font-size: 16px;
         }
-        .visible {
-            display: block;
-        }
-        
         @media (max-width: 600px) {
             p {
                 font-size: 18px;
             }
             table {
-                font-size: 14px;
+                font-size: 12px;
             }
             .bottom-center {
                 left: 42%;
@@ -103,7 +97,6 @@
     </style>
 </head>
 <body>
-
     <p>Csoport neve: WALL STREET </p>
     <p>Feladat sorszáma: </p>
     <p>Feladat címe: NAPJAINK TŐZSDEI HULLÁMAI </p> <br><br>
@@ -143,24 +136,5 @@
         <a href="bevezetes.html">▶</a>
         <span>Következő oldal</span>
     </div>
-
-    <script>
-        const tartalomLink = document.querySelector('.bottom-center');
-        const nextButton = document.querySelector('.bottom-right');
-
-        window.addEventListener('scroll', () => {
-            const scrollPosition = window.scrollY + window.innerHeight;
-            const documentHeight = document.documentElement.scrollHeight;
-
-            if (scrollPosition >= documentHeight - 50) {
-                tartalomLink.classList.add('visible');
-                nextButton.classList.add('visible');
-            } else {
-                tartalomLink.classList.remove('visible');
-                nextButton.classList.remove('visible');
-            }
-        });
-    </script>
-
 </body>
 </html>
