@@ -10,6 +10,9 @@
         }
         h1 {
             text-align: center;
+            word-wrap: break-word;
+            max-width: 90%;
+            margin: auto;
         }
         .center {
             text-align: center;
@@ -24,41 +27,36 @@
         .center2 {
             text-align: right;
         }
-        .bottom-center {
+        .bottom-center, .bottom-right {
             position: fixed;
             bottom: 20px;
-            left: 45%;
             transform: translateX(-50%);
             text-align: center;
+            display: none;
         }
-        .bottom-center a {
-            text-decoration: none;
-            color: black;
-            font-size: 30px;
-        }
-        .bottom-center span {
-            display: block;
-            font-size: 16px;
+        .bottom-center {
+            left: 45%;
         }
         .bottom-right {
-            position: fixed;
-            bottom: 20px;
             left: 55%;
-            transform: translateX(-50%);
-            text-align: center;
         }
-        .bottom-right a {
+        .bottom-center a, .bottom-right a {
             text-decoration: none;
             color: black;
             font-size: 30px;
         }
-        .bottom-right span {
+        .bottom-center span, .bottom-right span {
             display: block;
             font-size: 16px;
         }
         @media (max-width: 600px) {
             p {
                 font-size: 18px;
+            }
+            h1 {
+                font-size: 20px;
+                text-align: center;
+                white-space: pre-line;
             }
             table {
                 font-size: 12px;
@@ -69,12 +67,10 @@
             .bottom-right {
                 left: 58%;
             }
-            .bottom-center a,
-            .bottom-right a {
+            .bottom-center a, .bottom-right a {
                 font-size: 20px;
             }
-            .bottom-center span,
-            .bottom-right span {
+            .bottom-center span, .bottom-right span {
                 font-size: 12px;
             }
         }
@@ -85,12 +81,10 @@
             .bottom-right {
                 left: 60%;
             }
-            .bottom-center a,
-            .bottom-right a {
+            .bottom-center a, .bottom-right a {
                 font-size: 18px;
             }
-            .bottom-center span,
-            .bottom-right span {
+            .bottom-center span, .bottom-right span {
                 font-size: 10px;
             }
         }
@@ -127,14 +121,32 @@
         <p>BEADÁS DÁTUMA</p>
     </div> <br><br>
 
-    <div class="bottom-center">
+    <div class="bottom-center" id="tocButton">
         <a href="tartalomjegyzek.html">📋</a>
         <span>Tartalomjegyzék</span>
     </div>
 
-    <div class="bottom-right">
+    <div class="bottom-right" id="nextButton">
         <a href="bevezetes.html">▶</a>
         <span>Következő oldal</span>
     </div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            let scrollPosition = window.innerHeight + window.scrollY;
+            let documentHeight = document.body.offsetHeight;
+            let tocButton = document.getElementById("tocButton");
+            let nextButton = document.getElementById("nextButton");
+            
+            if (scrollPosition >= documentHeight - 10) {
+                tocButton.style.display = "block";
+                nextButton.style.display = "block";
+            } else {
+                tocButton.style.display = "none";
+                nextButton.style.display = "none";
+            }
+        });
+    </script>
 </body>
 </html>
+
