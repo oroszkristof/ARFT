@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Címlap</title>
+    <style>
+        p {
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center;
+        }
+        .center {
+            text-align: center;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .center2 {
+            text-align: right;
+        }
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 45%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 55%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+        .visible {
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px;
+            }
+            .bottom-center {
+                left: 42%;
+            }
+            .bottom-right {
+                left: 58%;
+            }
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 20px;
+            }
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 400px) {
+            .bottom-center {
+                left: 40%;
+            }
+            .bottom-right {
+                left: 60%;
+            }
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 18px;
+            }
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <p>Csoport neve: WALL STREET </p>
+    <p>Feladat sorszáma: </p>
+    <p>Feladat címe: NAPJAINK TŐZSDEI HULLÁMAI </p> <br><br>
+
+    <h1>ALKALMAZÁSFEJLESZTÉS DOKUMENTÁCIÓJA</h1> <br>
+
+    <div class="center">
+        <p>Gyakorlatvezető:</p>
+        <p>Dr. Mileff Péter</p>
+    </div> <br>
+
+    <p>Csoport tagok:</p>
+
+    <table border="2" class="center">
+        <tr>
+            <td>RADVÁNSZKY ÁDÁM JÁNOS</td>
+            <td>PROGRAMTERVEZŐ INFORMATIKUS</td>
+            <td>fuebb7@student.unithe.hu</td>
+        </tr>
+        <tr>
+            <td>OROSZ KRISTÓF</td>
+            <td>PROGRAMTERVEZŐ INFORMATIKUS</td>
+            <td>eyzwg9@student.unithe.hu</td>
+        </tr>
+    </table> <br><br>
+
+    <div class="center2">
+        <p>BEADÁS DÁTUMA</p>
+    </div> <br><br>
+
+    <div class="bottom-center">
+        <a href="tartalomjegyzek.html">📋</a>
+        <span>Tartalomjegyzék</span>
+    </div>
+
+    <div class="bottom-right">
+        <a href="bevezetes.html">▶</a>
+        <span>Következő oldal</span>
+    </div>
+
+    <script>
+        const tartalomLink = document.querySelector('.bottom-center');
+        const nextButton = document.querySelector('.bottom-right');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition >= documentHeight - 50) {
+                tartalomLink.classList.add('visible');
+                nextButton.classList.add('visible');
+            } else {
+                tartalomLink.classList.remove('visible');
+                nextButton.classList.remove('visible');
+            }
+        });
+    </script>
+
+</body>
+</html>
