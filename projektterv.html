@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekt terv</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+        p {
+            color: red;
+        }
+        .p2 {
+            color: blue;
+        }
+        h3 {
+            color: red;
+            text-align: center;
+        }
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+        .visible {
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 16px;
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Projekt terv</h1>
+    <h3>Határidő: 2025.02.28. 12:00</h3>
+    <h4>1. Csoport tagjai, struktúrája <br><br>
+        <p>Kristóf</p>
+        2. Fejlesztési terv: mérföldkövek, eredmények <br><br>
+        <p>Kristóf</p>
+        3. Programozói nyelvek, fejlesztő eszközök <br><br>
+        <p class="p2">Ádám</p>
+        4. Használni tervezett eszközök, technikák <br><br>
+        <p class="p2">Ádám</p>
+        5. Leendő produktumok (dokumentum), és létrejöttük ideje. <br><br>
+        <p>Kristóf</p>
+        6. Tesztelési követelmények <br><br>
+        <p>Kristóf</p>
+        7. Bemutatás (demó) és szállítás módja, ideje <br><br>
+        <p class="p2">Ádám</p>
+        8. Információ források</h4>
+        <p class="p2">Ádám</p>
+
+        <div class="bottom-left">
+            <a href="index.html">◀</a>
+            <span>Előző oldal</span>
+        </div>
+    
+        <div class="bottom-center">
+            <a href="tartalomjegyzek.html">📋</a>
+            <span>Tartalomjegyzék</span>
+        </div>
+    
+        <div class="bottom-right">
+            <a href="vizio.html">▶</a>
+            <span>Következő oldal</span>
+        </div>
+    
+        <script>
+            const prevButton = document.querySelector('.bottom-left');
+            const tartalomLink = document.querySelector('.bottom-center');
+            const nextButton = document.querySelector('.bottom-right');
+    
+            window.addEventListener('scroll', () => {
+                const scrollPosition = window.scrollY + window.innerHeight;
+                const documentHeight = document.documentElement.scrollHeight;
+    
+                if (scrollPosition >= documentHeight - 50) {
+                    prevButton.classList.add('visible');
+                    tartalomLink.classList.add('visible');
+                    nextButton.classList.add('visible');
+                } else {
+                    prevButton.classList.remove('visible');
+                    tartalomLink.classList.remove('visible');
+                    nextButton.classList.remove('visible');
+                }
+            });
+            </script>
+
+</body>
+</html>
