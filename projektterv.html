@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,16 +9,29 @@
         h1 {
             text-align: center;
         }
+
         p {
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .p1 {
             color: red;
         }
+
         .p2 {
             color: blue;
         }
+
         h3 {
             color: red;
             text-align: center;
         }
+        td {
+            text-align: center;
+            font-weight: normal;
+        }
+
         .bottom-left {
             position: fixed;
             bottom: 20px;
@@ -26,15 +40,18 @@
             text-align: center;
             display: none;
         }
+
         .bottom-left a {
             text-decoration: none;
             color: black;
             font-size: 30px;
         }
+
         .bottom-left span {
             display: block;
             font-size: 16px;
         }
+
         .bottom-center {
             position: fixed;
             bottom: 20px;
@@ -43,15 +60,18 @@
             text-align: center;
             display: none;
         }
+
         .bottom-center a {
             text-decoration: none;
             color: black;
             font-size: 30px;
         }
+
         .bottom-center span {
             display: block;
             font-size: 16px;
         }
+
         .bottom-right {
             position: fixed;
             bottom: 20px;
@@ -60,100 +80,151 @@
             text-align: center;
             display: none;
         }
+
         .bottom-right a {
             text-decoration: none;
             color: black;
             font-size: 30px;
         }
+
         .bottom-right span {
             display: block;
             font-size: 16px;
         }
+
         .visible {
             display: block;
         }
-        
+
         @media (max-width: 600px) {
             p {
                 font-size: 18px;
             }
+
             table {
                 font-size: 16px;
             }
+
             .bottom-left a,
             .bottom-center a,
             .bottom-right a {
                 font-size: 24px;
             }
+
             .bottom-left span,
             .bottom-center span,
             .bottom-right span {
                 font-size: 14px;
             }
+
             .bottom-left {
                 left: 35%;
             }
+
             .bottom-right {
                 left: 65%;
             }
         }
     </style>
 </head>
+
 <body>
     <h1>Projekt terv</h1>
     <h3>Határidő: 2025.02.28. 12:00</h3>
     <h4>1. Csoport tagjai, struktúrája <br><br>
-        <p>Kristóf</p>
+        <p>A fejlesztői csoportunk két főből áll. Ketten készítjük el az alkalmazásunk dokumentációját, illetve a hozzá
+            tartozó webalkalmazást.
+            <b>Orosz Kristóf</b> aki főként a frontend fejlesztéseket és az UI/UX tervezéseket fogja végrehajtani.
+            <b>Radvánszky Ádám János</b> pedig főként a Backend fejlesztéseket fogja elvégezni. Továbbá Ő fogja ellátni
+            részben a projektmenedzseri feladatokat is. <br> A  projekt fejlesztése közben <b>mindketten</b> tesztelőként  is részt fogunk venni, a weboldalunk
+            megfelelő müködése érdekében, amely során tapasztalatainkat, ötleteinket majd átadjuk egymásnak.
+            <br><br>
+            <table border="2">
+                <tr>
+                    <td colspan="2"><b>FELADATMEGOSZTÁS</b></td>
+                    
+                </tr>
+                <tr>
+                    <td>Orosz Kristóf</td>
+                    <td>Elválalom a UI komponensek és interaktív elemek fejlesztését.
+                        Meghatározom a CSS, JavaScript vagy egyéb frontend technológiák használatát.
+                        Döntök a reszponzív dizájn és a böngésző-kompatibilitási problémák megoldásáról.
+                        Fejlesztem a felhasználói élményt és biztosítom a vizuális konzisztenciát. Döntök az alkalmazás navigációs struktúrájáról és az interakciós mintákról.
+                        Készítek a wireframe-eket, prototípusokat és az UI mockupokat.
+                        Elvégzem az elsődleges felhasználói teszteket.</td>
+                </tr>
+                <tr>
+                    <td>Radvánszky Ádám János</td>
+                    <td>Döntök az ütemezésről, a projekt mérföldköveiről és a határidőkről.
+                        Koordinálom a csapattagok munkáját, biztosítom az erőforrások hatékony elosztását.
+                        Döntök az alkalmazott adatbázis-kezelési stratégiákról.
+                        Felelősséget vállalok a rendszer biztonságáért, adatvédelemért és skálázhatóságért.
+                        Hatáskörömbe tartozik a szerveroldali API-k kialakítása és a megfelelő keretrendszerek kiválasztása.
+                        Meghatározom a kódstruktúrát, a verziókezelési konvenciókat és az API-k dokumentációját.
+                        </td>
+                        
+                        <tr>
+                            <td>Közös feladat</td>
+                            <td>Döntünk a tesztelési módszerekről és az alkalmazott tesztelési eszközökről.
+                                Meghatározzuk a teszteléseket és azok végrehajtási sorrendjét.
+                                Jelentéseket készítünk a hibákról és az alkalmazás stabilitásáról.
+                                Felügyeljük a végső rendszerintegrációs és felhasználói teszteket.</td>
+                        </tr>
+                </tr>
+            </table>
+        </p>
         2. Fejlesztési terv: mérföldkövek, eredmények <br><br>
-        <p>Kristóf</p>
+        <p class="p1">Kristóf</p>
         3. Programozói nyelvek, fejlesztő eszközök <br><br>
         <p class="p2">Ádám</p>
         4. Használni tervezett eszközök, technikák <br><br>
         <p class="p2">Ádám</p>
         5. Leendő produktumok (dokumentum), és létrejöttük ideje. <br><br>
-        <p>Kristóf</p>
+        <p class="p1">Kristóf</p>
         6. Tesztelési követelmények <br><br>
-        <p>Kristóf</p>
+        <p class="p1">Kristóf</p>
         7. Bemutatás (demó) és szállítás módja, ideje <br><br>
         <p class="p2">Ádám</p>
-        8. Információ források</h4>
-        <p class="p2">Ádám</p>
+        8. Információ források
+    </h4>
+    <p class="p2">Ádám</p>
 
-        <div class="bottom-left">
-            <a href="index.html">◀</a>
-            <span>Előző oldal</span>
-        </div>
-    
-        <div class="bottom-center">
-            <a href="tartalomjegyzek.html">📋</a>
-            <span>Tartalomjegyzék</span>
-        </div>
-    
-        <div class="bottom-right">
-            <a href="vizio.html">▶</a>
-            <span>Következő oldal</span>
-        </div>
-    
-        <script>
-            const prevButton = document.querySelector('.bottom-left');
-            const tartalomLink = document.querySelector('.bottom-center');
-            const nextButton = document.querySelector('.bottom-right');
-    
-            window.addEventListener('scroll', () => {
-                const scrollPosition = window.scrollY + window.innerHeight;
-                const documentHeight = document.documentElement.scrollHeight;
-    
-                if (scrollPosition >= documentHeight - 50) {
-                    prevButton.classList.add('visible');
-                    tartalomLink.classList.add('visible');
-                    nextButton.classList.add('visible');
-                } else {
-                    prevButton.classList.remove('visible');
-                    tartalomLink.classList.remove('visible');
-                    nextButton.classList.remove('visible');
-                }
-            });
-            </script>
+    <div class="bottom-left">
+        <a href="index.html">◀</a>
+        <span>Előző oldal</span>
+    </div>
+
+    <div class="bottom-center">
+        <a href="tartalomjegyzek.html">📋</a>
+        <span>Tartalomjegyzék</span>
+    </div>
+
+    <div class="bottom-right">
+        <a href="vizio.html">▶</a>
+        <span>Következő oldal</span>
+    </div>
+
+    <script>
+        const prevButton = document.querySelector('.bottom-left');
+        const tartalomLink = document.querySelector('.bottom-center');
+        const nextButton = document.querySelector('.bottom-right');
+
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const documentHeight = document.documentElement.scrollHeight;
+
+            if (scrollPosition >= documentHeight - 50) {
+                prevButton.classList.add('visible');
+                tartalomLink.classList.add('visible');
+                nextButton.classList.add('visible');
+            } else {
+                prevButton.classList.remove('visible');
+                tartalomLink.classList.remove('visible');
+                nextButton.classList.remove('visible');
+            }
+        });
+    </script>
 
 </body>
+
 </html>
