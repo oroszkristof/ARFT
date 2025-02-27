@@ -5,9 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tartalomjegyzék</title>
     <style>
+        .center {
+            text-align: center;
+            font-size: 16px;
+        }
         h1 {
             text-align: left;
         }
+        li {
+            font-weight: bold;
+        }
+
         .link {
             font-size: 24px;
         }
@@ -18,6 +26,44 @@
         p {
             font-size: 16px;
         }
+        
+        .link ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #cccccc; 
+            padding: 5px;
+        }
+        .toggle-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+        }
+        
+        .extra-content {
+            display: none;
+            background-color: #e6e6e6; 
+            padding: 10px;
+        }
+        
+        .subchapters {
+            margin-left: 40px;
+            font-size: 16px;
+        }
+        .subchapters li {
+            margin-bottom: 10px;
+        }
+        .subchapters li a {
+            text-decoration: none;
+            color: black;
+        }
 
         @media (max-width: 1024px) {
             h1 {
@@ -27,6 +73,12 @@
                 font-size: 5vw;
             }
             p {
+                font-size: 4vw;
+            }
+            .toggle-button {
+                font-size: 5vw;
+            }
+            .subchapters {
                 font-size: 4vw;
             }
         }
@@ -41,6 +93,12 @@
             p {
                 font-size: 5vw;
             }
+            .toggle-button {
+                font-size: 6vw;
+            }
+            .subchapters {
+                font-size: 5vw;
+            }
         }
     </style>
 </head>
@@ -50,27 +108,45 @@
 
     <div class="link">
         <ul>
-            <a href="projektterv.html"> I. &nbsp; Projekt terv </a> 
-            <p>A projektterv tartalmazza a csoporttagok adatait, a fejlesztési ütemtervet és az elérendő eredményeket. Meghatározza a programozási nyelveket, technikai eszközöket, valamint a dokumentáció és tesztelés követelményeit. Emellett kitér a bemutatás módjára és az információforrásokra is.</p>
-            <p>1. Csoport tagjai, struktúrája <br><br>
+            <li>
                 
-                2. Fejlesztési terv: mérföldkövek, eredmények <br><br>
-                
-                3. Programozói nyelvek, fejlesztő eszközök <br><br>
-                
-                4. Használni tervezett eszközök, technikák <br><br>
-                
-                5. Leendő produktumok (dokumentum), és létrejöttük ideje. <br><br>
-                
-                6. Tesztelési követelmények <br><br>
-                
-                7. Bemutatás (demó) és szállítás módja, ideje <br><br>
-                
-                8. Információ források</p>
-                
+                <div class="header-container">
+                    <a href="projektterv.html"> <b>I. &nbsp; Projekt terv</b></a>
+                    <button class="toggle-button" onclick="toggleContent()" aria-label="Alfejezetek megnyitása/bezárása">&#9660;</button>
+                </div>
+              
+                <div id="extraContent" class="extra-content">
+                    <p>
+                        <div class="center">A projektterv tartalmazza a csoporttagok adatait, a fejlesztési ütemtervet és az elérendő eredményeket. Meghatározza a programozási nyelveket, technikai eszközöket, valamint a dokumentáció és tesztelés követelményeit. Emellett kitér a bemutatás módjára és az információforrásokra is.</div>
+                    </p>
+                    <ul class="subchapters">
+                        <li><a href="projektterv.html#alfejezet1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Csoport tagjai, struktúrája</a></li>
+                        <li><a href="projektterv.html#alfejezet2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Fejlesztési terv: mérföldkövek, eredmények</a></li>
+                        <li><a href="projektterv.html#alfejezet3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Programozói nyelvek, fejlesztő eszközök</a></li>
+                        <li><a href="projektterv.html#alfejezet4">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Használni tervezett eszközök, technikák</a></li>
+                        <li><a href="projektterv.html#alfejezet5">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5. Leendő produktumok (dokumentum), és létrejöttük ideje.</a></li>
+                        <li><a href="projektterv.html#alfejezet6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;6. Tesztelési követelmények</a></li>
+                        <li><a href="projektterv.html#alfejezet7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;7. Bemutatás (demó) és szállítás módja, ideje</a></li>
+                        <li><a href="projektterv.html#alfejezet8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8. Információ források</a></li>
+                    </ul>
+                </div>
+            </li>
         </ul>   
     </div>
 
+    <script>
+        function toggleContent() {
+            var extra = document.getElementById("extraContent");
+            var button = document.querySelector(".toggle-button");
+            if (extra.style.display === "none" || extra.style.display === "") {
+                extra.style.display = "block";
+                button.innerHTML = "&#9650;"; 
+            } else {
+                extra.style.display = "none";
+                button.innerHTML = "&#9660;"; 
+            }
+        }
+    </script>
 
 </body>
 </html>
