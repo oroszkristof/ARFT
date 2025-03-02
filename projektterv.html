@@ -31,9 +31,23 @@
         td {
             text-align: center;
             font-weight: normal;
+            padding: 8px;
         }
 
-        /* A .center osztály most már a táblázatot is középre helyezi */
+        /* Teljes szélességű táblázatok és border-collapse */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        /* Responsive táblázat konténer */
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
         .center {
             text-align: center;
             margin: 0 auto;
@@ -103,59 +117,44 @@
             display: block;
         }
 
-        /* Mobil eszközök (max-width: 600px) */
+        /* Media Queries */
         @media (max-width: 600px) {
             p {
                 font-size: 18px;
             }
-
             table {
-                font-size: 16px;
-                width: 100%;
-                display: block;
-                overflow-x: auto;
+                font-size: 14px; /* kisebb betűméret mobilon */
             }
-
             .bottom-left a,
             .bottom-center a,
             .bottom-right a {
                 font-size: 24px;
             }
-
             .bottom-left span,
             .bottom-center span,
             .bottom-right span {
                 font-size: 14px;
             }
-
             .bottom-left {
                 left: 35%;
             }
-
             .bottom-right {
                 left: 65%;
             }
         }
 
-        /* Tabletek (601px - 1024px) */
         @media (min-width: 601px) and (max-width: 1024px) {
             p {
                 font-size: 19px;
             }
-
             table {
-                font-size: 17px;
-                width: 100%;
-                display: block;
-                overflow-x: auto;
+                font-size: 16px; /* kicsit kisebb betűméret közepes képernyőkön */
             }
-
             .bottom-left a,
             .bottom-center a,
             .bottom-right a {
                 font-size: 26px;
             }
-
             .bottom-left span,
             .bottom-center span,
             .bottom-right span {
@@ -167,7 +166,6 @@
 
 <body>
     <h1>Projekt terv</h1>
-    
 
     <h4 id="alfejezet1"><b>1. Csoport tagjai, struktúrája</b></h4>
     <p>
@@ -176,123 +174,129 @@
         <b>Orosz Kristóf</b> aki főként a frontend fejlesztéseket és az UI/UX tervezéseket fogja végrehajtani.
         <b>Radvánszky Ádám János</b> pedig főként a Backend fejlesztéseket fogja elvégezni. Továbbá Ő fogja ellátni
         részben a projektmenedzseri feladatokat is. <br> A projekt fejlesztése közben <b>mindketten</b> tesztelőként is
-        részt fogunk venni, a weboldalunk megfelelő működése érdekében, amely során tapasztalatainkat, ötleteinket majd átadjuk egymásnak.
+        nyomonkövetjük alkalmazásunk fejlesztését, a weboldalunk megfelelő működése érdekében, amely során tapasztalatainkat, ötleteinket majd átadjuk egymásnak.
         <br><br>
-    <table border="2">
-        <tr>
-            <td colspan="2"><b>FELADATMEGOSZTÁS</b></td>
-        </tr>
-        <tr>
-            <td>Orosz Kristóf</td>
-            <td>Elválalom a UI komponensek és interaktív elemek fejlesztését.
-                Meghatározom a CSS, JavaScript vagy egyéb frontend technológiák használatát.
-                Döntök a reszponzív dizájn és a böngésző-kompatibilitási problémák megoldásáról.
-                Fejlesztem a felhasználói élményt és a vizuális konzisztenciát.
-                Döntök az alkalmazás navigációs struktúrájáról és az interakciós mintákról.
-                Készítek a wireframe-eket, prototípusokat és az UI mockupokat.
-                Elvégzem az elsődleges felhasználói teszteket.
-                Meghatározom a kódstruktúrát, a verziókezelési konvenciókat.
-            </td>
-        </tr>
-        <tr>
-            <td>Radvánszky Ádám János</td>
-            <td>Döntök az ütemezésről, a projekt mérföldköveiről és a határidőkről.
-                Koordinálom a csapat munkáját, biztosítom az erőforrások hatékony elosztását.
-                Döntök az alkalmazott adatbázis-kezelési stratégiákról.
-                Figyelek a rendszer biztonságára, adatvédelemért és skálázhatóságért.
-                Elvégzem a szerveroldali API-k kialakítást és a megfelelő keretrendszerek kiválasztását.
-                Meghatározom és az API-k dokumentációját.
-            </td>
-        </tr>
-        <tr>
-            <td>Közös feladat</td>
-            <td>Döntünk a tesztelési módszerekről és az alkalmazott tesztelési eszközökről.
-                Meghatározzuk a teszteléseket és azok végrehajtási sorrendjét.
-                Jelentéseket készítünk a hibákról és az alkalmazás stabilitásáról.
-                Felügyeljük a végső rendszerintegrációs és felhasználói teszteket.
-            </td>
-        </tr>
-    </table>
+        <div class="responsive-table">
+            <table border="2">
+                <tr>
+                    <td colspan="2"><b>FELADATMEGOSZTÁS</b></td>
+                </tr>
+                <tr>
+                    <td>Orosz Kristóf</td>
+                    <td>Elválalom a UI komponensek és interaktív elemek fejlesztését.
+                        Meghatározom a CSS, JavaScript vagy egyéb frontend technológiák használatát.
+                        Döntök a reszponzív dizájn és a böngésző-kompatibilitási problémák megoldásáról.
+                        Fejlesztem a felhasználói élményt és a vizuális konzisztenciát.
+                        Döntök az alkalmazás navigációs struktúrájáról és az interakciós mintákról.
+                        Készítek a wireframe-eket, prototípusokat és az UI mockupokat.
+                        Elvégzem az elsődleges felhasználói teszteket.
+                        Meghatározom a kódstruktúrát, a verziókezelési konvenciókat.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Radvánszky Ádám János</td>
+                    <td>Döntök az ütemezésről, a projekt mérföldköveiről és a határidőkről.
+                        Koordinálom a csapat munkáját, biztosítom az erőforrások hatékony elosztását.
+                        Döntök az alkalmazott adatbázis-kezelési stratégiákról.
+                        Figyelek a rendszer biztonságára, adatvédelemért és skálázhatóságért.
+                        Elvégzem a szerveroldali API-k kialakítást és a megfelelő keretrendszerek kiválasztását.
+                        Meghatározom és az API-k dokumentációját.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Közös feladat</td>
+                    <td>Döntünk a tesztelési módszerekről és az alkalmazott tesztelési eszközökről.
+                        Meghatározzuk a teszteléseket és azok végrehajtási sorrendjét.
+                        Jelentéseket készítünk a hibákról és az alkalmazás stabilitásáról.
+                        Felügyeljük a végső rendszerintegrációs és felhasználói teszteket.
+                    </td>
+                </tr>
+            </table>
+        </div>
     </p>
 
     <br>
     <h4 id="alfejezet2">2. Fejlesztési terv: mérföldkövek, eredmények</h4>
-    <table border="2" class="center">
-        <tr>
-            <td colspan="2"><b>FEJLESZTÉSI TERV</b></td>
-        </tr>
-        <tr>
-            <td>Kezdeti tervezés</td>
-            <td>Üzleti és funkcionális követelmények véglegesítése, a célcsoport és a felhasználói szerepkörök meghatározása.</td>
-        </tr>
-        <tr>
-            <td>Felhasználói felület</td>
-            <td>Interaktív prototípusok elkészítése, alapvető navigációs folyamatok megvalósítása.</td>
-        </tr>
-        <tr>
-            <td>Backend alapstruktúra és adatkezelés</td>
-            <td>A szerveroldali logika kialakítása, beleértve az adatbázistervezést és a valós idejű piaci adatforrások integrációjának előkészítését.</td>
-        </tr>
-        <tr>
-            <td>Valós idejű adatfeldolgozás</td>
-            <td>Éles adatok integrálása és frissítése, tranzakciós logika implementálása (megbízások létrehozása, végrehajtása, naplózása).</td>
-        </tr>
-        <tr>
-            <td>Biztonsági rétegek és jogosultságkezelés</td>
-            <td>Felhasználói azonosítás, szerepkör alapú hozzáférés, titkosítás és behatolási tesztek elvégzése.</td>
-        </tr>
-        <tr>
-            <td>Tesztelés és minőségbiztosítás</td>
-            <td>Egység-, integrációs, rendszer- és felhasználói elfogadási tesztek futtatása, valamint teljesítmény- és terhelésvizsgálatok.</td>
-        </tr>
-        <tr>
-            <td>Üzembe helyezés és bevezetés</td>
-            <td>Alkalmazás éles környezetbe történő telepítése, végfelhasználói támogatás és dokumentáció biztosítása.</td>
-        </tr>
-        <tr>
-            <td>Folyamatos fejlesztés</td>
-            <td>Felhasználói visszajelzések begyűjtése, rendszeres frissítések és új funkciók tervezése.</td>
-        </tr>
-    </table>
+    <div class="responsive-table center">
+        <table border="2">
+            <tr>
+                <td colspan="2"><b>FEJLESZTÉSI TERV</b></td>
+            </tr>
+            <tr>
+                <td>Kezdeti tervezés</td>
+                <td>Üzleti és funkcionális követelmények véglegesítése, a célcsoport és a felhasználói szerepkörök meghatározása.</td>
+            </tr>
+            <tr>
+                <td>Felhasználói felület</td>
+                <td>Interaktív prototípusok elkészítése, alapvető navigációs folyamatok megvalósítása.</td>
+            </tr>
+            <tr>
+                <td>Backend alapstruktúra és adatkezelés</td>
+                <td>A szerveroldali logika kialakítása, beleértve az adatbázistervezést és a valós idejű piaci adatforrások integrációjának előkészítését.</td>
+            </tr>
+            <tr>
+                <td>Valós idejű adatfeldolgozás</td>
+                <td>Éles adatok integrálása és frissítése, tranzakciós logika implementálása (megbízások létrehozása, végrehajtása, naplózása).</td>
+            </tr>
+            <tr>
+                <td>Biztonsági rétegek és jogosultságkezelés</td>
+                <td>Felhasználói azonosítás, szerepkör alapú hozzáférés, titkosítás és behatolási tesztek elvégzése.</td>
+            </tr>
+            <tr>
+                <td>Tesztelés és minőségbiztosítás</td>
+                <td>Egység-, integrációs, rendszer- és felhasználói elfogadási tesztek futtatása, valamint teljesítmény- és terhelésvizsgálatok.</td>
+            </tr>
+            <tr>
+                <td>Üzembe helyezés és bevezetés</td>
+                <td>Alkalmazás éles környezetbe történő telepítése, végfelhasználói támogatás és dokumentáció biztosítása.</td>
+            </tr>
+            <tr>
+                <td>Folyamatos fejlesztés</td>
+                <td>Felhasználói visszajelzések begyűjtése, rendszeres frissítések és új funkciók tervezése.</td>
+            </tr>
+        </table>
+    </div>
 
     <br>
     <h4 id="alfejezet3">3. Programozói nyelvek, fejlesztő eszközök</h4>
     <p>
-    <table border="2" class="center">
-        <tr>
-            <td><b>HTML</b></td>
-            <td>A weboldal struktúrájának kialakításához.</td>
-        </tr>
-        <tr>
-            <td><b>CSS</b></td>
-            <td>A vizuális megjelenés és reszponzivitás biztosítására. (normál CSS és Bootstrap)</td>
-        </tr>
-        <tr>
-            <td><b>JavaScript</b></td>
-            <td>A dinamikus funkcionalitások (pl. adatlekérdezés, grafikonok frissítése) programozásához.</td>
-        </tr>
-        <tr>
-            <td><b>API-k</b></td>
-            <td>Külső tőzsdei adatforrások integrálására (pl. Alpha Vantage API).</td>
-        </tr>
-        <tr>
-            <td><b>PHP</b></td>
-            <td>A szerveroldali logika megvalósításához, különösen a bejelentkezési és regisztrációs funkciók kezeléséhez.</td>
-        </tr>
-        <tr>
-            <td><b>SQL</b></td>
-            <td>Az adatok tárolására és kezelésére egy adatbázisban (pl. felhasználói adatok, tranzakciók).</td>
-        </tr>
-        <tr>
-            <td><b>OOP</b></td>
-            <td>Segítségével a webalkalmazásunk árfolyamfigyelését, portfóliókezelését, kockázatelemzését egyértelműen elkülönülő osztályokban valósítjuk meg, így a kód áttekinthetőbb és könnyebben karbantartható lesz. A domain logikát, a szervizréteget és az adattárolást is OOP-alapú struktúrába szervezzük.
-            </td>
-        </tr>
-        <tr>
-            <td><b>FEJLESZTŐ ESZKÖZÖK</b></td>
-            <td>Visual Studio Code (kódszerkesztés), Git (verziókezelés)</td>
-        </tr>
-    </table>
+        <div class="responsive-table center">
+            <table border="2">
+                <tr>
+                    <td><b>HTML</b></td>
+                    <td>A weboldal struktúrájának kialakításához.</td>
+                </tr>
+                <tr>
+                    <td><b>CSS</b></td>
+                    <td>A vizuális megjelenés és reszponzivitás biztosítására. (normál CSS és Bootstrap)</td>
+                </tr>
+                <tr>
+                    <td><b>JavaScript</b></td>
+                    <td>A dinamikus funkcionalitások (pl. adatlekérdezés, grafikonok frissítése) programozásához.</td>
+                </tr>
+                <tr>
+                    <td><b>API-k</b></td>
+                    <td>Külső tőzsdei adatforrások integrálására (pl. Alpha Vantage API).</td>
+                </tr>
+                <tr>
+                    <td><b>PHP</b></td>
+                    <td>A szerveroldali logika megvalósításához, különösen a bejelentkezési és regisztrációs funkciók kezeléséhez.</td>
+                </tr>
+                <tr>
+                    <td><b>SQL</b></td>
+                    <td>Az adatok tárolására és kezelésére egy adatbázisban (pl. felhasználói adatok, tranzakciók).</td>
+                </tr>
+                <tr>
+                    <td><b>OOP</b></td>
+                    <td>Segítségével a webalkalmazásunk árfolyamfigyelését, portfóliókezelését, kockázatelemzését egyértelműen elkülönülő osztályokban valósítjuk meg, így a kód áttekinthetőbb és könnyebben karbantartható lesz. A domain logikát, a szervizréteget és az adattárolást is OOP-alapú struktúrába szervezzük.
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>FEJLESZTŐ ESZKÖZÖK</b></td>
+                    <td>Visual Studio Code (kódszerkesztés), Git (verziókezelés)</td>
+                </tr>
+            </table>
+        </div>
     </p>
 
     <br>
@@ -307,38 +311,40 @@
     <p>
         A projekthez öt különböző tartalmú dokumentum fog készülni. Az dokumentumok típusait és a dokumentumok tartalmait, illetve várható elkészítésének időpontját az alábbi táblázat tartalmazza.
     </p>
-    <table border="2">
-        <tr>
-            <td><b>Dokumentumtípusok</b></td>
-            <td><b>Tartalma</b></td>
-            <td><b>Várható elkészítési időpont</b></td>
-        </tr>
-        <tr>
-            <td>Projekt terv</td>
-            <td>A projektterv tartalmazza a csoporttagok adatait, a fejlesztési ütemtervet és az elérendő eredményeket. Meghatározza a programozási nyelveket, technikai eszközöket, valamint a dokumentáció és tesztelés követelményeit.</td>
-            <td>2025.03.03.</td>
-        </tr>
-        <tr>
-            <td>Vízió</td>
-            <td>Fő célja a rendszer általános képének megalkotása, a probléma megértése. Ennek érdekében vizsgálja, kiknek az érdekét szolgálja a probléma megoldása, kik lesznek a használói, melyek lesznek a legfontosabb hatásai.</td>
-            <td>2025.03.24.</td>
-        </tr>
-        <tr>
-            <td>Softwera követelmény analízis</td>
-            <td>A RUP legelső fázisában elkezdett, és a következő fázisban részletesebben kidolgozott dokumentum, amely a tervezéshez szükséges részletességgel foglalja össze a rendszerrel szemben támasztott funkcionális és nem funkcionális követelményeket.</td>
-            <td>2025.04.07.</td>
-        </tr>
-        <tr>
-            <td>Analízis modell</td>
-            <td>Az analizis modellt az alkalmazás követelményeinek és üzleti igényeinek részletes feltérképezésére használjuk. Ez segít abban, hogy minden érintett fél közös megértést kapjon a projekt céljairól és elvárásairól.</td>
-            <td>2025.04.21.</td>
-        </tr>
-        <tr>
-            <td>Rendszertervezés</td>
-            <td>A rendszertervezési dokumentumok a technikai architektúra és a megoldási stratégia részletezésére szolgálnak. Ezek az útmutatók biztosítják, hogy a fejlesztőcsapat átlássa a rendszer felépítését és integrációs folyamatait a hatékony implementáció érdekében.</td>
-            <td>2025.05.12.</td>
-        </tr>
-    </table>
+    <div class="responsive-table">
+        <table border="2">
+            <tr>
+                <td><b>Dokumentumtípusok</b></td>
+                <td><b>Tartalma</b></td>
+                <td><b>Várható elkészítési időpont</b></td>
+            </tr>
+            <tr>
+                <td>Projekt terv</td>
+                <td>A projekt terv tartalmazza a csoporttagok adatait, a fejlesztési ütemtervet és az elérendő eredményeket. Meghatározza a programozási nyelveket, technikai eszközöket, valamint a dokumentáció és tesztelés követelményeit.</td>
+                <td>2025.03.03.</td>
+            </tr>
+            <tr>
+                <td>Vízió</td>
+                <td>Fő célja a rendszer általános képének megalkotása, a probléma megértése. Ennek érdekében vizsgálja, kiknek az érdekét szolgálja a probléma megoldása, kik lesznek a használói, melyek lesznek a legfontosabb hatásai.</td>
+                <td>2025.03.24.</td>
+            </tr>
+            <tr>
+                <td>Softwera követelmény analízis</td>
+                <td>A RUP legelső fázisában elkezdett, és a következő fázisban részletesebben kidolgozott dokumentum, amely a tervezéshez szükséges részletességgel foglalja össze a rendszerrel szemben támasztott funkcionális és nem funkcionális követelményeket.</td>
+                <td>2025.04.07.</td>
+            </tr>
+            <tr>
+                <td>Analízis modell</td>
+                <td>Az analizis modellt az alkalmazás követelményeinek és üzleti igényeinek részletes feltérképezésére használjuk. Ez segít abban, hogy minden érintett fél közös megértést kapjon a projekt céljairól és elvárásairól.</td>
+                <td>2025.04.21.</td>
+            </tr>
+            <tr>
+                <td>Rendszertervezés</td>
+                <td>A rendszertervezési dokumentumok a technikai architektúra és a megoldási stratégia részletezésére szolgálnak. Ezek az útmutatók biztosítják, hogy a fejlesztőcsapat átlássa a rendszer felépítését és integrációs folyamatait a hatékony implementáció érdekében.</td>
+                <td>2025.05.12.</td>
+            </tr>
+        </table>
+    </div>
 
     <br>
     <h4 id="alfejezet6">6. Tesztelési követelmények</h4>
