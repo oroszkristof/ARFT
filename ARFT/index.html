@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Címlap</title>
+    <style>
+        p {
+            font-size: 25px;
+        }
+        h1 {
+            text-align: center;
+            word-wrap: break-word;
+            max-width: 90%;
+            margin: auto;
+        }
+        .center {
+            text-align: center;
+        }
+        table {
+            text-align: center;
+            font-size: 20px;
+            width: 100%;
+            max-width: 1000px;
+            margin: auto;
+        }
+        .center2 {
+            text-align: right;
+        }
+        .bottom-center, .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+        .bottom-center {
+            left: 45%;
+        }
+        .bottom-right {
+            left: 55%;
+        }
+        .bottom-center a, .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+        .bottom-center span, .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            h1 {
+                font-size: 20px;
+                text-align: center;
+                white-space: pre-line;
+            }
+            table {
+                font-size: 12px;
+            }
+            .bottom-center {
+                left: 42%;
+                display: block !important;
+            }
+            .bottom-right {
+                left: 58%;
+                display: block !important;
+            }
+            .bottom-center a, .bottom-right a {
+                font-size: 20px;
+            }
+            .bottom-center span, .bottom-right span {
+                font-size: 12px;
+            }
+        }
+        @media (max-width: 400px) {
+            .bottom-center {
+                left: 40%;
+            }
+            .bottom-right {
+                left: 60%;
+            }
+            .bottom-center a, .bottom-right a {
+                font-size: 18px;
+            }
+            .bottom-center span, .bottom-right span {
+                font-size: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p>Csoport neve: WALL STREET </p>
+    <p>Feladat sorszáma: </p>
+    <p>Feladat címe: NAPJAINK TŐZSDEI HULLÁMAI </p> <br><br>
+
+    <h1>ALKALMAZÁSFEJLESZTÉS DOKUMENTÁCIÓJA</h1> <br>
+
+    <div class="center">
+        <p>Gyakorlatvezető:</p>
+        <p>Dr. Mileff Péter</p>
+    </div> <br>
+
+    <p>Csoport tagok:</p>
+
+    <table border="2" class="center">
+        <tr>
+            <td>RADVÁNSZKY ÁDÁM JÁNOS</td>
+            <td>PROGRAMTERVEZŐ INFORMATIKUS</td>
+            <td>fuebb7@student.unithe.hu</td>
+        </tr>
+        <tr>
+            <td>OROSZ KRISTÓF</td>
+            <td>PROGRAMTERVEZŐ INFORMATIKUS</td>
+            <td>eyzwg9@student.unithe.hu</td>
+        </tr>
+    </table> <br><br>
+
+    <div class="center2">
+        <p>BEADÁS DÁTUMA</p>
+    </div> <br><br>
+
+    <div class="bottom-center" id="tocButton">
+        <a href="tartalomjegyzek.html">📋</a>
+        <span>Tartalomjegyzék</span>
+    </div>
+
+    <div class="bottom-right" id="nextButton">
+        <a href="projektterv.html">▶</a>
+        <span>Következő oldal</span>
+    </div>
+
+    <script>
+        function handleScroll() {
+            let scrollPosition = window.innerHeight + window.scrollY;
+            let documentHeight = document.body.offsetHeight;
+            let tocButton = document.getElementById("tocButton");
+            let nextButton = document.getElementById("nextButton");
+            
+            if (window.innerWidth > 600) { // Csak ha nem mobil
+                if (scrollPosition >= documentHeight - 10) {
+                    tocButton.style.display = "block";
+                    nextButton.style.display = "block";
+                } else {
+                    tocButton.style.display = "none";
+                    nextButton.style.display = "none";
+                }
+            } else {
+                tocButton.style.display = "block";
+                nextButton.style.display = "block";
+            }
+        }
+        
+        window.addEventListener("scroll", handleScroll);
+        window.addEventListener("resize", handleScroll);
+        handleScroll(); 
+    </script>
+</body>
+</html>
