@@ -5,42 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tartalomjegyzék</title>
   <style>
-    
     body {
       margin: 0;
       padding: 0;
       font-family: sans-serif;
     }
+
     h1 {
       text-align: left;
       font-size: 2rem;
       margin: 1rem;
     }
+
     .center {
       text-align: center;
       font-size: 1rem;
     }
+
     li {
       font-weight: bold;
       margin: 0.5rem 0;
     }
+
     .link {
       font-size: 1.5rem;
       margin: 1rem;
     }
+
     .link a {
       text-decoration: none;
       color: black;
     }
+
     p {
       font-size: 1rem;
       margin: 1rem;
     }
+
     .link ul {
       list-style: none;
       margin: 0;
       padding: 0;
     }
+
     .header-container {
       display: flex;
       justify-content: space-between;
@@ -49,31 +56,35 @@
       padding: 0.5rem;
       margin: 0 1rem;
     }
+
     .toggle-button {
       background: none;
       border: none;
       cursor: pointer;
       font-size: 1.5rem;
     }
+
     .extra-content {
       display: none;
       background-color: #e6e6e6;
       padding: 1rem;
       margin: 0 1rem;
     }
+
     .subchapters {
       margin-left: 2.5rem;
       font-size: 1rem;
     }
+
     .subchapters li {
       margin-bottom: 0.5rem;
     }
+
     .subchapters li a {
       text-decoration: none;
       color: black;
     }
 
-  
     @media (max-width: 1024px) {
       h1 {
         font-size: 5vw;
@@ -91,6 +102,7 @@
         font-size: 4vw;
       }
     }
+
     @media (max-width: 768px) {
       h1 {
         font-size: 6vw;
@@ -112,24 +124,64 @@
 </head>
 <body>
   <h1>Tartalomjegyzék:</h1>
+  
+  
   <div class="link">
     <ul>
       <li>
         <div class="header-container">
-          <a href="projektterv.html"><b>I. &nbsp; Projekt terv</b></a>
-          <button class="toggle-button" onclick="toggleContent()" aria-label="Alfejezetek megnyitása/bezárása">&#9660;</button>
+          <a href="H1.html"><b>I. &nbsp; Projekt terv</b></a>
+          <button class="toggle-button" onclick="toggleContent('extraContent1', this)" aria-label="Alfejezetek megnyitása/bezárása">&#9660;</button>
+        </div>
+        <div id="extraContent1" class="extra-content">
+          <ul class="subchapters">
+            <li><a href="H1.html#alfejezet1">1. Csoport tagjai, struktúrája</a></li>
+            <li><a href="H1.html#alfejezet2">2. Fejlesztési terv: mérföldkövek, eredmények</a></li>
+            <li><a href="H1.html#alfejezet3">3. Programozói nyelvek, fejlesztő eszközök</a></li>
+            <li><a href="H1.html#alfejezet4">4. Használni tervezett eszközök, technikák</a></li>
+            <li><a href="H1.html#alfejezet5">5. Leendő produktumok (dokumentum), és létrejöttük ideje.</a></li>
+            <li><a href="H1.html#alfejezet6">6. Tesztelési követelmények</a></li>
+            <li><a href="H1.html#alfejezet7">7. Bemutatás (demó) és szállítás módja, ideje</a></li>
+            <li><a href="H1.html#alfejezet8">8. Információ források</a></li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+  
+  <div class="link">
+    <ul>
+      <li>
+        <div class="header-container">
+          <a href="#"><b>II. &nbsp; Vízió - Készítés alatt.</b></a>
+          <button class="toggle-button" onclick="toggleContent('extraContent2', this)" aria-label="Alfejezetek megnyitása/bezárása">&#9660;</button>
         </div>
         <div id="extraContent" class="extra-content">
-         
           <ul class="subchapters">
-            <li><a href="projektterv.html#alfejezet1">1. Csoport tagjai, struktúrája</a></li>
-            <li><a href="projektterv.html#alfejezet2">2. Fejlesztési terv: mérföldkövek, eredmények</a></li>
-            <li><a href="projektterv.html#alfejezet3">3. Programozói nyelvek, fejlesztő eszközök</a></li>
-            <li><a href="projektterv.html#alfejezet4">4. Használni tervezett eszközök, technikák</a></li>
-            <li><a href="projektterv.html#alfejezet5">5. Leendő produktumok (dokumentum), és létrejöttük ideje.</a></li>
-            <li><a href="projektterv.html#alfejezet6">6. Tesztelési követelmények</a></li>
-            <li><a href="projektterv.html#alfejezet7">7. Bemutatás (demó) és szállítás módja, ideje</a></li>
-            <li><a href="projektterv.html#alfejezet8">8. Információ források</a></li>
+            <li><a href="H2.html#alfejezet1">1. Bevezetés</a></li>
+            <li><a href="H2.html#alfejezet2">2. Az alkalmazás helye</a></li>
+            <li><a href="H2.html#alfejezet2.1">&nbsp;&nbsp;&nbsp;&nbsp;2.1 Üzleti lehetőségek</a></li>
+            <li><a href="H2.html#alfejezet2.2">&nbsp;&nbsp;&nbsp;&nbsp;2.2 A probléma megfogalmazása</a></li>
+            <li><a href="H2.html#alfejezet2.3">&nbsp;&nbsp;&nbsp;&nbsp;2.3 Az elkészült termék helye.</a></li>
+            <li><a href="H2.html#alfejezet3">3. Érintettek és felhasználók</a></li>
+            <li><a href="H2.html#alfejezet3.1">&nbsp;&nbsp;&nbsp;&nbsp;3.1 Az érintettek összefoglalása</a></li>
+            <li><a href="H2.html#alfejezet3.2">&nbsp;&nbsp;&nbsp;&nbsp;3.2 A felhasználók összefoglalása</a></li>
+            <li><a href="H2.html#alfejezet3.3">&nbsp;&nbsp;&nbsp;&nbsp;3.3 Felhasználói környezet</a></li>
+            <li><a href="H2.html#alfejezet3.4">&nbsp;&nbsp;&nbsp;&nbsp;3.4 Illetékesek adatai</a></li>
+            <li><a href="H2.html#alfejezet3.5">&nbsp;&nbsp;&nbsp;&nbsp;3.5 Felhasználók adatai</a></li>
+            <li><a href="H2.html#alfejezet4">4. A végtermék áttekintése</a></li>
+            <li><a href="H2.html#alfejezet4.1">&nbsp;&nbsp;&nbsp;&nbsp;4.1 A termék kapcsolatai</a></li>
+            <li><a href="H2.html#alfejezet4.2">&nbsp;&nbsp;&nbsp;&nbsp;4.2 A termék használatának előnyei</a></li>
+            <li><a href="H2.html#alfejezet4.3">&nbsp;&nbsp;&nbsp;&nbsp;4.3 Feltételezések és függőségek</a></li>
+            <li><a href="H2.html#alfejezet4.4">&nbsp;&nbsp;&nbsp;&nbsp;4.4 Költségbecslés</a></li>
+            <li><a href="H2.html#alfejezet4.5">&nbsp;&nbsp;&nbsp;&nbsp;4.5 Installáció</a></li>
+            <li><a href="H2.html#alfejezet5">5. A végtermék jellemzői, biztosított szolgáltatások</a></li>
+            <li><a href="H2.html#alfejezet6">6. Korlátozások</a></li>
+            <li><a href="H2.html#alfejezet7">7. Minőségi elvárások</a></li>
+            <li><a href="H2.html#alfejezet8">8. Dokumentációkkal kapcsolatos követelmények</a></li>
+            <li><a href="H2.html#alfejezet9">9. Kockázati lista</a></li>
+            <li><a href="H2.html#alfejezet10">10.Szótár</a></li>
           </ul>
         </div>
       </li>
@@ -137,15 +189,14 @@
   </div>
 
   <script>
-    function toggleContent() {
-      var extra = document.getElementById("extraContent");
-      var button = document.querySelector(".toggle-button");
+    function toggleContent(id, button) {
+      var extra = document.getElementById(id);
       if (extra.style.display === "none" || extra.style.display === "") {
         extra.style.display = "block";
-        button.innerHTML = "&#9650;"; 
+        button.innerHTML = "&#9650;";
       } else {
         extra.style.display = "none";
-        button.innerHTML = "&#9660;"; 
+        button.innerHTML = "&#9660;";
       }
     }
   </script>
