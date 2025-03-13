@@ -14,22 +14,249 @@
         .center {
             text-align: center;
         } 
+        
+        h1 {
+            text-align: center;
+        }
 
+        p {
+            font-weight: normal;
+            text-align: center;
+        }
 
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; /* kicsit kisebb betűméret közepes képernyőkön */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
 
-    <h1 class="center">Vízió</h1>
+    <h1 style="text-align: center;">Vízió</h1>
 
     <div class="center">
     <h4>Határidő <br>2025.03.16. 15:00 2-2 db cím kidolgozása</h4>
     <h4>Határidő <br>2025.03.21. 15:00 3-3 db cím kidolgozása</h4>
     </div>
 
-<b>1. Bevezetés - min. 1-2 oldal</b> <p class="red"> Kristóf</p> <br><br><br>
 
-<b>2. Az alkalmazás helye </b> <br><br><br>
+<h4 style="text-align: justify;" id="alfejezet1">1. Bevezetés</h4> 
+
+<p style="text-align: justify;">
+
+Ez a webalkalmazás  egy modern, interaktív platform, amely a pénzügyi piacok világába 
+vezeti be a felhasználókat valós idejű adatok, átfogó elemzési lehetőségek és intelligens 
+befektetési ajánlások segítségével. Célunk, hogy a felhasználók számára egyszerre biztosítsunk 
+pontos, naprakész információkat és egy kockázatmentes, oktató jellegű környezetet, 
+amelyben tesztelhetik befektetési döntéseiket. <br> <br> <br>
+
+A webalkalmazásunk elsődleges célja, hogy valós idejű adatokat szolgáltasson a 
+részvényárfolyamokról, indexekről és más pénzügyi eszközökről. Ennek révén a 
+felhasználók gyorsan reagálhatnak a piaci változásokra, így tájékozottabb döntéseket 
+hozhatnak a befektetéseik során. Az alkalmazás lehetőséget nyújt arra is, hogy a 
+felhasználók kockázatmentesen gyakorolják befektetési stratégiáikat.
+<br><br>
+A rendszerünk számos olyan menüponttal rendelkezik, melyek mindegyike a felhasználók különféle igényeit próbálják kielégíteni egy ilyen tőzsdei platformon. <br><br>
+•	<b>Portfóliókezelés:</b> Ebben a menüpontban a felhasználók nyomon követhetik és elemezhetik saját befektetési portfóliójukat. Az eszköz segítségével megtekinthető, hogyan alakulnak a befektetések hozamai és kockázatai, lehetővé téve a portfólió optimalizálását a piaci trendek fényében. <br><br>
+•	<b>Befektetési szimulátor:</b> Az interaktív szimulációs felület lehetőséget ad a rövid és hosszú távú kereskedési stratégiák kipróbálására. Valós adatok felhasználásával a felhasználók kockázatmentesen modellezhetik befektetéseik eredményét.<br><br>
+•	<b>Tőzsdei hírek:</b> A legfrissebb tőzsdei és gazdasági híreknek köszönhetően a felhasználók mindig naprakészek lehetnek a piacot érintő eseményekkel kapcsolatban. <br><br>
+•	<b>Mesterséges Intelligencia Ajánlások:</b> A modern AI-algoritmusok segítségével a rendszer elemzi a piaci adatokat, és személyre szabott befektetési ajánlásokat fogalmaz meg. Ez a funkció különösen értékes azok számára, akik kevésbé jártasak a pénzügyi piacok működésében. <br><br>
+•	<b>Árfolyamfigyelő:</b> A valós idejű árfolyamfigyelő modul segítségével a felhasználók folyamatosan nyomon követhetik a részvényárfolyamok, és más pénzügyi eszközök aktuális változásait. Az adatokat pedig grafikonokon segítségével vizuálisan is megjelenítjük.<br><br>
+•  <b>Felhasználói Regisztráció és Bejelentkezés:</b> Biztonságos fiókkezelés, amely megkönnyíti a személyre szabott élmény kialakítását. <br><br>
+•  <b>Hírlevél Feliratkozás:</b> Rendszeres értesítések, amelyek segítségével a felhasználók mindig naprakészek maradhatnak a legújabb piaci trendekkel és hírekkel kapcsolatban. <br><br>
+•  <b>Interaktív Közösségi Fórum:</b> Lehetőség a felhasználók közötti tapasztalatcserére, kérdésfeltevésre és a befektetési stratégiák megvitatására. <br><br>
+•  <b>Mobilbarát Design:</b> Reszponzív felület, amely minden eszközön optimális felhasználói élményt biztosít. <br><br>
+•  <b>Adatvédelmi és Biztonsági Funkciók:</b> Modern titkosítási protokollok és folyamatos biztonsági frissítések, amelyek garantálják a felhasználói adatok védelmét.
+
+
+
+
+<br><br><br>
+A webalkalmazásunk kialakításánál kiemelt figyelmet fordítottunk a felhasználói élményre. 
+Az átlátható felület révén még a pénzügyi piacokat kevésbé ismert felhasználók is könnyedén eligazodhatnak a rendszerben. 
+Így a rendszer révén az átlagemberek is betekintést nyerhetnek abba, hogyan befolyásolják a gazdasági események a 
+részvényárfolyamokat, és miként alkalmazhatók a pénzügyi elméletek a gyakorlatban.
+ 
+<br><br>
+A projekt fejlesztése során alkalmazni kívánt modern technológiai megoldások biztosítják, 
+hogy az alkalmazás mindig a legfrissebb adatokat és elemzési lehetőségeket kínálja. 
+Az adatelemzés és grafikus megjelenítés terén használt fejlett algoritmusok lehetővé teszik a gyors 
+és pontos piaci trendazonosítást. <br><br><br>
+
+
+Az alkalmazásunk több felhasználói csoport igényeit hivatott kielégíteni. <br><br>
+•	<b>Tapasztalt befektetők:</b> Akik részletes, mélyreható elemzéseket és a legfrissebb piaci adatokat igénylik a stratégiáik kialakításához. <br><br>
+•	<b>Befektetésben most indulók:</b> Azok számára, akik kockázatmentesen szeretnék kipróbálni a befektetési döntéseiket, és megismerni a pénzügyi piacok alapvető működését. <br><br>
+•	<b>Oktatási intézmények:</b> Tanulók és hallgatók számára, akik gyakorlati példákon keresztül szeretnék elsajátítani a gazdasági elméleteket és a pénzügyi piacok dinamikáját. <br><br>
+•	<b>Pénzügyi elemzők:</b> Akik számára elengedhetetlen a valós idejű adatfolyam és az átfogó elemzési lehetőségek a stratégiai döntéshozatalban. <br><br><br>
+Ezen felhasználói csoportok egyaránt profitálhatnak abból, hogy a rendszer integrálja a portfóliókezelést, 
+befektetési szimulációt és a hírfolyamokat, 
+így egy átfogó képet kapnak a piacok működéséről. 
+Az alkalmazás lehetővé teszi, hogy a felhasználók a saját stratégiáikat a piaci trendek és kockázati tényezők 
+figyelembevételével finomhangolják, ezáltal erősítve a pénzügyi tudatosságukat és döntéshozatali képességüket. <br><br><br>
+
+A webalkalmazásunk fejlesztésénél nemcsak a pénzügyi adatok valós idejű elérésére és a kockázatmentes gyakorlási lehetőségek 
+biztosítására helyeztük a hangsúlyt, hanem a rendszer biztonságára, stabilitására is. 
+A modern felhőalapú architektúránk lehetővé fogja tenni, hogy az alkalmazás rugalmasan skálázható legyen, 
+így a felhasználói bázis növekedésével párhuzamosan megőrizze a magas teljesítményt és gyors adatfeldolgozást. 
+A rendszer titkosítási protokolljai és garantálják, hogy a felhasználók személyes és pénzügyi adatai a legmagasabb 
+szintű védelem alatt álljanak. <br><br><br>
+
+Tehát webalkalmazásunk egy innovatív, többfunkciós platform, mely a pénzügyi piacok valós idejű adatainak nyújtása 
+mellett kockázatmentes gyakorlási lehetőségeket is kínál. A portfóliókezelés, befektetési szimulátor, 
+tőzsdei hírek, mesterséges intelligencia alapú ajánlások és árfolyamfigyelő funkciók integrációja 
+egy komplex, mégis könnyen használható eszközt eredményez, amely minden felhasználói réteg igényeit kielégíti. <br><br><br>
+
+
+A platform interaktív felülete támogatja a közösségi interakciót is. 
+A felhasználók megoszthatják egymással tapasztalataikat, stratégiáikat, és kérdéseket tehetnek fel, ezáltal egy élő, 
+folyamatosan fejlődő pénzügyi közösséget építve. Az ilyen típusú közösségi funkciók elősegítik a tudásmegosztást és 
+hozzájárulnak ahhoz, hogy a befektetési döntéshozatal még tudatosabb és megalapozottabb legyen.
+
+</p>
+<br> <br> <br><b>2. Az alkalmazás helye </b> <br><br><br>
 <p class="blue"> Ádám</p>
 &nbsp;&nbsp;&nbsp;&nbsp;2.1 Üzleti lehetőségek <br><br><br>
 
@@ -66,7 +293,7 @@
 
 <b>6. Korlátozások </b> <p class="red"> Kristóf</p> </b><br><br><br>
 
-<h4> 7. Minőségi elvárások</h4> 
+<h4 id="alfejezet7"> 7. Minőségi elvárások</h4> 
 <p style="width: 75%; padding-left: 15%; text-align: justify;">
     A felhasználói élmény intuitív és átlátható legyen, hogy mind a kezdők, mind a haladók könnyen eligazodhassanak benne.
     Az alkalmazásnak megbízható funkcionalitást kell biztosítania, beleértve a valós idejű árfolyamok megjelenítését, portfóliókezelést és 
@@ -79,10 +306,10 @@
 
 
 
-<h4><b>8. Dokumentációkkal kapcsolatos követelmények </b> </h4> <br>
+<h4 id="alfejezet8"><b>8. Dokumentációkkal kapcsolatos követelmények </b> </h4> <br>
 
 
-    <p class="center">A projekthez öt különböző tartalmú dokumentumnak kell készülnie. <br> Az dokumentumok típusait és a dokumentumok tartalmait, az alábbi táblázat tartalmazza. </p> <br> 
+    <p class="center">A projekthez öt különböző tartalmú dokumentumnak kell készülnie. <br> Az dokumentumok típusait és a dokumentumok tartalmait az alábbi táblázat tartalmazza. </p> <br> 
 <div class="responsive-table">
     <table border="2" class="center">
         <tr>
@@ -126,7 +353,7 @@
 </div> <br><br>
 
 
-<h4> 9. Kockázat lista</h4>
+<h4 id="alfejezet9" > 9. Kockázat lista</h4>
 <p style="width: 75%; padding-left: 15%; text-align: justify;">
     Az egyik legnagyobb kockázat az adatpontosság és a valós idejű árfolyamok kezelése, mivel hibás vagy késleltetett adatok félrevezethetik a 
     felhasználókat. Biztonsági szempontból a rosszul kezelt hitelesítési és titkosítási módszerek adatvédelmi problémákhoz vezethetnek, például 
@@ -141,6 +368,44 @@
 </p>
 <b>10. Szótár - min 1 oldal </b> <br><br><br>
 <p class="blue"> Ádám</p>
+
+<br><br><br><br><br>
+
+<div class="bottom-left">
+    <a href="H1.html">◀</a>
+    <span>Előző oldal</span>
+</div>
+
+<div class="bottom-center">
+    <a href="tartalomjegyzek.html">📋</a>
+    <span>Tartalomjegyzék</span>
+</div>
+
+<div class="bottom-right">
+    <a href="#">▶</a>
+    <span>Következő oldal</span>
+</div>
+
+<script>
+    const prevButton = document.querySelector('.bottom-left');
+    const tartalomLink = document.querySelector('.bottom-center');
+    const nextButton = document.querySelector('.bottom-right');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight - 50) {
+            prevButton.classList.add('visible');
+            tartalomLink.classList.add('visible');
+            nextButton.classList.add('visible');
+        } else {
+            prevButton.classList.remove('visible');
+            tartalomLink.classList.remove('visible');
+            nextButton.classList.remove('visible');
+        }
+    });
+</script>
 
 
     
