@@ -21,7 +21,7 @@
 
         p {
             font-weight: normal;
-            text-align: center;
+            text-align: left;
         }
 
         .p1 {
@@ -157,7 +157,7 @@
                 font-size: 19px;
             }
             table {
-                font-size: 16px; /* kicsit kisebb betűméret közepes képernyőkön */
+                font-size: 16px; 
             }
             .bottom-left a,
             .bottom-center a,
@@ -204,6 +204,12 @@
             <td>2025.03.13.</td>
             <td>1.2</td>
             <td>A(z) 1. (Bevezetés) és 8. (Dokumentációkkal kapcsolatos követelmények) fejezetek kidolgozása. </td>
+            <td>Orosz Kristóf</td>
+        </tr>
+        <tr>
+            <td>2025.03.17.</td>
+            <td>1.3</td>
+            <td>A 3. (Érintettek és felhasználók) és a 6. (Korlátozások) című fejezetek kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
     
@@ -283,19 +289,228 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
 
 &nbsp;&nbsp;&nbsp;&nbsp;2.3 Az elkészült termék helye - min 1-2 oldal <br><br><br>
 
-<b>3. Érintettek és felhasználók </b> <p class="red"> Kristóf</p><br><br><br>
+<b id="alfejezet3">3. Érintettek és felhasználók </b> <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;3.1. Az érintettek összefoglalása <br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp; <p id="alfejezet3.1">3.1. Az érintettek összefoglalása</p> <br>
+<table border="2">
+<tr>
+    <td><b>Elnevezés</b></td>
+    <td><b>Leírás</b></td>
+    <td><b>Szerep</b></td>
+</tr>
 
-&nbsp;&nbsp;&nbsp;&nbsp;3.2. A felhasználók összefoglalása <br><br><br>
+<tr>
+    <td>Frotend fejlesztő</td>
+    <td>Felelős a felhasználói felületért (UI) és a felhasználói élmény (UX) megvalósításáért.
+        Elkészíti a böngészőben futó kódot (HTML, CSS, JavaScript és keretrendszerek) ami megjeleníti webalkalmazást.
+    </td>
+    <td>
+        Kialakítja a táblázatok, grafikonok, űrlapok és navigáció struktúráját, megjelenését és működését.
+    </td>
+    <tr>
+    <td>Backend fejlesztő</td>
+    <td> Felelős az alkalmazás hátterében futó kiszolgálóoldali logikáért.
+        Szerveroldali nyelveket és keretrendszereket használ (Java, C#, Seasharp PHP), hogy megvalósítsa az adatbázis-kezelést, a hitelesítést, a jogosultsági rendszert.
+    <td> Biztosítja az árfolyamadatok fogadását, tárolását, frissítését és a valós idejű adatok küldését a kliensoldalra.</td>
+       </td>
+</tr>
+<tr>
+    <td>Tesztelő</b></td>
+    <td>A tesztelő a szoftver minőségét vizsgálja, ellenőrzi, hogy a készülő alkalmazás megfelel-e a funkcionális és nem funkcionális követelményeknek.</td>
+    <td>A tesztelő már a tervezési fázisban is bekapcsolódik a projektbe.
+        Kidolgozza a tesztelési stratégiát, a tesztelési terveket.</td>
+</tr>
+
+<tr>
+    <td>Szabályozó szerv <br>MNB</td>
+    <td>Az MNB, mint pénzügyi felügyeleti hatóság, felügyeli és ellenőrzi a hazai pénzügyi intézményeket és a pénzügyi szolgáltatások szabályozását.
+        Biztosítja, hogy az alkalmazás betartsa a vonatkozó jogszabályi előírásokat</td>
+    <td>
+        Befolyásolja a rendszer kialakítását a jogszabályi és biztonsági követelmények előírásával. 
+    </td>
+</tr>
+
+<tr>
+    <td>Végfelhasználó <br>(Kis - és Nagybefektető)</td>
+    <td>Napi szinten használja a tőzsdei alkalmazást, hogy részvényekkel, kötvényekkel vagy egyéb pénzügyi instrumentumokkal kereskedjen, információkat szerezzen, értesítéseket kapjon az árfolyamokról.</td>
+    <td>Visszajelzései kulcsfontosságúak a funkcionalitás, a felhasználói élmény (UX/UI) és a termék sikeres működése szempontjából.</td>
+</tr>
+</table> <br><br>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<p id="alfejezet3.2">3.2. A felhasználók összefoglalása</p> <br>
+
+    <table border="2">
+        <thead>
+          <tr>
+            <td><b>Elnevezés</b>
+            <th><b>Leírás</b> </th>
+            <th><b>Illetékes</b></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Kisbefektető</td>
+            <td>
+              A legáltalánosabb végfelhasználó, aki könnyen és gyorsan szeretne
+              részvényekbe, alapokba fektetni, minimális kockázattal.
+            </td>
+            <td>
+              Az üzleti elemző gyűjti és
+              képviseli az egyszerű funkciókra vonatkozó igényeket és visszajelzéseket.
+            </td>
+          </tr>
+          <tr>
+            <td>Profi kereskedő</td>
+            <td>
+              Napi szinten használja a platformot, valós idejű adatokra, technikai
+              elemző eszközökre, speciális kereskedési funkciókra van
+              szüksége. Az alkalmazás mélyebb funkcióit veszi igénybe.
+            </td>
+            <td>
+              A trading szakértő kezeli az összetettebb funkciókra vonatkozó 
+              követelményeket, és együttműködik a fejlesztőkkel a megvalósítás során.
+            </td>
+          </tr>
+          <tr>
+            <td>Intézményi felhasználó</td>
+            <td>
+              Bankok, alapkezelők vagy brókercégek képviselői, nagy tőkével és 
+              összetett riportálási igényekkel. Komoly biztonsági elvárásokat támasztanak.
+            </td>
+            <td>
+              Az üzleti elemző felelős az 
+              intézményi igények felméréséért, 
+              és továbbítja ezeket a fejlesztőcsapat felé.
+            </td>
+          </tr>
+          <tr>
+            <td>Adminisztrátor</td>
+            <td>
+              Rendszerszintű hozzáféréssel rendelkezik: felhasználói fiókok
+              kezeléséért, jogosultságok beállításáért és általános támogatásért felel.
+            </td>
+            <td>
+              A Rendszergazda vagy képviseli 
+              az adminisztrációs és üzemeltetési szempontokat a fejlesztésben. 
+              
+            </td>
+          </tr>
+        </tbody>
+      </table> <br><br><br>
+      
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;<p id="alfejezet3.3">3.3 Felhasználói környezet</p> <br>
+<p style="text-align: justify;">A tőzsdei alkalmazás elsősorban böngésző-alapú felületen fog futni. 
+    A webes verzió Chrome, Firefox, Edge és Safari támogatást fog kapni.
+    A fejlesztés során nagy figyelmet fordítunk a skálázhatóságra és a gyors adatfrissítésre. 
+    Az átlagos felhasználói terhelés néhány száz fő, amely piaci csúcsidőben több ezerre ugorhat. 
+    A daytrade kereskedők hosszabb ideig és intenzívebb használattal vannak jelen a rendszerben. 
+    A ritkábban kereskedő kisbefektetők rövidebb munkameneteket tartanak, de rendszeresen belépnek.
+    Mindkét csoport esetében kiemelt szempont a megbízható, valós idejű árfolyamkövetés és a 
+    felhasználóbarát kezelőfelület. Az adatbiztonság érdekében minden kommunikáció titkosított 
+    csatornákon történik, és lehetőség nyílik a kétfaktoros hitelesítésre is.
+    A felhasználók emellett személyre szabható értesítési beállításokkal követhetik nyomon az 
+    árfolyamok alakulását.
+    Fontos szempont, hogy a felület könnyen átlátható maradjon, még a számos funkció ellenére is.
+    Hosszú távon a mobilalkalmazások bevezetése is tervezett, így a befektetők bárhonnan figyelemmel 
+    kísérhetik portfóliójukat. <br><br>
+
+
+
+
+
+
+
+
+</p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;<p id="alfejezet3.4">3.4. Illetékesek adatai</p> <br>
 
 <table border="2">
+  <thead>
+    <tr>
+      <td><b>Név</b></td>
+      <td><b>Pozíció</b></td>
+      <td><b>Felelősségi kör</b></td>
+      <td><b>Elérhetőség</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Radvánszky Ádám János</td>
+      <td>Projektvezető, <br> Backend fejlesztő</td>
+      <td>A teljes fejlesztési ütemezés koordinálása, erőforrás-elosztás és stratégiai döntések</td>
+      <td>adam.radvanszky@tozsdetarsasag.hu</td>
+    </tr>
+    <tr>
+      <td>Orosz Kristóf</td>
+      <td>Tesztelő, <br>Frotend fejlesztő</td>
+      <td>Felhasználói igények felmérése, funkciók priorizálása, kommunikáció a fejlesztőcsapattal</td>
+      <td>kristof.orosz@tozsdettarsasag.hu</td>
+    </tr>
+    <tr>
+      <td>Fehér Balázs</td>
+      <td>Technikai vezető </td>
+      <td>Rendszerarchitektúra tervezése, technológiai döntések, fejlesztők szakmai támogatása</td>
+      <td>balazs.feher@tozsdetarsasag.hu</td>
+    </tr>
+    <tr>
+      <td>Kovács Anna</td>
+      <td>Szabályozó szerv vezetője</td>
+      <td>Jogi és szabályozói megfelelés felügyelete (MNB, AML/KYC), adatvédelmi előírások betartatása</td>
+      <td>anna.kovacs@tozsdetarsasag.hu</td>
+    </tr>
+    <tr>
+      <td>Kiss Mária</td>
+      <td>Ügyfélszolgálati vezető</td>
+      <td>Felhasználói kérdések és problémák kezelése, ügyféltámogatás irányítása</td>
+      <td>maria.kiss@tozsdetarsasag.hu</td>
+    </tr>
+  </tbody>
+</table> <br><br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;<p id="alfejezet3.5">3.5. Felhasználók adatai</p> <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;3.3 Felhasználói környezet <br><br><br>
+<table border="2">
+  <thead>
+    <tr>
+      <td><b>Felhasználói típus</b></td>
+      <td><b>Tárolt adatok</b></td>
+      <td><b>Adatmegőrzési idő</b></td>
+      <td><b>Megjegyzés</b></td>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Kisbefektető</td>
+      <td>Név, e-mail cím, bankszámlaszám, korlátozott KYC-dokumentumok</td>
+      <td>5 év</td>
+      <td>Alapvetően kisebb volumenű kereskedés, AML szempontból kevésbé kockázatos</td>
+    </tr>
+    <tr>
+      <td>Profi kereskedő</td>
+      <td>Név, e-mail, bankszámlaszám, teljes KYC-azonosítás, kereskedési előzmények</td>
+      <td>8 év</td>
+      <td>Gyakori tranzakciók, részletesebb dokumentáció AML / MNB jelentésekhez</td>
+    </tr>
+    <tr>
+      <td>Intézményi felhasználó</td>
+      <td>
+        Cégadatok (adószám, székhely), kapcsolattartók neve és elérhetősége, 
+        jogosultsági szintek, részletes pénzmozgások
+      </td>
+      <td>10 év</td>
+      <td>Magasabb kockázat és nagyobb tőke, részletes audit- és riportkövetelmények</td>
+    </tr>
+    <tr>
+      <td>Adminisztrátor </td>
+      <td>Rendszerszintű hozzáférési naplók, felhasználói fiókokhoz kapcsolt események</td>
+      <td>2 év <br>folyamatos frissítés</td>
+      <td>Felhasználói problémák megoldása, fiókok kezelése, jogosultság-beállítások</td>
+    </tr>
+  </tbody>
+</table> <br><br><br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;3.4. Illetékesek adatai <br><br><br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;3.5. Felhasználók adatai <br><br><br>
 
 <b>4. A végtermék áttekintése </b> <br><br><br>
 <p class="blue"> Ádám</p>
@@ -312,7 +527,39 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
 <b>5. A végtermék jellemzői, biztosított szolgáltatások - min. 2 oldal </b></b> <p class="red"> Kristóf</p><br><br><br>
 
 
-<b>6. Korlátozások </b> <p class="red"> Kristóf</p> </b><br><br><br>
+<b id="alfejezet6">6. Korlátozások </b> </b><br><br><br>
+
+<p style="text-align: justify;"></p>Az alkalmazás fejlesztése során több technológiai, jogi és üzleti korlátozást is figyelembe 
+kell venni. Az egyik legfontosabb korlátozó tényező a jogszabályi megfelelés, 
+mivel a platformnak a Magyar Nemzeti Bank (MNB), 
+valamint más pénzügyi hatóságok előírásait teljesítenie kell. 
+Ez különösen az ügyfélazonosítási (KYC), pénzmosás elleni (AML) és adatvédelmi (GDPR) 
+szabályozásokat érinti. <br><br>
+A mesterséges intelligencia-alapú ajánlások és a befektetési szimulátor használata során az 
+adatvédelmi szabályok szigorúan meghatározzák, milyen személyes adatokat 
+lehet gyűjteni és kezelni. 
+A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól származnak, 
+így azok licencfeltételei és szerződései is behatárolják a tartalmak felhasználását
+ és frissítési gyakoriságát. Technológiai szempontból a rendszernek képesnek kell lennie a 
+ hirtelen megnövekedett felhasználói terhelés kezelésére, 
+ ami infrastruktúra-korlátokat is jelent, például az árfolyamadatok gyors frissítésénél. <br><br>
+  A befektetési ajánlásokat az alkalmazás nem kínálhatja 
+  fel közvetlen pénzügyi tanácsadásként, amelyre a felhasználók figyelmét minden esetben 
+  fel kell hívni. Emiatt a fejlesztő cég jogilag nem vállalhat felelősséget a felhasználók
+   egyedi befektetési döntéseiért. A befektetési szimulátor és portfóliókezelés kialakításánál 
+   figyelembe kell venni, hogy a felhasználók eltérő pénzügyi tudással rendelkeznek, 
+   ezért a rendszer korlátozottan ajánlhat bonyolult vagy magas kockázatú pénzügyi termékeket. 
+   Az integrációs korlátok miatt a platformnak technológiai, biztonsági és kompatibilitási 
+   szempontból is igazodnia kell a banki, fizetési és egyéb külső szolgáltatók követelményeihez.
+    A felhasználói felület egyszerűségére és áttekinthetőségére való törekvés is egyfajta 
+    korlátozást jelent, mert nem lehet korlátlan számú összetett funkciót megjeleníteni. <br><br>
+    A biztonsági előírások miatt minden kommunikációt titkosítva kell lebonyolítani, és 
+    kétfaktoros hitelesítés alkalmazása szükséges, amely szintén technológiai és fejlesztési 
+    korlátokat határoz meg. Hosszabb távon felmerülhetnek újabb korlátozások, például további szabályozói 
+    változások vagy technológiai fejlesztések következtében. 
+    A korlátozások figyelembevételével biztosítható az alkalmazás hosszú távú, szabályozott, 
+    biztonságos és sikeres működése. </p><br><br>
+
 
 <h4 id="alfejezet7"> 7. Minőségi elvárások</h4> 
 <p style="width: 75%; padding-left: 15%; text-align: justify;">
@@ -387,7 +634,7 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
     bonyolult vagy nehezen átlátható felület, amely elriaszthatja a látogatókat a rendszer használatától. Végül a fenntarthatóság is problémát jelenthet, 
     ha az alkalmazás nem skálázható megfelelően, és a későbbi fejlesztések során jelentős átalakításra lenne szükség.
 </p>
-<b>10. Szótár - min 1 oldal </b> <br><br><br>
+<b>10. Szótár - min 1 oldal, Táblázatban (Fogalom, Megmagyarázás)</b> <br><br><br>
 <p class="blue"> Ádám</p>
 
 <br><br><br><br><br>
