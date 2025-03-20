@@ -229,10 +229,10 @@
         <tr>
             <td>2025.03.20.</td>
             <td>1.5</td>
-            <td>Az 2. Az alkalmazás helye(+alfejezetei), 4. A végtermék áttekintése(+alfejezetei) valamint 10. Szótár fejezetek kidolgozása</td>
+            <td>Az 2. Az alkalmazás helye (+alfejezetei), 4. A végtermék áttekintése (+alfejezetei) valamint 10. Szótár fejezetek kidolgozása</td>
             <td>Radvánszky Ádám János</td>
         </tr>
-    
+      
     </table> <br>
 
     <hr>
@@ -611,22 +611,61 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
     szerverüzemeltetéshez szükség lehet felhőalapú szolgáltatásra (pl.: Azure), amely havidíj alapú költségekkel jár. Ha valós idejű piaci adatokat használunk, egyes pénzügyi API-k 
     (pl.: Alpha Vantage, Yahoo Finance, Bloomberg) előfizetéses modellben működhetnek. Ha a rendszer hosszú távú fenntartásra készül, akkor figyelembe kell venni a karbantartási és 
     frissítési költségeket is.</p>
-    <ul style="width: 75%; padding-left: 15%; text-align: justify;">
-        <li><strong>Első év összesen:</strong> kb. 4,5 millió Ft</li>
-        <ul>
-            <li>Fejlesztés (egyszeri): 3 000 000 Ft</li>
-            <li>Azure (éves): 360 000 Ft</li>
-            <li>API (éves): 480 000 Ft</li>
-            <li>Karbantartás (éves): 600 000 Ft</li>
-        </ul>
-        <li><strong>Második évtől (éves üzemeltetés):</strong> kb. 1,5 millió Ft</li>
-        <ul>
-            <li>Azure (éves): 360 000 Ft</li>
-            <li>API (éves): 480 000 Ft</li>
-            <li>Karbantartás (éves): 600 000 Ft</li>
-        </ul>
-    </ul>
 
+    <table style="width:75%; margin: 0 auto; text-align:left; border-collapse: collapse;">
+        <thead>
+          <tr>
+            <th style="border-bottom: 2px solid #000; padding: 8px; text-align: center;">Tétel</th>
+            <th style="border-bottom: 2px solid #000; padding: 8px; text-align: center;">Összeg</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td style="padding: 8px;"><strong>Első év összesen:</strong></td>
+            <td style="padding: 8px;"><b>kb. 4,5 millió Ft</b></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">Fejlesztés (egyszeri)</td>
+            <td style="padding: 8px;">3 000 000 Ft</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">Azure (éves)</td>
+            <td style="padding: 8px;">360 000 Ft</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">API (éves)</td>
+            <td style="padding: 8px;">480 000 Ft</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">Karbantartás (éves)</td>
+            <td style="padding: 8px;">600 000 Ft</td>
+          </tr>
+          
+          <tr>
+            <td colspan="2" style="padding: 8px;">
+              <hr style="border: 1px solid #000;">
+            </td>
+          </tr>
+          <tr>
+            <td style="padding: 8px;"><strong>Második évtől (éves üzemeltetés):</strong></td>
+            <td style="padding: 8px;"><b>Kb. 1,5 millió Ft</b></td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">Azure (éves)</td>
+            <td style="padding: 8px;">360 000 Ft</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">API (éves)</td>
+            <td style="padding: 8px;">480 000 Ft</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px; padding-left: 30px;">Karbantartás (éves)</td>
+            <td style="padding: 8px;">600 000 Ft</td>
+          </tr>
+        </tbody>
+      </table>
+      
+      
 <h4 id="alfejezet4.5"><b>4.5. Installáció </b></h4>
 <p style="width: 75%; padding-left: 15%; text-align: justify;">A webapp telepítése egy böngészőalapú felületen keresztül történik, így nem igényel bonyolult kliensoldali installációt.Egy szerverre való feltöltés után a konfiguráció pedig 
     már csak kb. 2-3 órát vehet igénybe. A bárki egyszerűen egy linken keresztül el tudja érni a webalkalmazást.</p>
@@ -753,7 +792,7 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
     biztonságos és sikeres működése. </p> </p><br><br>
 
 
-<h4 id="alfejezet7"> 7. Minőségi elvárások</h4> 
+<b id="alfejezet7"> 7. Minőségi elvárások</b> 
 <p style="width: 75%; padding-left: 15%; text-align: justify;">
     A felhasználói élmény intuitív és átlátható legyen, hogy mind a kezdők, mind a haladók könnyen eligazodhassanak benne.
     Az alkalmazásnak megbízható funkcionalitást kell biztosítania, beleértve a valós idejű árfolyamok megjelenítését, portfóliókezelést és 
@@ -813,7 +852,7 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
 </div> <br><br>
 
 
-<h4 id="alfejezet9" > 9. Kockázat lista</h4>
+<b id="alfejezet9" > 9. Kockázat lista</b>
 <p style="width: 75%; padding-left: 15%; text-align: justify;">
     Az egyik legnagyobb kockázat az adatpontosság és a valós idejű árfolyamok kezelése, mivel hibás vagy késleltetett adatok félrevezethetik a 
     felhasználókat. Biztonsági szempontból a rosszul kezelt hitelesítési és titkosítási módszerek adatvédelmi problémákhoz vezethetnek, például 
@@ -826,7 +865,7 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
     bonyolult vagy nehezen átlátható felület, amely elriaszthatja a látogatókat a rendszer használatától. Végül a fenntarthatóság is problémát jelenthet, 
     ha az alkalmazás nem skálázható megfelelően, és a későbbi fejlesztések során jelentős átalakításra lenne szükség.
 </p>
-<h3 id="alfejezet10"><b>10. Szótár</b></h3>
+<b id="alfejezet10"><b>10. Szótár</b></b>
     <table class="alap">
         <tr>
             <th class="vmi">Fogalom</th>
