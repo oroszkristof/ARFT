@@ -125,7 +125,15 @@
         .visible {
             display: block;
         }
-
+        .vmi{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left
+        }
+        .alap{
+            width: 80%;
+            border-collapse: collapse;
+        }
         /* Media Queries */
         @media (max-width: 600px) {
             p {
@@ -218,6 +226,12 @@
             <td>Az 5. (A végtermék jellemzői, biztosított szolgáltatások) fejezet kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+        <tr>
+            <td>2025.03.20.</td>
+            <td>1.5</td>
+            <td>Az 2. Az alkalmazás helye(+alfejezetei), 4. A végtermék áttekintése(+alfejezetei) valamint 10. Szótár fejezetek kidolgozása</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
     
     </table> <br>
 
@@ -287,13 +301,31 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
 
 
 </p>
-<br> <br> <br><b>2. Az alkalmazás helye </b> <br><br><br>
-<p class="blue"> Ádám</p>
-&nbsp;&nbsp;&nbsp;&nbsp;2.1 Üzleti lehetőségek <br><br><br>
+<h4 id="alfejezet2"><b>2. Az alkalmazás helye</b></h4>
+<p>A tőzsdei webalkalmazás egy oktatási és kereskedési platform lesz, amely lehetőséget biztosít a felhasználóknak a tőzsde működésének tanulmányozására és gyakorlati kipróbására. 
+    Az alkalmazás helye függ attól, hogy milyen környezetben lesz futtatva(mobil, asztali pc). A fő cél az oktatás támogatása és a tőzsdei kereskedés. Az alkalmazás futhat helyi 
+    szerveren vagy felhőalapú megoldásként, amely skálázhatóságot és folyamatos frissítést biztosít.</p>
+<h4 id="alfejezet2.1"><b>2.1 Üzleti lehetőségek</b></h4>
+<p>Az alkalmazás széles körben hasznosítható az oktatásban, mivel lehetőséget biztosít mindenki számára, hogy kockázatmentesen tanuljanak a tőzsdei kereskedésről. További üzleti 
+    lehetőségek közé tartozik az alkalmazás fizetős verziójának bevezetése, amely extra funkciókat kínál, mint például AI-alapú befektetési tanácsadás vagy részletes piaci elemzések 
+    és AI alapú előrejelzések(nem 100%-os előrejelzés). Egy ilyen platform vonzó lehet pénzügyi tanfolyamok szervezőinek, befektetőknek, egyes bankok és brókercégek számára is. A 
+    reklámbevételek vagy partnerkapcsolatok is bevételi forrást jelenthetnek.</p> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;2.2 A probléma megfogalmazása - min. 2 oldal <br><br><br>
+<h4 id="alfejezet2.2"><b>2.2 A probléma megfogalmazása</b></h4>
+<p>A tőzsdei befektetések egyre népszerűbbek, de sok kezdő számára komoly kihívást jelent a piaci mozgások megértése és az optimális befektetési stratégia kialakítása. A valós piacon 
+    történő tanulás nagy kockázattal járhat, hiszen sok kezdő hajlamos rossz döntéseket hozni, amelyek pénzveszteséghez vezethetik őket. Az elérhető oktatási anyagok gyakran elavultak 
+    vagy nem elég interaktívak, így az emberek nem tudják hatékonyan alkalmazni a megszerzett tudást. Az webalkalmazás egy olyan megoldást kínál, amely lehetővé teszi a felhasználók számára, 
+    hogy a valós piaci adatokkal szimulált kereskedést folytassanak, anélkül hogy valós pénzt kockáztatnának. Ez nemcsak a tanulási folyamatot segíti, hanem hozzájárulhat a jobb pénzügyi
+    döntések meghozatalához a jövőben.</p> 
 
-&nbsp;&nbsp;&nbsp;&nbsp;2.3 Az elkészült termék helye - min 1-2 oldal <br><br><br>
+<h4 id="alfejezet2.3"><b>2.3 Az elkészült termék helye</b></h4> 
+<p>Az elkészült tőzsdei webalkalmazás egy modern, felhasználóbarát és letisztult felületet biztosít azok számára, akik meg akarják tanulni a tőzsdei kereskedés alapjait vagy fejleszteni 
+    szeretnék befektetési stratégiájukat. Az alkalmazás elsősorban oktatási célokra és tőzsdei szimulációra lesz fejlesztve, ezért mindenki számára ideális lehet. A webalkalmazás online 
+    platformként elérhető, böngészőből futtatható, így nem igényel külön telepítést vagy speciális hardvert. Az alkalmazás teljes mértékben reszponzív, ezért asztali gépeken, tableteken és 
+    mobiltelefonokon egyaránt elérhető. <br><br>
+
+    A termék helye a piacon az ingyenes szimulált kereskedési platformok és az oktatási eszközök metszetében helyezkedik el, biztosítva a kockázatmentes gyakorlás lehetőségét a felhasználóknak.
+    Jövőbeni fejlesztésekkel további funkciók, mint teljes mesterséges intelligencián alapuló piaci elemzések vagy befektetési tanácsadás is integrálható lehet a rendszerbe.</p>
 
 <b id="alfejezet3">3. Érintettek és felhasználók </b> <br>
 
@@ -518,32 +550,34 @@ egy komplex, mégis könnyen használható eszközt fog várhatóan eredményezn
 </table> <br><br><br>
 
 
-<b>4. A végtermék áttekintése </b> <br><br><br>
-<p class="blue"> Ádám</p>
-&nbsp;&nbsp;&nbsp;&nbsp;4.1 A termék kapcsolatai <br><br><br>
+<h4 id="alfejezet4"><b>4. A végtermék áttekintése</b></h4>
+<p>Ez a fejezet a tőzsdei webalkalmazás általános működését és kapcsolatait írja le, beleértve annak előnyeit, technikai függőségeit, költségbecslését és telepítési folyamatát.</p>
+<h4 id="alfejezet4.1"><b>4.1 A termék kapcsolatai</b></h4>
+<p>A webalkalmazás különböző rendszerekkel és szolgáltatásokkal kommunikál, például pénzügyi API-kkal a valós idejű árfolyamok lekérésére, adatbázissal a felhasználói információk 	
+    és kereskedési előzmények tárolására, valamint hitelesítési rendszerekkel a biztonságos bejelentkezés érdekében. Továbbá a frontend és a backend között is folyamatos adatáramlás 	
+    szükséges, amely REST API segítségével fog megvalósulni.</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.2. A termék használatának előnyei - Táblázat <br><br>
+<h4 id="alfejezet4.2"><b>4.2. A termék használatának előnyei</b></h4>
+<p>Az alkalmazás lehetővé teszi a felhasználók számára, hogy kockázatmentesen gyakorolják a tőzsdei kereskedést, és megértsék a piaci folyamatokat. A valós idejű árfolyamok és 
+    grafikonok segítik az elemzést, míg a portfóliókezelési funkciók fejlesztik a pénzügyi döntéshozatali készségeket. Oktatási célokra is használható, mivel támogatja a különböző 
+    befektetési stratégiák kipróbálását és elemzését</p>
 
-<p>Minta Dr. Mileff Péter oldaláról.
 
-</p>
-<table border="2">
-<tr>
-    <td><b>A megrendelő haszna (előnyei)</b></td>
-    <td><b>Az ezt támogató rendszer jellemző(k)</b></td>
-</tr>
-<tr>
-    <td>...</td>
-    <td>...</td>
-</tr>
+<h4 id="alfejezet4.3"><b>4.3. Feltételezések és függőségek</b></h4>
+<p>A rendszer megfelelő működése bizonyos feltételezésekhez és külső tényezőkhöz kötött. Feltételezzük, hogy a felhasználók stabil internetkapcsolattal rendelkeznek, és naprakész 	
+    böngészőt használnak az alkalmazás futtatásához. Függőségként figyelembe kell venni a külső adatforrásokat, például a tőzsdei árfolyamokat biztosító API-kat, amelyek 	elérhetősége 
+    és pontossága befolyásolhatja az alkalmazás megbízhatóságát. Továbbá a rendszer függ a backend és frontend megfelelő szinkronizációjától, az adatbázis kezelésétől 	és a biztonsági 
+    protokollok alkalmazásától.</p>
 
-</table> <br><br><br>
+<h4 id="alfejezet4.4"><b>4.4 Költségbecslés </b></h4>
+<p>A fejlesztési költségek több tényezőtől függenek, beleértve az alkalmazott technológiákat, a szerverüzemeltetési igényeket és a harmadik féltől származó szolgáltatásokat. A 
+    szerverüzemeltetéshez szükség lehet felhőalapú szolgáltatásra (pl.: Azure), amely havidíj alapú költségekkel jár. Ha valós idejű piaci adatokat használunk, egyes pénzügyi API-k 
+    (pl.: Alpha Vantage, Yahoo Finance, Bloomberg) előfizetéses modellben működhetnek. Ha a rendszer hosszú távú fenntartásra készül, akkor figyelembe kell venni a karbantartási és 
+    frissítési költségeket is.</p>
 
-&nbsp;&nbsp;&nbsp;&nbsp;4.3. Feltételezések és függőségek <br><br><br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;4.4 Költségbecslés <br><br><br>
-
-&nbsp;&nbsp;&nbsp;&nbsp;4.5. Installáció <br><br><br>
+<h4 id="alfejezet4.5"><b>4.5. Installáció </b></h4>
+<p>A webapp telepítése egy böngészőalapú felületen keresztül történik, így nem igényel bonyolult kliensoldali installációt.Egy szerverre való feltöltés után a konfiguráció pedig 
+    már csak kb. 2-3 órát vehet igénybe. A bárki egyszerűen egy linken keresztül el tudja érni a webalkalmazást.</p>
 
 <b id="alfejezet5">5. A végtermék jellemzői, biztosított szolgáltatások</b></b><br><br><br>
 <p style="text-align: center;">A tőzsdei webalkalmazásunk célja egy olyan platform biztosítása, amely mind kezdő, 
@@ -740,8 +774,84 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
     bonyolult vagy nehezen átlátható felület, amely elriaszthatja a látogatókat a rendszer használatától. Végül a fenntarthatóság is problémát jelenthet, 
     ha az alkalmazás nem skálázható megfelelően, és a későbbi fejlesztések során jelentős átalakításra lenne szükség.
 </p>
-<b>10. Szótár - min 1 oldal, Táblázat (Fogalom,Jelentés /A többiek is így írták./)</b> <br><br><br>
-<p class="blue"> Ádám</p>
+<h3 id="alfejezet10"><b>10. Szótár</b></h3>
+    <table class="alap">
+        <tr>
+            <th class="vmi">Fogalom</th>
+            <th class="vmi">Megmagyarázás</th>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Tőzsde</b></td>
+            <td class="vmi">Egy szervezett piaci tér, ahol különböző pénzügyi eszközökkel, mint részvényekkel, kötvényekkel, devizákkal vagy árupiaci 
+                termékekkel kereskednek.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Bróker</b></td>
+            <td class="vmi">Egy személy vagy cég, amely közvetít a befektetők és a pénzügyi piacok között, segítve a részvények, kötvények és 
+                egyéb eszközök adásvételét.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Részvény</b></td>
+            <td class="vmi">Egy vállalat tulajdonjogát megtestesítő értékpapír, amely osztalékot és szavazati jogot biztosíthat a tulajdonosának.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Kötvény</b></td>
+            <td class="vmi">Hitelezési megállapodás, amely garantálja a befektetőnek a tőke visszafizetését kamatokkal együtt.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Likviditás</b></td>
+            <td class="vmi">Egy eszköz azon képessége, hogy gyorsan és könnyen eladható a piacon jelentős árveszteség nélkül.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Portfólió</b></td>
+            <td class="vmi">Egy befektető által birtokolt pénzügyi eszközök összessége.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Bika piac</b></td>
+            <td class="vmi">Olyan piaci helyzet, amikor az árfolyamok hosszú távon emelkednek, és az optimizmus jellemzi a befektetőket.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Medve piac</b></td>
+            <td class="vmi">Olyan időszak a tőzsdén, amikor az árfolyamok csökkennek, és a befektetők pesszimisták.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Volatilitás</b></td>
+            <td class="vmi">A piaci árfolyamok ingadozásának mértéke.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Tőzsdeindex</b></td>
+            <td class="vmi">Egy adott piac teljesítményét mutató mérőszám (pl. S&P 500).</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Kockázatkezelés</b></td>
+            <td class="vmi">A befektetések veszteségeinek minimalizálására szolgáló stratégiák.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Valós idejű adat</b></td>
+            <td class="vmi">Folyamatosan frissülő tőzsdei információk.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Szimuláció</b></td>
+            <td class="vmi">Virtuális kereskedési gyakorlás fiktív pénzzel.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Adatvizualizáció</b></td>
+            <td class="vmi">A tőzsdei adatok grafikonok vagy táblázatok formájában történő megjelenítése.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Hozam</b></td>
+            <td class="vmi">A befektetésen elért nyereség.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>API</b></td>
+            <td class="vmi">Alkalmazásprogramozási interfész, amely lehetővé teszi külső adatforrásokból való információszerzést.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Befektetési stratégia</b></td>
+            <td class="vmi">A pénzügyi célok elérését szolgáló terv.</td>
+        </tr>
+    </table>
+
 
 <br><br><br><br><br>
 
