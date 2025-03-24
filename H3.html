@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H3</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .center {
+            text-align: center;
+        } 
+        
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+        .vmi{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left
+        }
+        .alap{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; 
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Software Követelmény Analízis (SRS) - H3</h1>
+
+    <hr>
+    
+    <h4 class="center">Történet</h4> <br>
+
+    <table border="2" class="center">
+        <tr>
+            <td><b>Dátum</b></td>
+            <td><b>Verzió</b></td>
+            <td><b>Leírás</b></td>
+            <td><b>Szerző</b></td>
+        </tr>
+        <tr>
+            <td>2025.03.24.</td>
+            <td>1.0</td>
+            <td>Dokumentum létrehozása, fejezetek felosztása egymás között.</td>
+            <td>Orosz Kristóf <br>Radvánszky Ádám János</td>
+        </tr>
+    </table> <br>
+
+    <hr>
+   
+
+    <h4 style="text-align: justify;" id="alfejezet1">1. Bevezetés</h4> 
+
+<p style="text-align: justify;">
+
+Ez a webalkalmazás  egy modern, interaktív platform lesz, amely a pénzügyi piacok világába 
+vezeti be a felhasználókat valós idejű adatok, átfogó elemzési lehetőségek és intelligens 
+befektetési ajánlások segítségével. Célunk, hogy a felhasználók számára egyszerre biztosítsunk 
+pontos, naprakész információkat és egy kockázatmentes, oktató jellegű környezetet, 
+amelyben tesztelhetik befektetési döntéseiket. <br> <br>
+
+A webalkalmazásunk elsődleges célja lesz, hogy valós idejű adatokat szolgáltasson a 
+részvényárfolyamokról, indexekről és más pénzügyi eszközökről. Ennek révén a 
+felhasználók gyorsan reagálhatnak a piaci változásokra, így tájékozottabb döntéseket 
+hozhatnak a befektetéseik során. Az alkalmazás lehetőséget fog nyújtani abban is, hogy a 
+felhasználók kockázatmentesen gyakorolják befektetési stratégiáikat.
+<br><br>
+A rendszerünk számos menüponttal fog rendelkezni. 
+A portfóliókezelés menüpontban a felhasználók majd nyomon fogják tudni követni és elemezni saját 
+befektetési portfóliójukat, így láthatják a hozamok és kockázatok alakulását, és 
+ennek fényében optimalizálhatják stratégiáikat. 
+A tervek szerint az interaktív befektetési szimulátor lehetőséget biztosít majd a rövid és 
+hosszú távú kereskedési stratégiák kockázatmentes kipróbálására, valós adatok felhasználásával. 
+Emellett a tőzsdei hírek szekció folyamatosan naprakész információkat fog szolgáltatni a 
+legfontosabb gazdasági és piaci eseményekről. <br><br>
+A mesterséges intelligencia ajánlások funkció modern AI-algoritmusok bevonásával fogja elemezni a piaci adatokat, 
+így személyre szabott befektetési ötleteket nyújt  
+majd a felhasználónak. <br><br>
+A tervek között szerepel a biztonságos felhasználói regisztráció és bejelentkezés funkció, 
+amelynek célja a személyre szabott élmény és a fokozott adatvédelem biztosítása, 
+továbbá a hírlevél feliratkozásnak köszönhetően a felhasználók mindig értesülnek majd a 
+legújabb piaci trendekről és hírekről. <br><br>
+A webalkalmazásunk kialakításánál kiemelt figyelmet fordítunk a felhasználói élményre. 
+Az átlátható felületek segítségével a pénzügyi piacokat kevésbé ismert felhasználók is könnyedén eligazodhatnak a rendszerben. 
+
+ 
+
+A projekt fejlesztése során alkalmazni kívánt modern technológiai megoldások biztosítják, 
+hogy az alkalmazás mindig a legfrissebb adatokat és elemzési lehetőségeket kínálja. 
+A modern felhőalapú architektúránk lehetővé fogja tenni, hogy az alkalmazás rugalmasan skálázható legyen, 
+így a felhasználói bázis növekedésével párhuzamosan megőrizze a magas teljesítményt és gyors adatfeldolgozást. 
+ <br><br><br>
+
+
+2. Áttekintés – min. 1 .oldal - Kristóf <br><br><br>
+3. A rendszer funkciói – min. 1 oldal - Ádám <br><br><br>
+3.1 Első követelmény <br><br><br>
+4. Használhatóság - min. fél oldal – Kristóf <br><br><br>
+4.1. Felhasználói felület <br><br><br>
+4.2. Tanulhatóság <br><br><br>
+4.3. Hozzáférhetőség <br><br><br>
+4.4. Hibakezelés <br><br><br>
+5. Megbízhatóság - Ádám <br><br><br>
+6. Teljesítmény - Ádám <br><br><br>
+7. Támogatottság - Kristóf <br><br><br>
+8. Tervezési korlátozások - min. fél oldal - Kristóf <br><br><br>
+9. On-line dokumentáció és Help rendszer – min 1. oldal - Ádám <br><br><br>
+10. Felhasznált kész komponensek  - min 1. oldal - Ádám <br><br><br>
+11. Interfészek - min 1 oldal. - Kristóf <br><br><br>
+11.1. Felhasználói interfészek <br><br><br>
+11.2. Hardware interfészek <br><br><br>
+11.3. Software interfészek <br><br><br>
+11.3. Kommunikációs interfészek <br><br><br>
+12. Alkalmazott szabványok - Ádám <br><br><br>
+12.1. Kötelezően alkalmazandó szabványok <br><br><br>
+12.2. Választás alapján alkalmazott szabványok <br><br><br>
+13. Mellékletek - Kristóf <br><br><br>
+
+<br><br><br><br><br>
+
+<div class="bottom-left">
+    <a href="H2.html">◀</a>
+    <span>Előző oldal</span>
+</div>
+
+<div class="bottom-center">
+    <a href="tartalomjegyzek.html">📋</a>
+    <span>Tartalomjegyzék</span>
+</div>
+
+<div class="bottom-right">
+    <a href="#">▶</a>
+    <span>Következő oldal</span>
+</div>
+
+<script>
+    const prevButton = document.querySelector('.bottom-left');
+    const tartalomLink = document.querySelector('.bottom-center');
+    const nextButton = document.querySelector('.bottom-right');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight - 50) {
+            prevButton.classList.add('visible');
+            tartalomLink.classList.add('visible');
+            nextButton.classList.add('visible');
+        } else {
+            prevButton.classList.remove('visible');
+            tartalomLink.classList.remove('visible');
+            nextButton.classList.remove('visible');
+        }
+    });
+</script>
+
+
+</body>
+</html>
