@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Szótár</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .center {
+            text-align: center;
+        } 
+        
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+        .vmi{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left
+        }
+        .alap{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; 
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+</head>
+<body>
+
+    <h1>Szótár</h1> <br>
+    <table class="alap">
+        <tr>
+            <th class="vmi" style="text-align: center;">Fogalom</th>
+            <th class="vmi" style="text-align: center;">Meghatározás</th>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Tőzsde</b></td>
+            <td class="vmi">Egy szervezett piaci tér, ahol különböző pénzügyi eszközökkel, mint részvényekkel, kötvényekkel, devizákkal vagy árupiaci 
+                termékekkel kereskednek.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Bróker</b></td>
+            <td class="vmi">Egy személy vagy cég, amely közvetít a befektetők és a pénzügyi piacok között, segítve a részvények, kötvények és 
+                egyéb eszközök adásvételét.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Részvény</b></td>
+            <td class="vmi">Egy vállalat tulajdonjogát megtestesítő értékpapír, amely osztalékot és szavazati jogot biztosíthat a tulajdonosának.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Kötvény</b></td>
+            <td class="vmi">Hitelezési megállapodás, amely garantálja a befektetőnek a tőke visszafizetését kamatokkal együtt.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Likviditás</b></td>
+            <td class="vmi">Egy eszköz azon képessége, hogy gyorsan és könnyen eladható a piacon jelentős árveszteség nélkül.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Portfólió</b></td>
+            <td class="vmi">Egy befektető által birtokolt pénzügyi eszközök összessége.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Bika piac</b></td>
+            <td class="vmi">Olyan piaci helyzet, amikor az árfolyamok hosszú távon emelkednek, és az optimizmus jellemzi a befektetőket.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Medve piac</b></td>
+            <td class="vmi">Olyan időszak a tőzsdén, amikor az árfolyamok csökkennek, és a befektetők pesszimisták.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Volatilitás</b></td>
+            <td class="vmi">A piaci árfolyamok ingadozásának mértéke.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Tőzsdeindex</b></td>
+            <td class="vmi">Egy adott piac teljesítményét mutató mérőszám.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Kockázatkezelés</b></td>
+            <td class="vmi">A befektetések veszteségeinek minimalizálására szolgáló stratégiák.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Valós idejű adat</b></td>
+            <td class="vmi">Folyamatosan frissülő tőzsdei információk.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Szimuláció</b></td>
+            <td class="vmi">Virtuális kereskedési gyakorlás fiktív pénzzel.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Adatvizualizáció</b></td>
+            <td class="vmi">A tőzsdei adatok grafikonok vagy táblázatok formájában történő megjelenítése.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Hozam</b></td>
+            <td class="vmi">A befektetésen elért nyereség.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>API</b></td>
+            <td class="vmi">Alkalmazásprogramozási interfész, amely lehetővé teszi külső adatforrásokból való információszerzést.</td>
+        </tr>
+        <tr>
+            <td class="vmi"><b>Befektetési stratégia</b></td>
+            <td class="vmi">A pénzügyi célok elérését szolgáló terv.</td>
+        </tr>
+    </table>
+
+   
+
+
+</body>
+</html>
