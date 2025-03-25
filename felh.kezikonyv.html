@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Felhasználói Kézikönyv</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; /* kicsit kisebb betűméret közepes képernyőkön */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    
+
+    <h2 style="text-align: center;">FELHASZNÁLÓI KÉZIKÖNYV</h2>
+
+    <hr>
+    
+    <h4 class="center">Történet</h4> <br>
+    <table border="2" class="center">
+        <tr>
+            <td><b>Dátum</b></td>
+            <td><b>Verzió</b></td>
+            <td><b>Leírás</b></td>
+            <td><b>Szerző</b></td>
+        </tr>
+        <tr>
+            <td>2025.03.24.</td>
+            <td>1.0</td>
+            <td>Dokumentum létrehozása, fejezetek felosztása egymás között.</td>
+            <td>Orosz Kristóf <br>Radvánszky Ádám János</td>
+        </tr>
+
+            </table> <br>
+
+    <hr>
+
+    <ol>
+      <li>
+        Bevezetés – Kristóf
+        <ol>
+          <li>Az alkalmazás célja és felépítése</li>
+          <li>Felhasználói csoportok bemutatása</li>
+          <li>Technikai követelmények</li>
+        </ol>
+      </li>
+      <li>
+        Regisztráció és Bejelentkezés - Ádám
+        <ol>
+          <li>Felhasználói regisztráció folyamata</li>
+          <li>Bejelentkezési folyamat ismertetése</li>
+          <li>Fiókadatok kezelése</li>
+        </ol>
+      </li>
+      <li>
+        Felhasználói felület bemutatása – Kristóf
+        <ol>
+          <li>Főoldal és navigáció</li>
+          <li>Profilbeállítások</li>
+        </ol>
+      </li>
+      <li>
+        Portfóliókezelő modul – Kristóf
+        <ol>
+          <li>Portfólió létrehozása és szerkesztése</li>
+          <li>Befektetések nyomon követése</li>
+          <li>Portfólióelemzés</li>
+        </ol>
+      </li>
+      <li>
+        Befektetési szimulátor modul – Kristóf
+        <ol>
+          <li>Szimulátor használata</li>
+          <li>Virtuális tranzakciók végrehajtása</li>
+          <li>Virtuális portfólió elemzése és kezelése</li>
+        </ol>
+      </li>
+      <li>
+        EdgeAI modul - Ádám
+        <ol>
+          <li>EdgeAI bemutatása és funkciói</li>
+          <li>Döntéstámogatás befektetési lehetőségekhez</li>
+          <li>AI által generált befektetési javaslatok</li>
+        </ol>
+      </li>
+      <li>
+        Befektetési kalkulátor modul - Ádám
+        <ol>
+          <li>Kalkulátor funkció bemutatása</li>
+          <li>Hozamkalkuláció és előrejelzések</li>
+          <li>Eredmények exportálása és mentése</li>
+        </ol>
+      </li>
+      <li>
+        Tranzakciókezelés – Kristóf
+        <ol>
+          <li>Valós tranzakciók végrehajtása</li>
+          <li>Tranzakciók követése, listázása</li>
+        </ol>
+      </li>
+      <li>
+        Értesítések és riasztások kezelése - Ádám
+        <ol>
+          <li>Árfolyam- és eseményriasztások beállítása</li>
+          <li>Testreszabott értesítési beállítások</li>
+        </ol>
+      </li>
+      <li>
+        Súgó, támogatás és hibakezelés - Ádám
+        <ol>
+          <li>Gyakran ismételt kérdések (GYIK)</li>
+          <li>Ügyfélszolgálati elérhetőségek</li>
+        </ol>
+      </li>
+      <li>
+        Biztonság és adatvédelem - Ádám
+        <ol>
+          <li>Fiók- és adatvédelem</li>
+          <li>Adatvédelmi tájékoztató és adatkezelési információk</li>
+        </ol>
+      </li>
+    </ol>
+  </section>
+
+</body>
+</html>
+</body>
+</html>
