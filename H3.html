@@ -326,8 +326,39 @@ ahol a piacokat követő befektetők valóban otthon érezhetik magukat. <br><br
 4.2. Tanulhatóság <br><br><br>
 4.3. Hozzáférhetőség <br><br><br>
 4.4. Hibakezelés <br><br><br>
-5. Megbízhatóság - Ádám <br><br><br>
-6. Teljesítmény - Ádám <br><br><br>
+<h4 id="alfejezet5"><b>5. Megbízhatóság</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás megbízhatósága kulcsfontosságú ahhoz, hogy a felhasználók legyenek, a kezdő befektetők vagy tanulni vágyók – magabiztosan használhassák 
+    az eszközt a pénzügyi döntéseik támogatására. Technikai szempontból az alkalmazás stabil működést biztosít, mivel a fejlesztés során nagy hangsúlyt fektetünk 
+    a szerveroldali infrastruktúra robusztusságára, amely képes kezelni a nagy mennyiségű valós idejű adatot, például árfolyamfrissítéseket vagy híreket. A webapp 
+    99,9%-os rendelkezésre állást céloz, így a felhasználók minimális kieséssel számolhatnak, még csúcsidőszakokban is, például egy jelentős piaci esemény idején. 
+    A rendszeres hibajavítások garantálja, hogy az alkalmazás ne omoljon össze váratlan terhelés alatt, például ha sokan egyszerre használják a szimulációs funkciót.
+    <br>
+    Az adatbiztonság szintén a megbízhatóság alapvető eleme. A webalkalmazás titkosított kapcsolatot (HTTPS) használ, hogy a felhasználók adatai – például a 
+    szimulált portfóliók vagy a személyes beállítások – védve legyenek a külső támadásokkal szemben. Emellett a rendszer megfelel a modern adatvédelmi előírásoknak is, 
+    például a GDPR-nak, így a felhasználók nyugodtak lehetnek, hogy személyes információik nem kerülnek illetéktelen kezekbe. A külső adatforrások, mint a tőzsdei API-k,
+    szintén megbízható partnerektől származnak (Yahoo Finance, Alpha Vantage), így az árfolyamok és hírek pontosak és naprakészek. A webapp emellett rendszeres 
+    biztonsági mentéseket készít, hogy egy-egy esetleges technikai hiba esetén a felhasználók adatai ne vesszenek el, és a szimulált kereskedési előzményeik bármikor 
+    visszaállíthatók legyenek. Összességében a tőzsdei webalkalmazás megbízhatósága a stabil működés, a biztonságos adatkezelés és a pontos információk kombinációján 
+    alapul, amely bizalmat ébreszt a felhasználókban. <br>
+</p>
+<h4 id="alfejezet6"><b>6. Teljesítmény</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás teljesítménye alapvető fontosságú ahhoz, hogy a felhasználók zökkenőmentes és hatékony élményt kapjanak, akár valós idejű adatokat 
+    böngészéséhez, akár szimulált kereskedést végezzenek. Az alkalmazás gyors válaszidőt biztosít: az árfolyamok frissítése és a grafikonok betöltése kevesebb 
+    mint 1 másodpercet vesz igénybe, így a felhasználók azonnal reagálhatnak a piaci változásokra, például egy hirtelen árfolyamzuhanásra. Ez különösen fontos 
+    azok számára, akik a szimuláció során szeretnék gyakorolni a gyors döntéshozatalt, hiszen a valós tőzsdei környezetben is kulcsfontosságú a sebesség. A webapp 
+    mögött álló szerverinfrastruktúra: a felhőalapú megoldás, mint az AWS vagy a Google Cloud lesz, amely lehetővé teszi, hogy az alkalmazás nagy terhelés mellett 
+    is stabilan működjön, akár több ezer felhasználó egyidejű aktivitása esetén is.
+    <br>
+    A teljesítményt a reszponzív dizájn is növeli, amely biztosítja, hogy az alkalmazás minden eszközön: legyen az asztali gép, tablet vagy mobiltelefon – egyformán 
+    gyorsan és hatékonyan működhessen. A mobilfelhasználók számára optimalizált felület minimális adatforgalmat használ, így gyengébb internetkapcsolat mellett is 
+    gördülékeny marad a használat, például egy utazás közbeni gyors ellenőrzés során. Emellett a webalkalmazás hatékonyan kezeli a nagy adathalmazokat: a történelmi 
+    árfolyamok vagy a szimulált portfóliók elemzése során sem lassul be, mivel az adatfeldolgozás jelentős része a szerveroldalon történik. A felhasználói élmény 
+    szempontjából a teljesítményt az is fokozza, hogy az alkalmazás intuitív navigációt kínál, így a kezdők is gyorsan eligazodhatnak a funkciók között, például egy
+    új szimuláció indításakor vagy egy részvény adatlapjának megtekintésekor. Összességében a tőzsdei webalkalmazás teljesítménye a sebesség, a skálázhatóság és a 
+    felhasználóbarát működés egyensúlyán alapul, amely biztosítja, hogy a felhasználók bármikor és bárhol hatékonyan használhassák az eszközt. <br>
+</p>
 
 <h4 style="text-align: justify;" id="alfejezet7">7. Támogatottság</h4> 
 
@@ -425,8 +456,64 @@ amely megkönnyítheti az adatmegtekintést internetkapcsolat nélkül is.
 
 <br><br><br> </p>
 
-9. On-line dokumentáció és Help rendszer – min 1. oldal - Ádám <br><br><br>
-10. Felhasznált kész komponensek  - min 1. oldal - Ádám <br><br><br>
+<h4 id="alfejezet9"><b>9. On-line dokumentáció és Help rendszer</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás on-line dokumentációja és help rendszere arra szolgál, hogy a felhasználók legyenek azok kezdők vagy haladóbb befektetők, gyorsan és 
+    hatékonyan eligazodjanak az alkalmazás funkciói között, valamint megoldást találjanak esetleges kérdéseikre vagy problémáikra. Az on-line dokumentáció egy 
+    könnyen hozzáférhető, böngészőből megnyitható tudásbázisként működik, amely részletesen bemutatja az alkalmazás minden aspektusát. A dokumentáció strukturált 
+    formában, kategóriákra bontva tartalmazza az információkat, például "Kezdő lépések", "Szimulált kereskedés használata", "Árfolyamok és grafikonok értelmezése" 
+    vagy "Gyakori hibák elhárítása". Minden szekció közérthető nyelvezettel íródott, hogy az átlagos felhasználók számára is érthető legyen, és lépésről lépésre 
+    útmutatókat kínál, például arról, hogyan indítsanak egy új szimulációt, vagy hogyan mentsék el a portfóliójukat. A dokumentáció emellett vizuális elemeket, 
+    például képernyőképeket és rövid videókat is tartalmaz, amelyek még szemléletesebbé teszik a magyarázatokat, például egy grafikon beállításának folyamatát.
+    <br>
+    A help rendszer az alkalmazás felületébe integrálva érhető el, egy könnyen észrevehető "Segítség" ikon formájában, amely minden oldalon megjelenik. Erre kattintva a 
+    felhasználók egy kereshető súgórendszert érnek el, ahol kulcsszavak alapján gyorsan megtalálhatják a válaszokat, például ha nem értik, mit jelent a "volatilitás", 
+    vagy hogyan állítsanak be értesítéseket egy részvény árfolyamváltozásáról. A help rendszer interaktív elemeket is kínál, például egy chatbotot, amely egyszerűbb 
+    kérdésekre azonnal válaszol, például "Hogyan vásárolhatok részvényt a szimulációban?" vagy "Miért nem frissül az árfolyam?". Ha a chatbot nem tudja megoldani a 
+    problémát, a felhasználók egy űrlapon keresztül kapcsolatba léphetnek az ügyfélszolgálattal, amely 24 órán belül válaszol. A help rendszer emellett egy GYIK 
+    (Gyakran Ismételt Kérdések) szekciót is tartalmaz, amely a leggyakoribb problémákra ad gyors megoldásokat, például az elfelejtett jelszó visszaállítására vagy a 
+    lassú betöltési idő okainak elhárítására.
+    <br>
+    A dokumentáció és a help rendszer együttesen biztosítja, hogy a felhasználók ne érezzék magukat elveszettnek, még akkor sem, ha először használják az alkalmazást. 
+    A rendszer több nyelven – például magyarul és angolul – is elérhető, hogy a nemzetközi közönség számára is kényelmes legyen. Rendszeres frissítésekkel a 
+    dokumentáció naprakész marad, például ha új funkciókat vezetünk be, mint például egy mesterséges intelligencián alapuló elemző eszközt. A help rendszer 
+    visszajelzési lehetőséget is kínál, így a felhasználók javaslatokat tehetnek a dokumentáció bővítésére, például ha egy adott témáról részletesebb magyarázatot 
+    szeretnének. Összességében az on-line dokumentáció és help rendszer a tőzsdei webalkalmazás szerves részét képezi, amely a felhasználói élményt javítva segíti a 
+    tanulást és a problémamentes használatot. <br>
+</p>
+  
+<h4 id="alfejezet10"><b>10. Felhasznált kész komponensek</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás fejlesztése során számos kész komponenst és külső könyvtárat használunk fel, hogy gyorsítsuk a fejlesztési folyamatot, biztosítsuk a 
+    stabilitást, és magas színvonalú felhasználói élményt nyújthassunk. Az alkalmazás front-end részének kialakításához a React JavaScript könyvtárat alkalmaztuk, 
+    amely lehetővé tette a dinamikus és reszponzív felhasználói felület létrehozását. A React komponensalapú megközelítése segített abban, hogy az olyan elemek, 
+    mint a valós idejű árfolyamgrafikonok vagy a szimulált portfólió kezelőfelülete, gyorsan betöltődjenek és zökkenőmentesen működjenek különböző eszközökön, 
+    például mobiltelefonokon és asztali gépeken. A vizuális dizájn egységesítésére a Material-UI könyvtárat használtuk, amely modern, letisztult megjelenést 
+    biztosít, például gombok, táblázatok és navigációs elemek formájában, így a felhasználók számára intuitív a kezelőfelület.
+    <br>
+    A valós idejű tőzsdei adatok integrálásához külső API-kat alkalmaztunk, például az Alpha Vantage és a Yahoo Finance API-kat, amelyek megbízható forrásból 
+    biztosítanak árfolyamokat, történelmi adatokat és piaci híreket. Ezek az API-k lehetővé teszik, hogy a felhasználók naprakész információk alapján gyakorolhassák 
+    a kereskedést egy szimulációs környezetben, például valós részvényárfolyamok segítségével. Az API-k integrálásához a front-end oldalon a Axios könyvtárat 
+    használtuk,amely leegyszerűsíti az adatlekérdezéseket, és biztosítja, hogy az adatok gyorsan és biztonságosan érkezzenek a felhasználói felületre. Az 
+    adatvizualizációhoz a Chart.js könyvtárat választottuk, amely interaktív grafikonokat és diagramokat kínál, például vonaldiagramokat az árfolyamok változásának 
+    megjelenítésére, így a felhasználók könnyen elemezhetik a piaci trendeket.
+    <br>
+    A back-end fejlesztéséhez a .NET Core keretrendszert és C# nyelvet használtuk, amely lehetővé tette egy skálázható és nagy teljesítményű API létrehozását. 
+    A .NET API (ASP.NET Core) biztosítja a szerveroldali logika kezelését, például a felhasználói kérések feldolgozását, a szimulált kereskedési tranzakciók 
+    kezelését és az API-kból érkező adatok továbbítását a front-end felé. Az adatbázis-kezeléshez a Microsoft SQL Server-t (MSSQL) alkalmaztuk, amely gyors és 
+    megbízható tárolást biztosít a felhasználói adatok, például a szimulált portfóliók vagy a kereskedési előzmények számára. A .NET API és az MSSQL közötti 
+    kapcsolatot egy Entity Framework Core segítségével valósítottuk meg, amely leegyszerűsíti az adatbázis-műveleteket, például az adatok lekérdezését vagy mentését, 
+    miközben biztosítja a teljesítmény optimalizálását. A biztonság érdekében a JWT (JSON Web Token) autentikációs rendszert integráltuk a .NET API-ba, amely védi a 
+    felhasználói fiókokat, és biztosítja, hogy csak jogosult személyek férjenek hozzá az érzékeny adatokhoz, például a szimulált portfóliókhoz.
+    <br>
+    A reszponzív dizájn érdekében a Bootstrap CSS keretrendszert is felhasználtuk, amely segített abban, hogy az alkalmazás minden képernyőméreten egységesen és 
+    esztétikusan jelenjen meg, például egy mobiltelefon kisebb kijelzőjén is. A valós idejű frissítésekhez a .NET API-val kompatibilis SignalR könyvtárat integráltuk, 
+    amely lehetővé teszi, hogy az árfolyamok automatikusan frissüljenek anélkül, hogy a felhasználónak újra kellene töltenie az oldalt, így a piaci adatok valós 
+    időben jelennek meg a grafikonokon. Ezek a kész komponensek együttesen biztosítják, hogy a tőzsdei webalkalmazás gyors, biztonságos és felhasználóbarát legyen, 
+    miközben a .NET és C# alapú technológiai stack előnyeit – például a nagy teljesítményt és a robusztusi biztonságot – maximálisan kihasználja. A külső könyvtárak 
+    és API-k használata lehetővé tette, hogy a fejlesztők a specifikus funkciókra, például a szimulációs logikára vagy az oktatási tartalmakra fókuszáljanak, 
+    ahelyett, hogy minden alapvető elemet a nulláról kellene felépíteniük. <br>
+</p>
 
 
 <h4 style="text-align: justify;" id="alfejezet11">11. Interfészek</h4> 
