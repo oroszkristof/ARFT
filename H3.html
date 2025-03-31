@@ -212,6 +212,12 @@
             <td>Megbízhatóság(5.), Teljesítmény(6.), On-line dokumentáció és Help rendszer(9.), Felhasznált kész komponensek(10.), fejezetek kidolgozása</td>
             <td>Radvánszky Ádám János</td>
         </tr>
+        <tr>
+            <td>2025.03.31.</td>
+            <td>1.3</td>
+            <td>A 4. (Használhatóság) fejezeteinek és alfejezeteinek kidolgozása.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
     </table> <br>
 
     <hr>
@@ -327,11 +333,193 @@ ahol a piacokat követő befektetők valóban otthon érezhetik magukat. <br><br
 3.5 Bejelentkezés és Regisztráció <br><br><br>
 3.6 Friss tőzsdei hírek és Hírlevél feliratkozás <br><br><br>
 
-4. Használhatóság – Kristóf <br><br><br>
-4.1. Felhasználói felület <br><br><br>
-4.2. Tanulhatóság <br><br><br>
-4.3. Hozzáférhetőség <br><br><br>
-4.4. Hibakezelés <br><br><br>
+<b>4. Használhatóság</b> <br><br><br>
+<p style="text-align: center;">A fejlesztendő tőzsdei alkalmazás sikerének egyik kulcsa a magas szintű használhatóság lesz. 
+A rendszernek nem csupán funkcionálisan kell majd helytállnia, 
+hanem a felhasználók számára is könnyen elérhetővé, gyorsan tanulhatóvá és kényelmesen kezelhetővé 
+fog válni. <br> Ehhez a legfontosabb információkat az alábbi alfejezetek tartalmazzák. </p>
+
+<p style="text-align: justify;">
+<b>4.1. Felhasználói felület </b><br><br>
+Az alkalmazás felhasználói felületét úgy fogjuk megtervezni, 
+hogy áttekinthető és intuitív legyen, különös tekintettel a következő szempontokra 
+fogunk figyelni a felhasználói felület kapcsán:<br><br>
+
+<b>Elrendezés és struktúra</b><br><br>
+Az elrendezés kidolgozása során nagy hangsúlyt fogunk fektetni arra, hogy a 
+felhasználók első pillantásra felismerjék, mely funkciók a legfontosabbak és hogyan 
+tudnak hozzájuk gyorsan hozzáférni. A menürendszerben logikus csoportosításokkal és 
+kategorizálásokkal segítjük majd az egyes tőzsdei tevékenységek közötti gyors váltást, 
+például a befektetési portfóliók, az árfolyamfigyelő és a hírfolyam funkciók külön 
+szekciókban kapnak helyet. Gondoskodni fogunk arról, hogy az információk sorrendje 
+tükrözze a felhasználói folyamatokat, így a kezdő lépésektől a részletes elemzésekig 
+fokozatosan épüljön fel a felület. Tervezzük, hogy ikonokkal és jól látható jelzésekkel 
+is elkülönítjük a kulcsfunkciókat, például megkülönböztetett színnel vagy mérettel. <br><br> 
+Mindezek a megoldások lehetővé teszik majd, hogy a felhasználók még kevés tőzsdei 
+tapasztalattal is gyorsan megtanulják, merre induljanak el, illetve hogyan érjék el a 
+kívánt funkciókat a legrövidebb időn belül.<br><br>
+
+<b>Megfelelő információmegjelenítés</b><br><br>
+A tőzsdei adatoknak különösen nagy a mennyisége, 
+ezért a célunk az, hogy a lehető legkevesebb görgetéssel és kattintással 
+is minden fontos információ elérhető legyen. Az adatok vizuális megjelenítésére 
+többféle grafikus formátumot fogunk alkalmazni, például gyertyadiagramokat, 
+vonaldiagramokat és oszlopdiagramokat, hogy a felhasználók könnyen összehasonlíthassák a 
+történeti adatokat és az aktuális trendeket. <br><br> Gondoskodunk arról, hogy az egyes nézeteket 
+testreszabható szűrők, illetve oszloprendezési lehetőségek egészítsék ki, így mindenki a saját 
+befektetési stílusához igazíthatja a megjelenést. A részletes adatokat, például a kötési volumeneket,
+ a piaci kapitalizációt vagy a volatilitási mutatókat is egyszerűen elérhetővé tesszük, de úgy, 
+ hogy ne terheljük feleslegesen a képernyőt, ha a felhasználó nem kér rá. Emellett beépítünk 
+ gyorskeresőt és kulcsszavas szűrőt is, így akár több száz részvény adatai közül is pillanatok 
+ alatt ki lehessen választani a relevánsakat.<br><br>
+
+<b>Konzisztens és felhasználóbarát elemek</b><br><br>
+Törekedni fogunk arra, hogy az alkalmazás különböző részein mindig ugyanolyan logikát és 
+vizuális elemeket használjunk, így a felhasználók minden gomb, űrlap vagy 
+menüpont működését gyorsan elsajátíthatják. A címkék, ikonok és elnevezések esetében 
+is egységes szabályrendszert fogunk kialakítani, hogy a felhasználónak ne kelljen minden 
+egyes felugró ablaknál újraértelmeznie a vezérlőelemek jelentését. <br><br> Nagy figyelmet fordítunk 
+arra, hogy a hibajelzések, megerősítést kérő üzenetek és egyéb visszajelzések is konzisztens 
+stílusban jelenjenek meg, hogy bárhol jelentkezik egy probléma, azt azonnal felismerjék és 
+megértsék a felhasználók. Mindezek mellett a felhasználói visszajelzések alapján folyamatosan 
+fogjuk finomhangolni a design elemeit, hogy a leghatékonyabb és legkényelmesebb felületet 
+biztosíthassuk. Arra is figyelünk, hogy a magyar nyelvű felület mellett a későbbi idegen nyelvű 
+támogatás esetén is ugyanez a konzisztencia megmaradjon, így bárki a lehető legkevesebb 
+fennakadással, globális szinten is használhassa az alkalmazást.<br><br>
+
+<b>Reszponzív kivitel</b> <br><br>
+Az alkalmazást nem csupán asztali számítógépeken, hanem mobil eszközökön és 
+tableteken is zökkenőmentesen szeretnénk használhatóvá tenni, ezért fejlesztési 
+folyamatunkban kiemelt szerepet kap a reszponzív dizájn. Ez azt jelenti, hogy a 
+képernyő méretétől és felbontásától függően a felhasználói felület elemei rugalmasan 
+átrendeződnek vagy átméreteződnek, mindig optimális megjelenést és könnyű kezelhetőséget 
+biztosítva. <br> <br> Kiemelt figyelmet fogunk fordítani az érintőképernyős interakciókra is, 
+például nagyobb gombokat és könnyen görgethető listákat alkalmazunk, hogy a felhasználók 
+még egy kis kijelzőn is gyorsan és pontosan navigálhassanak. Tervezéskor szem előtt tartjuk 
+a különböző platformok (Android, iOS, Windows stb.) sajátosságait, és igyekszünk kihasználni 
+az általuk kínált natív funkciókat. Végeredményben olyan modern, reszponzív keretrendszert 
+fogunk kialakítani, amely a felhasználók eszközeinek széles skáláján biztosítja a profi 
+tőzsdei adatelemzés és portfóliókezelés élményét.<br><br><br>
+
+
+
+<b>4.2. Tanulhatóság</b> <br><br>
+A rendszer tervezésénél fontos szempont lesz, hogy a 
+kezdő felhasználók rövid idő alatt elérhessék azt a tudásszintet, 
+mely lehetővé teszi majd a hatékony munkát, míg a haladó felhasználók 
+gyorsan megtalálhatják a számukra releváns funkciókat. <br><br>
+
+<b>Betanulási időszükséglet</b> <br><br>
+
+<b>Kezdő felhasználók:</b> 
+Arra fogunk törekedni, hogy egy teljesen kezdő – 
+legyen akár tőzsdei, akár általános informatikai értelemben – néhány oktatóvideó, 
+illetve az alkalmazás beépített súgója és interaktív útmutatói segítségével egy 
+napon belül elsajátíthassa a legalapvetőbb feladatokat.<br><br>
+
+<b>Haladó felhasználók:</b> 
+A tőzsdei tapasztalattal és rendszerek 
+ismeretével rendelkező felhasználók akár néhány órán belül meg fogják tudni szokni a 
+felületet és képesek lesznek hatékonyan kihasználni az EdgeAI előrejelzéseket és a 
+portfóliószimulációt. <br><br>
+
+<b>Tevékenység-végrehajtás sebessége:</b> <br><br>
+A rendszer sebességének növelése érdekében olyan adatgyűjtési 
+és -szűrési algoritmusokat fogunk integrálni, amelyek valós időben 
+képesek reagálni a tőzsdei eseményekre. Ez a megközelítés lehetővé 
+teszi, hogy a felhasználók azonnal értesüljenek a fontosabb piaci mozgásokról 
+és változásokról, legyen szó akár egy részvény hirtelen árfolyamingadozásáról, 
+akár friss gazdasági hírekről. Emellett a felhasználóknak lehetőségük lesz 
+automatizált figyelmeztetéseket  
+beállítani, amelyek segítenek elkerülni a manuális frissítések időigényes feladatát. 
+<br><br>A befektetési szimulátor funkciók kiterjesztését is tervezzük, így a különböző 
+tranzakciókat és forgatókönyveket szinte valós időben ki lehet majd próbálni, 
+ezzel is támogatva a gyors döntéshozatalt. A rendszer testreszabhatósága lehetővé 
+teszi, hogy a felhasználók a számukra legkritikusabb adatokra fókuszáljanak, ezáltal 
+elkerülhető a felesleges információáradat. Mindez azt eredményezi, hogy a felhasználók 
+koncentrálni tudnak a stratégiai teendőkre, ahelyett hogy a napi operatív részletekben 
+vesznének el. Végső soron a gyorsabb végrehajtás és döntéstámogatás a befektetések hatékonyabb 
+menedzselését teszi lehetővé, növelve a rendszer vonzerejét és versenyképességét.<br><br>
+
+<b>Támogató eszközök a betanuláshoz:</b><br><br>
+Az oktatóvideók rövid, fókuszált formában mutatják majd be a legfontosabb 
+funkciókat és munkafolyamatokat, így a felhasználók célzottan tanulhatnak 
+meg egy-egy műveletet. Az interaktív súgó funkció lehetővé teszi, hogy a 
+felhasználók lépésről lépésre kövessék a képernyőn megjelenő utasításokat, 
+például egy új portfólió létrehozásakor vagy egy részvény történeti adatainak 
+lekérdezésekor. A demo prototípus használata során valós piaci körülményekhez 
+hasonló szituációkban lehet gyakorolni, így a valós befektetési kockázat nélkül 
+próbálhatják ki a felhasználók a különböző stratégiákat. <br> <br> Tervezzük, hogy interaktív 
+kvízekkel vagy gyakorló feladatokkal is bővítjük a tananyagokat, amellyel ellenőrizhetővé 
+válik, mennyire sikerült elsajátítani a rendszer használatát. Ezek a kiegészítő modulok 
+motiválni fogják a felhasználókat, és megerősítik a tanultakat, csökkentve annak esélyét, 
+hogy később elakadjanak a használatban. A haladó felhasználók pedig mélyebb, szakmai tartalmú 
+anyagokhoz is hozzáférhetnek, amelyekben különböző stratégiai lehetőségek, technikai elemzések 
+és kockázatkezelési technikák szerepelnek. Így biztosítjuk, hogy mindenki a saját tudásszintjének 
+megfelelő információkhoz jusson, és a lehető leghamarabb magabiztosan kezelje az alkalmazás által 
+nyújtott lehetőségeket. <br><br><br>  <br>
+
+<b>4.3. Hozzáférhetőség</b> <br> <br>
+
+<b>Rugalmas integráció más alkalmazásokkal</b> <br><br>
+A CSV import-export lehetőségének köszönhetően a felhasználók zökkenőmentesen átvihetik majd 
+adataikat más szoftverekből, illetve egyszerűen importálhatnak onnan származó tőzsdei információkat. 
+Az API-hozzáférés emellett lehetővé teszi, hogy fejlettebb, automatizált megoldásokat is 
+integráljanak a munkafolyamataikba, például egyéni adatfeldolgozó scriptek vagy 
+jelentéskészítő eszközök segítségével. Az Outlook-integráción keresztül a rendszer 
+közvetlenül a felhasználók levelezésébe is elküldi majd a fontos értesítéseket és 
+riasztásokat, így semmilyen piaci változás nem kerüli el a figyelmüket. <br><br>Bővítési lehetőség 
+például a felhőalapú adattároló szolgáltatásokkal való integráció, ami megkönnyíti a nagy 
+méretű fájlok kezelését és megosztását. Emellett a rugalmas kialakításnak köszönhetően 
+harmadik féltől származó, fejlett elemző eszközöket is be lehet majd csatolni a szoftverhez, 
+ezáltal még komplexebb adatelemzés és jelentéskészítés válik elérhetővé. 
+
+
+
+
+
+
+
+
+<br><br>
+
+<b>Testreszabhatóság</b> <br><br>
+Lehetőség lesz egyéni igények alapján átrendezni vagy 
+ki-/bekapcsolni egyes modulfelületeket. Ez különösen fontos azon felhasználóknak, 
+akik például csak az árfolyamkövetés funkcióra fókuszálnak, míg mások az EdgeAI 
+modul vagy a befektetési szimulátor speciális nézetét szeretnék alkalmazni. A moduláris felépítésnek 
+köszönhetően a felhasználók csak azokat a funkciókat fogják látni és használni, 
+amelyekre valóban szükségük van, ezáltal elkerülhető a felületet túlzsúfoló, 
+felesleges menüpontok megjelenése. A testreszabható elrendezés révén mindenki a 
+saját munkafolyamataihoz igazíthatja az alkalmazást, például másképp csoportosíthatja a 
+rendelkezésre álló indikátorokat, eszközöket vagy a grafikonfelületeket. Ez a rugalmasság 
+pedig a későbbi bővítések és frissítések során is fennmarad, hiszen új funkciók integrálásakor a 
+felhasználók továbbra is eldönthetik, hogy beépítik-e azokat a saját felületükre, vagy inkább 
+mellőzik őket. <br> <br><br>
+
+<b>4.4. Hibakezelés </b><br><br><br>
+
+A hibakezelés és a felhasználók által kapott visszajelzések jelentős szerepet fognak játszani a 
+pozitív felhasználói élményben: <br> <br>
+
+<b>Érthető hibaüzenetek:</b> <br><br>
+Ha a rendszerben meghibásodás, váratlan állapot lép majd fel, akkor érthető, emberi nyelven 
+írt hibaüzenetek jelennek meg. Ezek a hibaüzenetek lehetőség szerint javaslatokat is fognak 
+adni a felhasználóknak a továbblépésre 
+(pl. „Kérjük, ellenőrizze az adatokat, vagy forduljon az ügyfélszolgálathoz.”). <br><br>
+
+<b>Hibakeresés és jelentés:</b> <br><br>
+
+<b>Felhasználói visszajelzés:</b> Beépített űrlapon keresztül a felhasználók könnyedén jelezhetik 
+majd, ha hibát találnak. <br><br>
+
+<b>Naplózás:</b> A rendszer részletes naplókat fog vezetni a hibákról és a felhasználói akciókról, 
+hogy a fejlesztők hatékonyan ki tudják vizsgálni a problémákat, és javításokat hajthassanak végre. <br> <br>
+
+
+<b>Automatikus figyelmeztetések:</b>
+Az alkalmazás képes lesz automatikus értesítéseket küldeni kritikus hibákról és esetleges rendszerleállásokról a karbantartók vagy rendszergazdák felé. Így gyorsan be tudnak majd avatkozni, biztosítva a folyamatos és biztonságos működést.
+<br><br><br></p>
 <h4 id="alfejezet5"><b>5. Megbízhatóság</b></h4>
 <p style="text-align: justify;">
     A tőzsdei webalkalmazás megbízhatósága kulcsfontosságú ahhoz, hogy a felhasználók legyenek, a kezdő befektetők vagy tanulni vágyók – magabiztosan használhassák 
@@ -680,7 +868,9 @@ rendszerek megkövetelnek. <br><br>
 12. Alkalmazott szabványok - Ádám <br><br><br>
 12.1. Kötelezően alkalmazandó szabványok <br><br><br>
 12.2. Választás alapján alkalmazott szabványok <br><br><br>
-13. Mellékletek - Kristóf <br><br><br>
+13. Mellékletek <br><br>
+
+
 
 <br><br><br><br><br>
 
