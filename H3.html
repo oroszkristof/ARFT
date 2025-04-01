@@ -218,6 +218,12 @@
             <td>A 4. (Használhatóság) és a 13. (Mellékletek) fejezeteinek és alfejezeteinek kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+        <tr>
+            <td>2025.04.01.</td>
+            <td>2 óra</td>
+            <td>A 12.fejezet(Alkalmazott szabványok) és alfejezetinek kidolgozása.</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
     </table> <br>
 
     <hr>
@@ -866,9 +872,59 @@ rendszerek megkövetelnek. <br><br>
 </p></p>
 
 
-12. Alkalmazott szabványok - Ádám <br><br><br>
-12.1. Kötelezően alkalmazandó szabványok <br><br><br>
-12.2. Választás alapján alkalmazott szabványok <br>
+<h4 id="alfejezet12"><b>12. Alkalmazott szabványok</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás fejlesztése során az alkalmazott szabványok kulcsfontosságú szerepet játszanak abban, hogy a rendszer megfeleljen a modern technológiai 
+    elvárásoknak, biztosítsa a felhasználók számára a zökkenőmentes élményt, és eleget tegyen a jogi és biztonsági követelményeknek. A szabványok alkalmazása 
+    lehetővé teszi, hogy az alkalmazás – amely .NET API-val és C# nyelvvel készülni fog – stabil, skálázható és biztonságos legyen, miközben a front-end (React) 
+    és a back-end közötti kommunikáció hatékonyan működik, például a valós idejű árfolyamfrissítések vagy a szimulált tranzakciók kezelése során. A szabványok 
+    betartása nemcsak a technikai minőséget garantálja, hanem a felhasználói bizalmat is növeli, hiszen egy pénzügyi témájú alkalmazás esetében elengedhetetlen, 
+    hogy az adatok védettek legyenek, és a rendszer minden eszközön – legyen az asztali gép vagy mobiltelefon – megbízhatóan működjenek. A szabványokat két fő 
+    kategóriába soroltuk: a kötelezően alkalmazandó szabványok olyan előírásokat tartalmaznak, amelyek nélkül az alkalmazás nem felelne meg az alapvető technikai 
+    és jogi követelményeknek, míg a választás alapján alkalmazott szabványok olyan opcionális, de előnyös gyakorlatokat fednek le, amelyek a funkcionalitást, a 
+    teljesítményt és a felhasználói élményt javítják. Az alábbiakban részletezzük ezeket a kategóriákat.
+    <br><br>
+</p>
+<h4 id="alfejezet12.1"><b>12.1. Kötelezően alkalmazandó szabványok</b></h4>
+<p style="text-align: justify;">
+    A tőzsdei webalkalmazás fejlesztése során több kötelezően alkalmazandó szabványt is betartottunk, hogy biztosítsuk a rendszer technikai megbízhatóságát, 
+    biztonságát és a jogi előírásoknak való megfelelőséget. Az alkalmazás kommunikációjához a HTTPS protokollt alkalmazzuk, amely az SSL/TLS 1.3 szabványon 
+    alapul, így a .NET API és a front-end közötti adatforgalom – például a szimulált tranzakciók adatai vagy a felhasználói beállítások – titkosítva van, védve 
+    a lehallgatásoktól. Ez a szabvány elengedhetetlen egy olyan alkalmazás esetében, amely pénzügyi adatokat kezel, még ha szimulációs környezetben is, hiszen 
+    a felhasználói bizalom kulcsfontosságú. A .NET API fejlesztéséhez az OpenAPI Specification (OAS) 3.1 szabványt követtük, amely lehetővé teszi az API-végpontok 
+    pontos dokumentálását, így a front-end (React) és a back-end közötti kommunikáció – például az árfolyamok lekérdezése – strukturáltan és hibamentesen történik. 
+    Emellett a JSON Schema (Draft 2020-12) szabványt használtuk az API-válaszok validálására, biztosítva, hogy a kapott adatok – például egy részvény árfolyama – 
+    megfeleljenek az elvárt formátumnak.
+    <br>
+    A front-end fejlesztés során a W3C által meghatározott HTML5 és CSS3 szabványokat alkalmaztuk, hogy az alkalmazás minden modern böngészőben – például Chrome, 
+    Firefox – megfelelően működjenek, és a felhasználók egységes élményt kapjanak, például a szimulált portfóliók megjelenítésekor. Az adatbázis-kezeléshez a 
+    Microsoft SQL Serverrel az ANSI SQL:2019 szabványt követtük, amely biztosítja az adatbázis-műveleteket – például a szimulált kereskedési előzmények tárolása – 
+    konzisztenciáját és hatékonyságát különböző környezetekben. A felhasználók adatvédelmének érdekében a PCI DSS (Payment Card Industry Data Security Standard) 
+    alapelveit is figyelembe vesszük, bár az alkalmazás jelenleg nem kezel valós fizetési tranzakciókat, de a jövőbeli bővítések – például prémium funkciók 
+    vásárlása – esetén ez a szabvány biztosítja a pénzügyi adatok védelmét. Végül, a .NET API autentikációjához az OpenID Connect (OIDC) szabványt (RFC 6749 
+    kiterjesztése) alkalmazzuk majd, amely a JWT-vel együtt biztosítja a biztonságos bejelentkezést és a felhasználói jogosultságok kezelését, például annak 
+    ellenőrzését, hogy csak regisztrált felhasználók férjenek hozzá a szimulációs funkciókhoz.
+    <br><br>
+</p>
+<h4 id="alfejezet12.2"><b>12.2. Választás alapján alkalmazott szabványok </b></h4>
+<p style="text-align: justify;">
+    A kötelező szabványokon túl több olyan szabványt is alkalmazunk, amelyek nem voltak előírtak, de a tőzsdei webalkalmazás funkcionalitásának, fenntarthatóságának 
+    és felhasználói élményének javítását célozzák meg. Az egyik ilyen az ISO 3166-1 szabvány, amelyet az országkódok kezelésére használunk, például a részvények 
+    piacának azonosításakor (pl. US, HU), hogy a felhasználók könnyen megértsék, melyik tőzsdéhez tartozik egy adott részvény, például az amerikai NASDAQ vagy a 
+    magyar BÉT. Ez a szabvány különösen hasznos egy nemzetközi közönség számára, mivel egységesíti az országok kódolását. A front-end fejlesztése során a Web 
+    Animations API (W3C ajánlás) szabványt használjuk, hogy a finom animációkat – például a grafikonok betöltési effektjeit – implementáljuk, amelyek javítják a 
+    felhasználói élményt anélkül, hogy jelentősen növelnék a betöltési időt.
+    <br>
+    A kódminőség érdekében a StyleCop által javasolt C# kódolási szabványokat alkalmazzuk, például a kódformázási szabályokat és a metódusok elnevezési konvencióit, 
+    hogy a kód olvasható és karbantartható legyen, például egy új funkciók integrálása esetén is. A teljesítmény növelése érdekében az HTTP/2 Server Push (RFC 7540) 
+    szabványt implementáltuk a .NET API-ban, amely lehetővé teszi, hogy a szerver proaktívan küldjön adatokat – például a gyakran használt grafikonokat – a 
+    böngészőnek, még mielőtt a felhasználó kérné azokat, így csökkentve a betöltési időt. Az akadálymentesítés érdekében a WCAG 2.2 (Web Content Accessibility 
+    Guidelines) szabványokat részben alkalmazzuk csak, például a színek kontrasztarányának beállításával és a billentyűzet-navigáció támogatásával, hogy a 
+    látássérült vagy mozgáskorlátozott felhasználók is használhassák az alkalmazást. Végül, a naplózás során a JSON Logging formátumot (nem hivatalos, de elterjedt 
+    gyakorlat) válasszuk, hogy a rendszer naplófájljai – például egy API-hívás hibája – strukturált formában legyenek tárolva, ami megkönnyíti a hibakeresést és a 
+    monitorozást is. Ezek a választott szabványok hozzájárulnak az alkalmazás hatékonyságához, akadálymentesítéséhez és hosszú távú fenntarthatóságához.
+    <br><br>
+</p>
 
 <h4 style="text-align: justify;" id="alfejezet13">13. Mellékletek</h4> 
 
