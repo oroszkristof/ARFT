@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H3</title>
+    <link rel="stylesheet" href="sorkizart.css">
     <style>
         .red {
             color: red;
@@ -206,29 +207,45 @@
             <td>A 2. (Áttekintés), a 7. (Támogatottság), 8. (Tervezési korlátozások), 11. (Interfészek) fejezeteinek, és alfejezeteinek kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+
+        <tr>
+            <td>2025.03.29.</td>
+            <td>1.2</td>
+            <td>A 2. (Áttekintés) fejezethez az első kezdetleges prototípus elkészítése a webalkalmazáshoz.</td>
+            <td>Orosz Kristóf <br> Radvánszky Ádám János</td>
+        
+        </tr>
+
         <tr>
             <td>2025.03.30</td>
-            <td>1.2</td>
+            <td>1.3</td>
             <td>Megbízhatóság(5.), Teljesítmény(6.), On-line dokumentáció és Help rendszer(9.), Felhasznált kész komponensek(10.), fejezetek kidolgozása</td>
             <td>Radvánszky Ádám János</td>
         </tr>
         <tr>
             <td>2025.03.31.</td>
-            <td>1.3</td>
+            <td>1.4</td>
             <td>A 4. (Használhatóság) és a 13. (Mellékletek) fejezeteinek és alfejezeteinek kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
         <tr>
             <td>2025.04.01.</td>
-            <td>1.4</td>
+            <td>1.5</td>
             <td>A 12.fejezet(Alkalmazott szabványok) és alfejezetinek kidolgozása.</td>
             <td>Radvánszky Ádám János</td>
         </tr>
         <tr>
             <td>2025.04.03.</td>
-            <td>1.5</td>
+            <td>1.6</td>
             <td>A 3.fejezet(A rendszer funkciói) és alfejezetinek kidolgozása.</td>
             <td>Radvánszky Ádám János</td>
+        </tr>
+
+        <tr>
+            <td>2025.04.05.</td>
+            <td>1.7</td>
+            <td>Dokumentum átnézése, hibák kijavítása.</td>
+            <td>Orosz Kristóf</td>
         </tr>
     </table> <br>
 
@@ -330,7 +347,36 @@ ahol a piacokat követő befektetők valóban otthon érezhetik magukat. <br><br
 
 <div style="text-align: center;">
 <img src="prototipus.jpg" alt="Prototípus" width="600px" height="300px">
-</div>
+</div> <br><br>
+
+
+Az alkalmazás fejlesztése során több technológiai, jogi és üzleti korlátozást is figyelembe 
+kell venni. Az egyik legfontosabb korlátozó tényező a jogszabályi megfelelés, 
+mivel a platformnak a <b>Magyar Nemzeti Bank (MNB), </b>
+valamint más pénzügyi hatóságok előírásait teljesítenie kell. 
+Ez különösen az ügyfélazonosítási (KYC), pénzmosás elleni (AML) és adatvédelmi (GDPR) 
+szabályozásokat érinti. <br><br>
+A <b>mesterséges intelligencia-alapú</b> ajánlások és a befektetési szimulátor használata során az 
+adatvédelmi szabályok szigorúan meghatározzák, milyen személyes adatokat 
+lehet gyűjteni és kezelni. 
+A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól származnak, 
+így azok licencfeltételei és szerződései is behatárolják a tartalmak felhasználását
+ és frissítési gyakoriságát. Technológiai szempontból a rendszernek képesnek kell lennie a 
+ hirtelen megnövekedett felhasználói terhelés kezelésére, 
+ ami infrastruktúra-korlátokat is jelent, például az árfolyamadatok gyors frissítésénél. 
+ A <b>befektetési szimulátor</b> és <b>portfóliókezelés</b> kialakításánál 
+ figyelembe kell venni, hogy a felhasználók eltérő pénzügyi tudással rendelkeznek, 
+ ezért a rendszer korlátozottan ajánlhat bonyolult vagy magas kockázatú pénzügyi termékeket. 
+ Az <b>integrációs korlátok</b> miatt a platformnak technológiai, biztonsági és kompatibilitási 
+ szempontból is igazodnia kell a banki, fizetési és egyéb külső szolgáltatók követelményeihez.
+  A felhasználói felület egyszerűségére és áttekinthetőségére való törekvés is egyfajta 
+  korlátozást jelent, mert nem lehet korlátlan számú összetett funkciót megjeleníteni. <br><br>
+  </p> A webalkalmazás felhasználói között lesz várhatóan a <b>kisbefektető	</b> aki legáltalánosabb végfelhasználó, aki könnyen és gyorsan szeretne részvényekbe, alapokba fektetni, minimális kockázattal,
+  a <b>profi kereskedő</b>	aki napi szinten használja a platformot, valós idejű adatokra, technikai elemző eszközökre, speciális kereskedési funkciókra van szüksége. Az alkalmazás mélyebb funkcióit veszi igénybe.
+  Az <b>intézményi felhasználó</b>	bankok, alapkezelők vagy brókercégek képviselői, nagy tőkével és összetett riportálási igényekkel. Komoly biztonsági elvárásokat támasztanak.
+  Illetve az <b>adminisztrátor</b>	aki rendszerszintű hozzáféréssel rendelkezik: felhasználói fiókok kezeléséért, jogosultságok beállításáért és általános támogatásért felel.
+
+
 </p>
 
 
@@ -373,11 +419,10 @@ ahol a piacokat követő befektetők valóban otthon érezhetik magukat. <br><br
 <p style="text-align: justify;">
     A Portfóliókezelés funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi a felhasználók számára, hogy átlátható módon nyomon kövessék 
     és kezeljék szimulált befektetéseiket. A "Portfólió összetétele" szekció egy vizuális ábrát – jelen esetben egy narancssárga kördiagramot – jelenít meg, 
-    amely a portfólió eloszlását mutatja. A diagramon jelenleg egyetlen elem, az Apple Inc. (AAPL) részvénye látható, ami azt jelzi, hogy a portfólió teljes 
-    egészében ebből az eszközből áll, de a jövőben a diagram dinamikusan frissülhet, ha a felhasználó további részvényeket ad hozzá, például Teslát vagy 
+    amely a portfólió eloszlását mutatja. A diagram dinamikusan frissülhet, ha a felhasználó további részvényeket ad hozzá, például Teslát vagy 
     Microsoftot, így vizuálisan is láthatóvá válik a diverzifikáció mértéke.
     <br>
-    A "Befektetési jegyek" szekció egy listát biztosít, amely a portfólió konkrét elemeit sorolja fel, például az AAPL részvényből 10 darabot. Ez a funkció 
+    A "Befektetési jegyek" szekció egy listát biztosít, amely a portfólió konkrét elemeit sorolja fel. Ez a funkció 
     lehetővé teszi a felhasználók számára, hogy gyorsan áttekintsék, milyen eszközökből áll a portfóliójuk, és szükség esetén módosításokat hajtsanak végre, 
     például újabb részvényeket vásároljanak vagy meglévőket adjanak el a szimulált környezetben. Későbbiekben bővülni fog és a Portfóliókezelés funkció a jövőben 
     részletesebb statisztikákat is kínálhat, például a portfólió teljes értékét, a hozamot vagy a kockázati mutatókat, segítve a felhasználókat abban, hogy 
@@ -437,7 +482,7 @@ ahol a piacokat követő befektetők valóban otthon érezhetik magukat. <br><br
     A Friss tőzsdei hírek és Hírlevél feliratkozás funkció a tőzsdei webalkalmazás fontos eleme, amely a felhasználókat naprakész piaci információkkal látja el, 
     és lehetőséget biztosít számukra, hogy rendszeres értesítéseket kapjanak. A "Friss tőzsdei hírek" szekció egy dedikált oldalon jelenik meg, ahol a felhasználók 
     valós idejű híreket olvashatnak a globális piacokról, például egy nagy technológiai vállalat, mint az Apple új termékbejelentéséről, vagy egy gazdasági 
-    esemény, például az amerikai kamatemelés hatásairól. A hírek külső API-k, például a Yahoo Finance vagy a NewsAPI segítségével kerülnek integrálásra, és rövid, 
+    esemény, például az amerikai kamatemelés hatásairól. A hírek külső API-k, például a Finnhub segítségével kerülnek integrálásra, és rövid, 
     könnyen olvasható formátumban jelennek meg, címekkel, rövid összefoglalókkal és a forrás megjelölésével, így a felhasználók gyorsan átláthatják a legfontosabb 
     eseményeket, amelyek befolyásolhatják szimulált kereskedési döntéseiket.
     <br>
@@ -651,7 +696,7 @@ Az alkalmazás képes lesz automatikus értesítéseket küldeni kritikus hibák
     Az adatbiztonság szintén a megbízhatóság alapvető eleme. A webalkalmazás titkosított kapcsolatot (HTTPS) használ, hogy a felhasználók adatai – például a 
     szimulált portfóliók vagy a személyes beállítások – védve legyenek a külső támadásokkal szemben. Emellett a rendszer megfelel a modern adatvédelmi előírásoknak is, 
     például a GDPR-nak, így a felhasználók nyugodtak lehetnek, hogy személyes információik nem kerülnek illetéktelen kezekbe. A külső adatforrások, mint a tőzsdei API-k,
-    szintén megbízható partnerektől származnak (Yahoo Finance, Alpha Vantage), így az árfolyamok és hírek pontosak és naprakészek. A webapp emellett rendszeres 
+    szintén megbízható partnerektől származnak mint például a Finnhub, így az árfolyamok és hírek pontosak és naprakészek. A webapp emellett rendszeres 
     biztonsági mentéseket készít, hogy egy-egy esetleges technikai hiba esetén a felhasználók adatai ne vesszenek el, és a szimulált kereskedési előzményeik bármikor 
     visszaállíthatók legyenek. Összességében a tőzsdei webalkalmazás megbízhatósága a stabil működés, a biztonságos adatkezelés és a pontos információk kombinációján 
     alapul, amely bizalmat ébreszt a felhasználókban. <br>
@@ -706,7 +751,7 @@ különböző nyelvi beállításokhoz, így a felület több nyelven is elérhe
 befektetőknek. Az alkalmazás használatához egy könnyen áttekinthető súgórendszert is fejlesztünk,
 amely lépésről lépésre vezeti be a felhasználót az egyes funkciók használatába. <br><br>
 
-Úgy tervezzük, hogy a legnagyobb API-s támogatónk a <b>https://finnhub.io/ </b>weboldal lesz. 
+Úgy tervezzük, hogy a legnagyobb API-s támogatónk a  <a href="https://finnhub.io" target="_blank" style="color: black; text-decoration: none;"><b>https://finnhub.io</b></a> weboldal lesz. 
 A Finnhub egy olyan pénzügyi adatplatform, amely API-kon keresztül biztosít valós idejű adatokat, 
 többek között részvényekhez, devizapárokhoz és kriptovalutákhoz. A rendszerből lehetőség van 
 különféle piacelemzési információk lekérdezésére is, mint például vállalati hírekre, 
@@ -806,7 +851,7 @@ amely megkönnyítheti az adatmegtekintést internetkapcsolat nélkül is.
     például mobiltelefonokon és asztali gépeken. A vizuális dizájn egységesítésére a Material-UI könyvtárat használjuk, amely modern, letisztult megjelenést 
     biztosít, például gombok, táblázatok és navigációs elemek formájában, így a felhasználók számára intuitív a kezelőfelület.
     <br> <br>
-    A valós idejű tőzsdei adatok integrálásához külső API-kat alkalmazzunk, például az Alpha Vantage és a Yahoo Finance API-kat, amelyek megbízható forrásból 
+    A valós idejű tőzsdei adatok integrálásához külső API-kat alkalmazzunk, például a Finnhub API-t, amely megbízható forrásból 
     biztosítanak árfolyamokat, történelmi adatokat és piaci híreket. Ezek az API-k lehetővé teszik, hogy a felhasználók naprakész információk alapján gyakorolhassák 
     a kereskedést egy szimulációs környezetben, például valós részvényárfolyamok segítségével. Az API-k integrálásához a front-end oldalon a Axios könyvtárat 
     használjuk,amely leegyszerűsíti az adatlekérdezéseket, és biztosítja, hogy az adatok gyorsan és biztonságosan érkezzenek a felhasználói felületre. Az 
@@ -858,10 +903,7 @@ figyelmeztető jelzésekként jelennek meg, kiemelve a várható piaci fordulato
 kockázatokat. A rugalmas keresőfunkció lehetővé teszi, hogy a felhasználó bármikor 
 beírja a kiszemelt részvény nevét vagy tickerkódját, és pillanatok alatt megkapja a 
 releváns adatokat. <br><br>
-<p style="text-align: center;"><b>Prototípus az alkalmazás főoldaláról.</b></p>
-<div style="text-align: center;">
-    <img src="prototipus.jpg" alt="Prototípus" width="600px" height="300px">
-    </div>
+
 
 </p>
 <br><br>
