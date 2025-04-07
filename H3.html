@@ -247,6 +247,12 @@
             <td>Dokumentum átnézése, hibák kijavítása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+        <tr>
+            <td>2025.04.07.</td>
+            <td>1.8</td>
+            <td>A 3.1 (Árfolyamfigyelő) alfejezet bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
     </table> <br>
 
     <hr>
@@ -394,16 +400,36 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
 
 <h4 id="alfejezet3.1"><b>3.1 Árfolyamfigyelő </b></h4>
 <p style="text-align: justify;">
-    Az Árfolyamfigyelő funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi a felhasználók számára, hogy valós idejű piaci adatokat 
-    kövessenek nyomon egy átlátható és egyszerű felületen keresztül. A funkció egy táblázatos nézetet biztosít, amelyben a felhasználók olyan népszerű 
-    részvényeket láthatnak, mint pl.: az Apple Inc. (AAPL), Tesla Inc. (TSLA), Microsoft Corp. (MSFT), Amazon Inc. (AMZN) és Alphabet Inc. (GOOGL). 
-    A táblázat oszlopai a részvény nevét, az aktuális árfolyamot (HUF-ban), a napi árfolyamváltozást százalékban és a kereskedési lehetőségeket mutatják be.
-    <br>
-    A funkció célja, hogy a felhasználók gyorsan áttekinthessék a kiválasztott részvények ingadozásait, és azonnali döntéseket hozhassanak a szimulált kereskedési 
-    környezetben. A táblázat mellett található "Vásárlás" és "Eladás" gombok – zöld és piros színben – lehetővé teszik a felhasználók számára, hogy közvetlenül 
-    a felületről indítsanak tranzakciókat, például vásároljanak Apple részvényeket, ha úgy látják, hogy az árfolyam kedvező. Ez a funkció különösen hasznos azok 
-    számára, akik szeretnék figyelemmel kísérni a piac mozgásait, és gyakorolni a gyors döntéshozatalt egy kockázatmentes környezetben.
+    Az Árfolyamfigyelő funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi 
+    a felhasználók számára, hogy valós idejű piaci adatokat kövessenek nyomon egy átlátható és 
+    egyszerű felületen keresztül. A funkció egy táblázatos nézetben jeleníti meg az adatokat, 
+    ahol a felhasználók olyan népszerű részvények adatait tekinthetik meg, mint az Apple Inc. 
+    (AAPL), Tesla Inc. (TSLA), Microsoft Corp. (MSFT), Amazon Inc. (AMZN) és Alphabet Inc. (GOOGL). 
+    A táblázat oszlopai között szerepel a részvény neve, az aktuális árfolyam (HUF-ban), a napi 
+    árfolyamváltozás százalékban, valamint a kereskedési lehetőségek.
     <br><br>
+    A fejlesztés során a táblázat minden egyes sorához több funkciógomb integrálása szükséges. 
+    Alapvető tranzakciós funkcióként szerepel a Vásárlás és az Eladás gomb, melyek segítségével a 
+    felhasználók azonnal indíthatnak tranzakciókat. 
+    A Vásárlás gomb zöld színnel jelenik meg, és az adott részvény vételét indítja el, míg az 
+    Eladás gomb piros színnel rendelkezik, elősegítve a részvény eladásának gyors kezdeményezését.
+    <br><br>
+    A tranzakciós funkciók mellett a rendszer három további, kiegészítő funkciót is tartalmaz, amelyek javítják a felhasználói élményt és elősegítik a részletes piaci elemzést. Az első kiegészítő funkció a Grafikon megjelenítése, amely minden táblázatsorban egy dedikált gomb formájában jelenik meg. Ennek a gombnak a megnyomása egy modális ablakot indít el, amely részletes árfolyamgrafikonon mutatja be az adott részvény múltbeli és aktuális mozgását, beleértve technikai indikátorok, például mozgóátlagok alkalmazását is.
+    A második kiegészítő funkció az Értesítés beállítása, mely lehetővé teszi, hogy a 
+    felhasználók személyre szabott árfolyamriasztásokat állítsanak be. 
+    Ennek a funkciónak a keretében minden táblázatsorhoz tartozik egy gomb, amely egy 
+    modális űrlapot nyit meg. Az űrlap segítségével a felhasználó megadhatja a minimális 
+    és maximális árküszöböket, melyek elérése esetén a rendszer automatikusan riasztást küld.
+    A további kiegészítő funkció a Részletes adatok megtekintése, amelynek célja, hogy a 
+    felhasználók átfogó piaci információkat érjenek el az adott részvényről. Ennek a 
+    funkciónak a gombja lehetőséget biztosít egy külön oldalra vagy modális ablakra 
+    való navigációra, ahol részletes adatok, mint például a napi kereskedési forgalom, az 
+    éves osztalék, a piaci kapitalizáció és egyéb releváns statisztikák jelennek meg.
+
+    <div style="text-align: center;">
+        <img src="arfolyamfigyelo.jpg" alt="Árfolyamfigyelő rendszer" width="800px" height="400px">
+        </div> <br>
+        
 </p> 
 
 <h4 id="alfejezet3.2"><b>3.2 Porfóliókezelés </b></h4>
