@@ -254,11 +254,17 @@
             <td>Orosz Kristóf</td>
         </tr>
         <tr>
-        <td>2025.04.08.</td>
-        <td>1.9</td>
-        <td>A  3.0 (Főoldal funkciói), a 3.2 (Portfoliókezelő) és 3.3 (Mesterséges Intelligencia) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
-        <td>Orosz Kristóf</td>
-    </tr>
+            <td>2025.04.08.</td>
+            <td>1.9</td>
+            <td>A  3.0 (Főoldal funkciói), a 3.2 (Portfoliókezelő) és 3.3 (Mesterséges Intelligencia) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
+        <tr>
+            <td>2025.04.08.</td>
+            <td>2.0</td>
+            <td>A 3.fejezet javitása(3.4, 3.5, 3.6, 3.8)</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
     </table> <br>
 
     <hr>
@@ -629,18 +635,45 @@ az Általános Szerződési Feltételek, az Adatvédelmi tájékoztató, a „R�
 
 <h4 id="alfejezet3.4"><b>3.4 Fiókkezelés</b></h4>
 <p style="text-align: justify;">
-    A Fiókkezelés funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi a felhasználók számára, hogy személyes adataikat és 
-    fiókbeállításaikat kezeljék. A felület egy egyszerű, átlátható ablakot jelenít meg, amely a felhasználó alapvető adatait – például a nevét  és e-mail-címét 
-    – mutatja, így a felhasználók gyorsan ellenőrizhetik, hogy helyesek-e az adataik. Ez a szekció a fiók alapvető információinak áttekintésére szolgál, 
-    és biztosítja, hogy a felhasználók mindig naprakész adatokat lássanak, például ha egy e-mail-cím változott.
-    <br>
-    A "Rólam" ablak alatt két gomb található: a "Fiók törlése" és a "Jelszó megváltoztatása", amelyek alapvető fiókkezelési műveleteket tesznek lehetővé. 
-    A "Jelszó megváltoztatása" gomb segítségével a felhasználók frissíthetik bejelentkezési jelszavukat, például ha biztonsági okokból erősebb jelszót szeretnének 
-    választani, míg a "Fiók törlése" opció lehetővé teszi a fiók végleges megszüntetését, például ha a felhasználó már nem kívánja használni az alkalmazást. 
-    Ez a funkció biztosítja, hogy a felhasználók teljes kontrollt gyakorolhassanak fiókjuk felett, miközben a .NET API-val készült back-end garantálja az adatok 
-    biztonságos tárolását és kezelését.
+    A Fiókkezelés funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi a felhasználók számára, hogy személyes adataikat és fiókbeállításaikat 
+    kezeljék. A felület egy egyszerű, átlátható ablakot jelenít meg, amely a felhasználó alapvető adatait – például a nevét és e-mail-címét – mutatja, így a 
+    felhasználók gyorsan ellenőrizhetik, hogy helyesek-e az adataik. Ez a szekció a fiók alapvető információinak áttekintésére szolgál, és biztosítja, hogy a 
+    felhasználók mindig naprakész adatokat lássanak, például ha egy e-mail-cím változott. A "Rólam" ablak alatt két gomb található: a "Fiók törlése" és a "Jelszó 
+    megváltoztatása", amelyek alapvető fiókkezelési műveleteket tesznek lehetővé. A "Jelszó megváltoztatása" gomb segítségével a felhasználók frissíthetik 
+    bejelentkezési jelszavukat, például ha biztonsági okokból erősebb jelszót szeretnének választani, míg a "Fiók törlése" opció lehetővé teszi a fiók végleges 
+    megszüntetését, például ha a felhasználó már nem kívánja használni az alkalmazást. Ez a funkció biztosítja, hogy a felhasználók teljes kontrollt 
+    gyakorolhassanak fiókjuk felett, miközben a .NET API-val készül back-end garantálja az adatok biztonságos tárolását és kezelését.
     <br><br>
+    A "Rólam" szekcióban a felhasználók nem csupán az alapvető adataikat tekinthetik meg, hanem a jövőbeni fejlesztések során lehetőségük lesz további 
+    információk – például telefonszám vagy preferált nyelv – hozzáadására és szerkesztésére is. Ez különösen hasznos lehet azok számára, akik többnyelvű támogatást 
+    szeretnének kihasználni, például ha magyar helyett angol nyelven használnák az alkalmazást, vagy ha egy másik e-mail-címet szeretnének megadni a 
+    hírlevél-értesítésekhez. A szerkesztési folyamat egyszerű és intuitív: a felhasználók egy "Szerkesztés" gombra kattintva módosíthatják adataikat, majd a 
+    változtatásokat a rendszer azonnal menti a Microsoft SQL Server adatbázisban, amelyet a .NET API kezel, biztosítva az adatok konzisztenciáját és biztonságát.
+    <br><br>
+    A biztonság kiemelt szerepet játszik a Fiókkezelés funkcióban, hiszen a felhasználók személyes adatai érzékeny információkat tartalmaznak. A .NET API a JWT 
+    (JSON Web Token) autentikációs rendszert használja, amely garantálja, hogy csak a jogosult felhasználók férjenek hozzá a fiókjukhoz, például a 
+    "Jelszó megváltoztatása" művelet során. A jelszófrissítési folyamat során a rendszer szigorú jelszókövetelményeket érvényesít, például minimum 8 karaktert, 
+    kis- és nagybetűk, valamint számok használatát, hogy a felhasználók fiókja védve legyen a jogosulatlan hozzáférésekkel szemben. Emellett a "Fiók törlése" 
+    opció használata előtt a rendszer egy megerősítő ablakot jelenít meg, amely figyelmezteti a felhasználót, hogy a művelet végleges, és minden szimulált 
+    portfólió, tranzakciós előzmény és egyéb adat törlésre kerül. Ez a lépés biztosítja, hogy a felhasználók nehogy véletlenül töröljék fiókjukat, például egy 
+    elhamarkodott döntés miatt.
+    <br><br>
+    A Fiókkezelés funkció a felhasználói élmény javítását is szem előtt tartja. A felület reszponzív dizájnnal készül, így a fiókkezelési ablak asztali gépeken, 
+    tableteken és mobiltelefonokon egyaránt jól működik, például ha a felhasználó útközben szeretné ellenőrizni adatait egy okostelefonon keresztül. A rendszer 
+    emellett naplózza a fiókhoz kapcsolódó fontos műveleteket – például a jelszóváltoztatás időpontját vagy a fiók törlésének kérését –, amelyeket a felhasználók 
+    egy külön "Tevékenységnapló" szekcióban tekinthetnek meg. Ez a napló átláthatóságot biztosít, és segít a felhasználóknak nyomon követni, hogy milyen 
+    változtatásokat hajtottak végre, például ha gyanús tevékenységet észlelnek, és ellenőrizni szeretnék, hogy történt-e illetéktelen bejelentkezés.
+    <br><br>
+    A jövőben a Fiókkezelés funkció további bővítésekkel gazdagodhat, például a kétfaktoros hitelesítés (2FA) bevezetésével, amely extra biztonsági réteget ad a 
+    fiókhoz, például egy SMS-ben vagy e-mailben küldött kód megadásával a bejelentkezés során. Emellett a felhasználók számára lehetőség nyílhat a szimulált 
+    portfóliókhoz kapcsolódó értesítések testreszabására közvetlenül a Fiókkezelés felületéről, például annak beállítására, hogy milyen típusú piaci eseményekről 
+    kapjanak e-mailes vagy push-értesítéseket. A rendszer integrálhat közösségi média alapú bejelentkezési lehetőségeket is, például Google- vagy Facebook-fiókkal 
+    való belépést, hogy a felhasználók még gyorsabban hozzáférjenek a platformhoz. Ezek a fejlesztések tovább növelik a Fiókkezelés funkció rugalmasságát és 
+    kényelmét, miközben a felhasználók számára teljes kontrollt és biztonságot nyújtanak a tőzsdei webalkalmazás használata során.
 </p> 
+    <div style="text-align: center;">
+        <img src="fiokkezeles.png" alt="Fiók kezelés" width="1200px" height="600px">
+    </div>
 
 <h4 id="alfejezet3.5"><b>3.5 Bejelentkezés és Regisztráció</b></h4>
 <p style="text-align: justify;">
@@ -648,41 +681,142 @@ az Általános Szerződési Feltételek, az Adatvédelmi tájékoztató, a „R�
     rendszerhez, és új fiókot hozhassanak létre. A bejelentkezési ablak egy egyszerű felületet kínál, ahol a felhasználók az e-mail-címüket és jelszavukat 
     adhatják meg, majd a "Belépés" gombra kattintva férhetnek hozzá fiókjukhoz. Az ablak alján található "Nincs fiókja? Ide kattintva regisztrálhat!" link, 
     valamint az "Elfelejtett jelszó?" opció további lehetőségeket biztosít, például új fiók létrehozását vagy a jelszó visszaállítását, ha a felhasználó 
-    elfelejtette azt.
-    <br>
-    A regisztrációs ablak is hasonlóan letisztult dizájnnal rendelkezik, és a szükséges adatokat – név, e-mail-cím, jelszó és jelszó megerősítése – kéri be a 
-    felhasználótól. A "Regisztráció" gombra kattintva a felhasználók létrehozhatják fiókjukat, amely lehetővé teszi számukra a szimulált kereskedési környezet 
-    és egyéb funkciók használatát. A .NET API-val készült back-end biztosítja az adatok titkosítását és biztonságos tárolását, így a felhasználók adatai 
-    védettek maradnak.
+    elfelejtette azt. A regisztrációs ablak is hasonlóan letisztult dizájnnal rendelkezik, és a szükséges adatokat – név, e-mail-cím, jelszó és jelszó 
+    megerősítése – kéri be a felhasználótól. A "Regisztráció" gombra kattintva a felhasználók létrehozhatják fiókjukat, amely lehetővé teszi számukra a 
+    szimulált kereskedési környezet és egyéb funkciók használatát. A .NET API-val készült back-end biztosítja az adatok titkosítását és biztonságos tárolását, 
+    így a felhasználók adatai védettek maradnak.
     <br><br>
+    A bejelentkezési folyamat során a rendszer valós idejű ellenőrzést végez, például figyelmezteti a felhasználót, ha helytelen e-mail-címet vagy jelszót adott 
+    meg, például egy "Hibás e-mail vagy jelszó" üzenettel, amely segít a hibák gyors javításában. Az "Elfelejtett jelszó?" opcióra kattintva a felhasználók egy 
+    e-mailben kapnak egy linket, amelyen keresztül új jelszót állíthatnak be. Ez a folyamat a .NET API-val készül back-end segítségével történik, amely egy 
+    ideiglenes tokent generál a jelszó-visszaállítási kéréshez, biztosítva, hogy csak a fiók tulajdonosa férjen hozzá a művelethez. A jelszó-visszaállítási 
+    e-mailben a felhasználók egy biztonságos linket kapnak, amely 24 órán belül lejár, így minimalizálva a jogosulatlan hozzáférés kockázatát.
+    <br><br>
+    A regisztrációs folyamat során a rendszer szintén szigorú ellenőrzéseket végez a felhasználói adatok validálására. Például a jelszónak meg kell felelnie 
+    bizonyos követelményeknek, például minimum 8 karakterből kell állnia, és tartalmaznia kell kis- és nagybetűket, valamint számokat, hogy a fiók védve legyen 
+    a gyenge jelszavak miatti támadásokkal szemben. Az e-mail-cím egyediségét a rendszer automatikusan ellenőrzi a Microsoft SQL Server adatbázisban, és ha a 
+    megadott e-mail már regisztrálva van, a felhasználó egy figyelmeztető üzenetet kap, például "Ez az e-mail-cím már használatban van". A jelszó megerősítése 
+    mező biztosítja, hogy a felhasználó ne gépelje el véletlenül a jelszót, és a két jelszó egyezőségét a rendszer valós időben ellenőrzi, például a "A jelszavak 
+    nem egyeznek" üzenettel, ha eltérés van. Ez a hibakezelési mechanizmus segít a felhasználóknak a regisztráció zökkenőmentes befejezésében, még akkor is, 
+    ha először használják az alkalmazást.
+    <br><br>
+    A Bejelentkezés és Regisztráció funkció a felhasználói élményt is szem előtt tartja. Mindkét ablak reszponzív dizájnnal készül, így asztali gépeken, 
+    tableteken és mobiltelefonokon egyaránt jól működik, például ha a felhasználó egy okostelefonon keresztül szeretne bejelentkezni útközben. A felületen a 
+    "Bezárás" gomb (X) lehetővé teszi, hogy a felhasználók könnyen kilépjenek az ablakból, ha meggondolják magukat, például ha mégsem szeretnének regisztrálni. 
+    A rendszer emellett naplózza a bejelentkezési kísérleteket, és ha túl sok sikertelen próbálkozás történik – például háromszor egymás után helytelen jelszót 
+    adnak meg –, a fiók ideiglenesen zárolásra kerül, és a felhasználó egy e-mailben kap értesítést a gyanús tevékenységről. Ez a biztonsági intézkedés védi a 
+    fiókot a brute force támadásokkal szemben, és növeli a felhasználók bizalmát a platform iránt.
+    <br><br>
+    A jövőben a Bejelentkezés és Regisztráció funkció további fejlesztésekkel bővülhet, például a kétfaktoros hitelesítés (2FA) bevezetésével, amely extra 
+    biztonsági réteget ad a bejelentkezéshez, például egy SMS-ben vagy e-mailben küldött kód megadásával. Emellett a rendszer integrálhat közösségi média alapú 
+    bejelentkezési lehetőségeket, például Google- vagy Facebook-fiókkal való belépést, hogy a felhasználók még gyorsabban hozzáférjenek a platformhoz anélkül, 
+    hogy külön jelszót kellene megjegyezniük. A regisztráció során a felhasználók számára lehetőség nyílhat a preferált nyelv kiválasztására már a fiók 
+    létrehozásakor, például magyar vagy angol, így az alkalmazás azonnal az általuk választott nyelven jelenik meg. Ezek a fejlesztések tovább növelik a 
+    Bejelentkezés és Regisztráció funkció kényelmét és biztonságát, miközben a felhasználók számára zökkenőmentes belépést biztosítanak a tőzsdei webalkalmazás 
+    világába.
 </p> 
+    <div style="text-align: center;">
+        <img src="bejelentkezes_regisztracio.png" alt="Bejelentkezés és regisztráció" width="1200px" height="600px">
+    </div>
 
 <h4 id="alfejezet3.6"><b>3.6 Friss tőzsdei hírek és Hírlevél feliratkozás</b></h4>
 <p style="text-align: justify;">
     A Friss tőzsdei hírek és Hírlevél feliratkozás funkció a tőzsdei webalkalmazás fontos eleme, amely a felhasználókat naprakész piaci információkkal látja el, 
     és lehetőséget biztosít számukra, hogy rendszeres értesítéseket kapjanak. A "Friss tőzsdei hírek" szekció egy dedikált oldalon jelenik meg, ahol a felhasználók 
     valós idejű híreket olvashatnak a globális piacokról, például egy nagy technológiai vállalat, mint az Apple új termékbejelentéséről, vagy egy gazdasági 
-    esemény, például az amerikai kamatemelés hatásairól. A hírek külső API-k, például a Finnhub segítségével kerülnek integrálásra, és rövid, 
-    könnyen olvasható formátumban jelennek meg, címekkel, rövid összefoglalókkal és a forrás megjelölésével, így a felhasználók gyorsan átláthatják a legfontosabb 
-    eseményeket, amelyek befolyásolhatják szimulált kereskedési döntéseiket.
-    <br>
-    A Hírlevél feliratkozás funkció lehetővé teszi a felhasználók számára, hogy e-mailben kapjanak napi vagy heti összefoglalókat a legjelentősebb piaci hírekről, 
-    valamint a szimulált portfóliójuk teljesítményéről. A feliratkozás egy egyszerű űrlapon keresztül történik, ahol a felhasználók megadják e-mail-címüket, és 
-    kiválaszthatják, milyen típusú értesítéseket szeretnének kapni, például csak a technológiai szektorra vonatkozó híreket. A hírlevelek személyre szabottak, 
-    és tartalmazhatnak tippeket a kereskedési stratégiák javítására, például egy javaslatot a diverzifikáció növelésére. A .NET API-val készült back-end 
-    biztosítja a feliratkozási adatok biztonságos kezelését, és a felhasználók bármikor leiratkozhatnak a hírlevélről egy link segítségével. Ez a funkció 
-    különösen hasznos azok számára, akik szeretnék folyamatosan követni a piaci fejleményeket, és tanulni a hírek hatásairól anélkül, hogy állandóan az 
-    alkalmazásban kellene böngészniük.
+    esemény, például az amerikai kamatemelés hatásairól. A hírek külső API-k, például a Finnhub segítségével kerülnek integrálásra, és rövid, könnyen olvasható 
+    formátumban jelennek meg, címekkel, rövid összefoglalókkal és a forrás megjelölésével, így a felhasználók gyorsan átláthatják a legfontosabb eseményeket, 
+    amelyek befolyásolhatják szimulált kereskedési döntéseiket. A Hírlevél feliratkozás funkció lehetővé teszi a felhasználók számára, hogy e-mailben kapjanak 
+    napi vagy heti összefoglalókat a legjelentősebb piaci hírekről, valamint a szimulált portfóliójuk teljesítményéről. A feliratkozás egy egyszerű űrlapon 
+    keresztül történik, ahol a felhasználók megadják e-mail-címüket, és kiválaszthatják, milyen típusú értesítéseket szeretnének kapni, például csak a 
+    technológiai szektorra vonatkozó híreket. A hírlevelek személyre szabottak, és tartalmazhatnak tippeket a kereskedési stratégiák javítására, például egy 
+    javaslatot a diverzifikáció növelésére. A .NET API-val készült back-end biztosítja a feliratkozási adatok biztonságos kezelését, és a felhasználók bármikor 
+    leiratkozhatnak a hírlevélről egy link segítségével. Ez a funkció különösen hasznos azok számára, akik szeretnék folyamatosan követni a piaci fejleményeket, 
+    és tanulni a hírek hatásairól anélkül, hogy állandóan az alkalmazásban kellene böngészniük.
     <br><br>
-
-    <h4 id="alfejezet3.7"><b>3.7 Súgó - Kristóf</b></h4> <br><br><br>
-
-    <h4 id="alfejezet3.8"><b>3.8 Közösségi Fórum - Ádám</b></h4> <br><br>
-
-
+    A hírek listája időrendi sorrendben jelenik meg, de a felhasználók szűrhetik a tartalmat különböző kategóriák szerint, például szektor (technológia, pénzügy, 
+    energia) vagy földrajzi régió (USA, Európa, Ázsia) alapján, hogy csak a számukra releváns híreket lássák. Például egy felhasználó, aki főként technológiai 
+    részvényekkel kereskedik, beállíthatja, hogy csak az olyan híreket jelenítse meg a rendszer, amelyek a technológiai szektort érintik, például egy új iPhone 
+    piacra dobását vagy egy rivális cég, mint a Samsung új fejlesztéseit. A hírek mellett a rendszer egy "Részletek" gombra kattintva további információkat is 
+    biztosít, például a hír teljes szövegét vagy a kapcsolódó részvények árfolyamváltozását, így a felhasználók mélyebben is elemezhetik az eseményeket, és 
+    megalapozott döntéseket hozhatnak a szimulált kereskedési környezetben.
+    <br><br>
+    A Hírlevél feliratkozás funkció a felhasználói igényekhez igazodva rendkívül testreszabható. A feliratkozási űrlapon a felhasználók nemcsak az e-mail-címüket 
+    adhatják meg, hanem részletes beállításokat is végezhetnek, például kiválaszthatják, hogy milyen gyakran szeretnének hírlevelet kapni (napi, heti vagy havi), 
+    és milyen típusú tartalmat preferálnak, például csak a szimulált portfóliójukkal kapcsolatos híreket vagy általános piaci összefoglalókat. A hírlevelek 
+    tartalma dinamikusan generálódik a .NET API segítségével, amely a felhasználó korábbi tevékenységei – például a gyakran vásárolt részvények vagy a szimulált 
+    tranzakciók – alapján állít össze releváns tartalmat. Például, ha egy felhasználó főként technológiai részvényekkel kereskedik, a hírlevél kiemelheti a 
+    legfrissebb technológiai híreket, például egy új mesterséges intelligencia fejlesztést az Alphabet (Google) részéről, és javaslatot tehet a portfólió 
+    diverzifikálására egy másik szektor, például az egészségügy területén.
+    <br><br>
+    A felhasználói élmény javítása érdekében a Friss tőzsdei hírek szekció reszponzív dizájnnal készül, így a hírek asztali gépeken, tableteken és mobiltelefonokon 
+    egyaránt jól olvashatók, például ha a felhasználó útközben, egy okostelefonon keresztül szeretné áttekinteni a legfrissebb fejleményeket. A hírek betöltése 
+    gyors, a SignalR technológia miatt, amely valós idejű frissítéseket biztosít anélkül, hogy az oldalt újra kellene tölteni, így a felhasználók mindig a 
+    legfrissebb információkhoz férnek hozzá, például egy váratlan piaci esemény, mint egy tőzsdei zuhanás esetén. A Hírlevél feliratkozás során a rendszer egy 
+    megerősítő e-mailt küld a felhasználónak, amelyben egy linkre kattintva aktiválhatják a feliratkozást, így elkerülhető, hogy valaki más e-mail-címével 
+    visszaéljenek. A hírlevelek dizájnja szintén a webalkalmazás stílusához igazodik.
 
 </p>  
+    <div style="text-align: center;">
+        <img src="hirek_hirlevel.png" alt="Friss tőzsdei hírek és Hírlevél feliratkozás" width="1200px" height="600px">
+    </div>
+<h4 id="alfejezet3.7"><b>3.7 Súgó - Kristóf</b></h4> <br><br><br>
 
+<h4 id="alfejezet3.8"><b>3.8 Közösségi Fórum</b></h4>
+<p style="text-align: justify;">
+    A Közösségi Fórum a tőzsdei webalkalmazás egyik kiemelkedő funkciója, amely lehetőséget biztosít a felhasználóknak arra, hogy interaktív közösségi térben 
+    osszák meg tapasztalataikat, stratégiáikat és kérdéseiket a tőzsdei kereskedés világával kapcsolatban. A platform részeként a fórum célja, hogy támogassa a 
+    felhasználókat – különösen a kezdő befektetőket és pénzügyi érdeklődésű egyéneket – a tanulási folyamatban, miközben egy támogató közösséget épít, ahol a 
+    tagok egymástól tanulhatnak. A fórum egy dedikált oldalon érhető el a navigációs menüből, és a platform általános dizájnjához igazodva.
+    <br><br>
+    A Közösségi Fórum felépítése kategóriákra és témákra oszlik, hogy a felhasználók könnyen megtalálják a számukra releváns tartalmat. A főbb kategóriák 
+    között szerepelhet például a "Kezdőknek", ahol az alapvető tőzsdei fogalmakról – például a hozam kiszámításáról vagy a kockázatkezelésről – lehet beszélgetni, 
+    valamint a "Stratégiák", ahol a tapasztaltabb felhasználók megoszthatják szimulált kereskedési taktikáikat, például egy sikeres technológiai részvényekkel 
+    kapcsolatos stratégiát. További kategóriák lehetnek a "Részvényelemzések", ahol a felhasználók konkrét részvényekről – például az Apple (AAPL) vagy a Tesla 
+    (TSLA) teljesítményéről – vitatkozhatnak, és a "Piaci hírek", ahol a legfrissebb gazdasági események hatásait tárgyalhatják meg, például egy kamatemelés 
+    piaci következményeit. Minden kategórián belül a felhasználók új témát indíthatnak, például egy "Melyik technológiai részvényt érdemes most venni?" című 
+    bejegyzést, amelyre mások válaszolhatnak, így egy aktív párbeszéd alakulhat ki.
+    <br><br>
+    A fórum bejegyzései időrendi sorrendben jelennek meg, de a felhasználók szűrhetik a tartalmat különböző szempontok szerint, például a legnépszerűbb vagy a 
+    legfrissebb hozzászólások alapján. Minden bejegyzés mellett látható a szerző neve, a közzététel időpontja, valamint a hozzászólások száma, így a felhasználók 
+    gyorsan átláthatják, mely témák a legaktívabbak. A bejegyzésekhez a felhasználók szöveges válaszokat írhatnak, és a jövőbeni fejlesztések során lehetőség 
+    nyílhat képek vagy grafikonok csatolására is, például egy szimulált portfólió teljesítményét bemutató diagram megosztására. A hozzászólások alatt egy 
+    "Tetszik" gomb található, amellyel a felhasználók kifejezhetik, ha egy adott hozzászólás hasznosnak bizonyult számukra, például egy jól megfogalmazott 
+    stratégiai tanács esetén. Ez a funkció segít kiemelni a minőségi tartalmat, és ösztönzi a közösséget arra, hogy értékes hozzászólásokat tegyen.
+    <br><br>
+    A Közösségi Fórum moderált környezetet biztosít, hogy a közösségi tér biztonságos és konstruktív maradjon. A rendszer automatikus szűrőkkel rendelkezik, 
+    amelyek kiszűrik a nem megfelelő tartalmakat, például a sértő nyelvezetet vagy a spam jellegű bejegyzéseket, és a felhasználók jelenthetik a problémás 
+    hozzászólásokat egy "Jelentés" gomb segítségével. A moderátorok – akik lehetnek a platform adminisztrátorai vagy kijelölt közösségi tagok – áttekintik a 
+    jelentett tartalmakat, és szükség esetén eltávolítják azokat, például ha egy felhasználó irreleváns hirdetéseket posztol. A moderálási folyamat átlátható, 
+    és a felhasználók értesítést kapnak, ha egy bejegyzésük törlésre került, így tisztában lehetnek a közösségi irányelvek megsértésének következményeivel. 
+    Ez a megközelítés biztosítja, hogy a fórum egy támogató és tanulást elősegítő tér maradjon, ahol a felhasználók szabadon kifejezhetik véleményüket anélkül, 
+    hogy a közösség kárára válna.
+    <br><br>
+    A felhasználói élmény javítása érdekében a Közösségi Fórum reszponzív dizájnnal készült, így a fórum asztali gépeken, tableteken és mobiltelefonokon egyaránt 
+    jól működik, például ha a felhasználó egy okostelefonon keresztül szeretne hozzászólni egy témához útközben. A .NET API-val és SignalR technológiával készült 
+    back-end valós idejű frissítéseket biztosít, így a felhasználók azonnal látják az új hozzászólásokat anélkül, hogy az oldalt újra kellene tölteniük, például 
+    egy aktív vita során. A fórum emellett integrálódik a platform egyéb funkcióival, például a szimulált portfóliókezeléssel: a felhasználók közvetlenül a f
+    órumon keresztül megoszthatják egy adott tranzakciójuk részleteit, például egy sikeres Apple részvényvásárlást, amely inspirálhat másokat, vagy kérhetnek 
+    tanácsot egy adott részvény eladásával kapcsolatban.
+    <br><br>
+    A Közösségi Fórum a közösségi interakciók mellett tanulási lehetőségeket is kínál. A felhasználók számára egy "Kiemelt tartalmak" szekció állhat rendelkezésre, 
+    ahol a moderátorok által kiválasztott, különösen hasznos bejegyzések – például egy részletes útmutató a technológiai részvények elemzéséről – jelennek meg, 
+    így a kezdők könnyen megtalálhatják a számukra értékes információkat. A fórum emellett ösztönzi a közösségi aktivitást egy pontozási rendszerrel, ahol a 
+    felhasználók pontokat szerezhetnek a hozzászólásaikért és a "Tetszik" reakciókért, amelyeket később például egy ranglista formájában jeleníthet meg a rendszer, 
+    motiválva a tagokat az aktív részvételre. Ez a gamifikációs elem különösen vonzó lehet a fiatalabb generációk számára, akik szeretik az interaktív, 
+    közösségi alapú platformokat.
+    <br><br>
+    A jövőben a Közösségi Fórum további fejlesztésekkel bővülhet, például egy privát üzenetküldési funkcióval, amely lehetővé teszi a felhasználók számára, 
+    hogy közvetlenül egymással kommunikáljanak, például ha egy stratégiát részletesebben szeretnének megbeszélni. Emellett a fórum integrálhat egy mesterséges 
+    intelligencia alapú ajánlórendszert, amely a felhasználó fórumon belüli tevékenységei – például a gyakran olvasott témák – alapján javasol új bejegyzéseket, 
+    például egy technológiai részvényekkel kapcsolatos vitát, ha a felhasználó korábban ilyen témákban volt aktív. A fórum emellett támogathat élő csevegési 
+    eseményeket, például egy "Kérdezz a szakértőtől" alkalmat, ahol a felhasználók valós időben tehetnek fel kérdéseket egy tőzsdei szakértőnek, például a piaci 
+    trendekről vagy egy adott részvény jövőbeli kilátásairól. Ezek a fejlesztések tovább növelik a Közösségi Fórum interaktivitását és hasznosságát, miközben a 
+    felhasználók számára egy dinamikus, tanulást és közösségi élményt ötvöző teret biztosítanak a tőzsdei webalkalmazáson belül.
+</p>
+<div style="text-align: center;">
+    <img src="forum.png" alt="Közösségi Fórum" width="1200px" height="600px">
+</div>
 
 <h4 style="text-align: justify;" id="alfejezet4"><b>4. Használhatóság</b></h4>  <br>
 <p style="text-align: center;">A fejlesztendő tőzsdei alkalmazás sikerének egyik kulcsa a magas szintű használhatóság lesz. 
