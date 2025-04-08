@@ -256,13 +256,13 @@
         <tr>
             <td>2025.04.08.</td>
             <td>1.9</td>
-            <td>A  3.0 (Főoldal funkciói), a 3.2 (Portfoliókezelő) és 3.3 (Mesterséges Intelligencia) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
+            <td>A  3.0 (Főoldal funkciói), a 3.2 (Portfoliókezelő) 3.3 (Mesterséges Intelligencia) és a 3.8 (Súgó) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
             <td>Orosz Kristóf</td>
         </tr>
         <tr>
             <td>2025.04.08.</td>
             <td>2.0</td>
-            <td> A 3.4. (Fiókkezelés), 3.5. (Bejeletkezés és Regisztráció), 3.6. (Friss tőzsdei hírek és Hírlevél feliratkozás) és 3.8 (Közösségi Fórum) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
+            <td> A 3.4. (Fiókkezelés), 3.5. (Bejeletkezés és Regisztráció), 3.6. (Friss tőzsdei hírek és Hírlevél feliratkozás), 3.8 (Közösségi Fórum) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
             <td>Radvánszky Ádám János</td>
         </tr>
     </table> <br>
@@ -762,7 +762,59 @@ az Általános Szerződési Feltételek, az Adatvédelmi tájékoztató, a „R�
         <img src="hirek.jpg" alt="Friss tőzsdei hírek és Hírlevél feliratkozás" width="800px" height="400px">
     </div>
 
-    <h4 id="alfejezet3.7"><b>3.7 Súgó - Kristóf</b></h4> <br><br><br>
+    <h4 id="alfejezet3.7"><b>3.7 Súgó </b></h4> 
+
+    Az alkalmazás súgó modulja az egyik kulcsfontosságú támogatási rendszerünk, amely 
+    biztosítja, hogy a felhasználók gyorsan és egyszerűen megtalálják a számukra szükséges 
+    információkat bármilyen használati vagy technikai kérdés esetén. Ennek a modulnak a célja, 
+    hogy átfogó, könnyen kereshető és mindig naprakész tudásbázist biztosítson, elősegítve a 
+    felhasználói elégedettséget és a zökkenőmentes rendszerhasználatot. <br><br>
+
+    Elsőként, a Gyakran Ismételt Kérdések (GYIK) és Dokumentáció szekció olyan részletes 
+    és folyamatosan frissített tudásbázist képez, amely tartalmazza a leggyakoribb kérdésekre 
+    adott részletes válaszokat, megoldási javaslatokat, tippeket és trükköket. A fejlesztőknek 
+    ezen komponens esetében biztosítaniuk kell a dinamikus tartalomfrissítést, lehetővé téve az 
+    adatbázis karbantartását egy adminisztrációs felületen keresztül, valamint a témák 
+    kategorizálását és keresési funkciók integrálását. A front-end rétegnek reszponzív 
+    felületet kell biztosítania, ahol a felhasználók kulcsszavak vagy témakörök alapján 
+    hatékonyan tudják keresni a releváns tartalmakat, míg a back-end a tartalom kezelését, 
+    indexelését és cache-elését végzi, esetleg REST API-k segítségével. 
+
+A további komponens, a Részletes Felhasználói Kézikönyv, egy átfogó 
+online dokumentációs anyag, amely a rendszer összes funkcióját ismerteti 
+példákkal, képernyőképekkel és illusztrációkkal. A fejlesztők számára ebben a 
+modulban szükséges egy tartalomkezelő rendszer integrálása, amely lehetővé 
+teszi a dokumentáció egyszerű frissítését és karbantartását. A rendszernek támogatnia 
+kell az offline elérhetőséget és a dinamikus tartalom betöltését is, valamint keresési 
+és navigációs funkciókat kell biztosítania, hogy a felhasználók bármikor könnyen 
+megtalálják az őket érdeklő részeket. <br><br>
+
+A hibabejelentési és Visszajelző Modul célja, hogy a felhasználók számára intuitív 
+felületet kínáljon hibák, problémák vagy fejlesztési javaslatok benyújtására. Ennek 
+fejlesztése során a rendszernek képesnek kell lennie a beérkező hibabejelentések 
+azonnali rögzítésére, kategorizálására és prioritás szerinti rangsorolására, 
+valamint a visszajelzések naplózására. A back-end oldalon REST API-k biztosítják 
+a hibabejelentések adatbázisba történő mentését, a front-end pedig egy könnyen 
+használható formanyomtatványt nyújt, ahol az ellenőrzés és érvényesítés során a 
+beviteli adatok validálása történik. A modulnak lehetővé kell tennie a felhasználók 
+számára, hogy megkapják a bejelentett hibák státuszát, illetve visszajelzést kapjanak a 
+benyújtott adatok feldolgozásáról. <br><br>
+
+Végül, a további funkció a Live Chat és Ügyfélszolgálati Asszisztens, 
+amely valós idejű kommunikációt biztosít a felhasználók és az ügyfélszolgálati szakértők között. 
+A fejlesztőknek ki kell alakítaniuk egy olyan chat rendszert, amely támogatja az aszinkron 
+kommunikációt és biztosítja a felhasználók számára az élő támogatást. Ehhez célszerű olyan 
+technológiákat alkalmazni, mint a WebSocket vagy más real-time kommunikációs protokoll, 
+valamint integrálni egy ügyfélszolgálati back-end rendszert, amely kezelni tudja a bejövő 
+chat kéréseket, hozzárendeli a felhasználókat egy ügyfélszolgálati munkatárshoz, és lehetőséget 
+ad az előzmények megtekintésére. A rendszernek emellett úgy kell kialakulnia, hogy a felhasználó 
+számára egyértelműen láthatóvá váljon a válaszidő, és adott esetben automatikus üzeneteket is 
+képes legyen küldeni, például vészhelyzetben vagy hétvégén. <br><br>
+
+<div style="text-align: center;">
+    <img src="sugo.jpg" alt="Friss tőzsdei hírek és Hírlevél feliratkozás" width="800px" height="400px">
+</div>
+
 
 <h4 id="alfejezet3.8"><b>3.8 Közösségi Fórum</b></h4>
 <p style="text-align: justify;">
