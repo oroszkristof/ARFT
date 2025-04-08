@@ -253,6 +253,12 @@
             <td>A 3.1 (Árfolyamfigyelő) alfejezet bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
             <td>Orosz Kristóf</td>
         </tr>
+        <tr>
+        <td>2025.04.08.</td>
+        <td>1.9</td>
+        <td>A 3.2 (Portfoliókezelő) és 3.3 (Mesterséges Intelligencia) alfejezeteinek bővítése funkciókkal, és a hozzá tartozó Use Case diagramm elkészítése.</td>
+        <td>Orosz Kristóf</td>
+    </tr>
     </table> <br>
 
     <hr>
@@ -398,6 +404,8 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
     <br><br>
 </p>  
 
+<h4 id="alfejezet3.0"><b>3.0 Főoldal funkciói - Kristóf (D) , Ádám (SZ)</b></h4>
+
 <h4 id="alfejezet3.1"><b>3.1 Árfolyamfigyelő </b></h4>
 <p style="text-align: justify;">
     Az Árfolyamfigyelő funkció a tőzsdei webalkalmazás egyik alapvető 
@@ -526,7 +534,7 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
      a portfóliót a kockázatok csökkentése érdekében. <br><br>
 
      <div style="text-align: center;">
-        <img src="portfoliokezelo.jpg" alt="Árfolyamfigyelő rendszer" width="800px" height="400px">
+        <img src="portfoliokezelo.jpg" alt="Portfolió kezelő rendszer" width="800px" height="400px">
         </div> <br>
 
 
@@ -534,19 +542,60 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
 
 <h4 id="alfejezet3.3"><b>3.3 Mesterséges inteligencia alapú ajánlások</b></h4>
 <p style="text-align: justify;">
-    A Mesterséges intelligencia alapú ajánlások funkció a tőzsdei webalkalmazás egyik innovatív eleme, amely személyre szabott befektetési javaslatokat kínál a 
-    felhasználóknak, hogy hatékonyabb döntéseket hozhassanak a szimulált kereskedési környezetben. A rendszer egy gépi tanulási algoritmusra épül, amely a 
-    .NET API-n keresztül elemzi a felhasználók korábbi szimulált tranzakcióit, preferenciáit és a piaci trendeket, majd ezek alapján ajánl részvényeket vagy 
-    stratégiákat. Például, ha egy felhasználó gyakran vásárol technológiai szektorban működő cégeknél, mint az Apple vagy a Microsoft, az algoritmus olyan 
-    hasonló részvényeket javasolhat, mint az Nvidia vagy az Intel, figyelembe véve az aktuális piaci ingadozásaikat és a felhasználó kockázati profilját.
-    <br>
-    A funkció egy könnyen áttekinthető felületen jeleníti meg az ajánlásokat, például egy "Mai ajánlások" szekcióban, ahol a felhasználók láthatják a 
-    javasolt részvényeket, azok várható hozamát és a hozzájuk kapcsolódó kockázati szintet. Az algoritmus a piaci adatok mellett figyelembe veszi a globális 
-    gazdasági híreket is, például egy technológiai vállalat új termékbejelentését, hogy pontosabb előrejelzéseket adjon. A felhasználók az ajánlások alapján 
-    közvetlenül indíthatnak szimulált tranzakciókat, például vásárolhatnak egy javasolt részvényből, így azonnal tesztelhetik a rendszer javaslatait. 
-    Ez a funkció különösen hasznos azok számára, akik még nem rendelkeznek mély tőzsdei ismeretekkel, mivel az MI-alapú ajánlások iránymutatást nyújtanak, 
-    miközben a felhasználók tanulhatnak a piac működéséről és saját döntéshozatali szokásaikról.
+    Elsőként az AI-alapú Interaktív Oktatási Modul és Elemző Eszközt vezetjük be, 
+    amely a rendszer mögötti bonyolult adatfeldolgozó algoritmus működését és a piaci trendek alakulását illusztrálja. A modul nemcsak statikus tartalmakat kínál, hanem a mesterséges intelligencia segítségével személyre szabott tananyagokat jelenít meg, melyek interaktív videókon, lépésről-lépésre útmutatókon és esettanulmányokon keresztül segítik a felhasználót a tőzsdei alapfogalmak, kockázatértékelés és prediktív elemzések megértésében. Az MI dinamikusan elemzi a felhasználói interakciókat, és ennek megfelelően finomhangolja a bemutatott tartalmakat, így lehetővé téve, hogy a tananyagok a felhasználók egyedi igényeire szabottak legyenek.
     <br><br>
+    Majd egy MI-val támogatott Valós Idejű Értesítési 
+    Rendszert alakítunk ki, amely az aktuális piaci ingadozásokat és globális 
+    gazdasági eseményeket figyeli. E rendszer során a mesterséges intelligencia folyamatosan 
+    elemzi a piaci adatokat, a hírszolgáltatásokat és egyéb releváns forrásokat, hogy azonnal 
+    felismerje a kritikus változásokat, például egy technológiai vállalat új termékbejelentését. 
+    Az értesítési rendszer így push üzenetekben vagy e-mail riasztásokban közli a felhasználóval 
+    az aktuális befektetési kockázatok és lehetőségek változását, a felhasználók által előre 
+    beállított paraméterek alapján, amelyeket az MI személyre szabott elemzése révén folyamatosan 
+    aktualizál. <br><br>
+    
+    További komponensként az MI-vezérelt Szimulált Portfólió Analitikai és 
+    Diverzifikációs Asszisztens funkcióját építjük be, amelynek célja a 
+    felhasználók portfóliójának részletes elemzése és optimalizálása. Ebben a 
+    rendszerben a mesterséges intelligencia olyan grafikonokat, statisztikákat és 
+    korrelációs elemzéseket generál, amelyek révén a felhasználó könnyen átláthatja 
+    portfóliójának teljesítményét, és azonosíthatja a túlzott koncentrációkat egy-egy szektorban. 
+    Az MI ezen felül "mit-venne, ha" szimulációkat is képes futtatni, amelyek alapján a rendszer 
+    prediktív javaslatokat kínál a portfólió diverzifikációjának javítására, így a felhasználók 
+    a kockázatokat csökkentve, a befektetési stratégiáikat dinamikusan alakíthatják.
+    <br><br>
+    Negyedik fejlesztési elemként egy Visszajelzés Alapú Adaptív Tanulási Mechanizmust 
+    integrálunk, amely a rendszer folyamatos fejlesztését és személyre szabását szolgálja. 
+    Itt a felhasználói visszajelzéseket – például az egyes ajánlások sikerességét értékelő 
+    visszajelző felületen keresztül – a mesterséges intelligencia elemzi, majd az eredmények 
+    alapján módosítja az ajánlási algoritmust. Ez az adaptív tanulási folyamat lehetővé teszi, 
+    hogy a rendszer a folyamatos felhasználói interakciók és tapasztalatok tükrében finomítsa 
+    a javaslatokat, biztosítva ezzel, hogy a rendszer a piaci trendek változásait és a felhasználók
+     egyéni kockázati profilját is figyelembe vegye.
+     <br><br>
+
+     A fent ismertetett funkciók teljesítményének és integrációjának alapját maga a mesterséges 
+     intelligencia építi, amely több rétegből áll. Az adatgyűjtési réteg számos külső API-t 
+     (például valós idejű piaci adatok és globális gazdasági hírek szolgáltatói API-kat) integrál, 
+     így biztosítva, hogy a rendszer mindig naprakész információk birtokában legyen. 
+     Az adat-előkészítést a .NET API segítségével végezzük, amely normalizálja, tisztítja 
+     és előfeldolgozza a felhasználók korábbi szimulált tranzakcióit és a releváns piaci adatokat. 
+     Az előkészített adatok alapján a modellépítési réteg, melynek fejlesztése során a Microsoft 
+     ML.NET keretrendszert és egyéb gépi tanulási könyvtárakat (például TensorFlow integrációs 
+     lehetőségeit, ha szükséges) alkalmazzuk, regressziós, osztályozási és előrejelző 
+     algoritmusokat implementál. Ezek az algoritmusok képezik a rendszer intelligens magját, 
+     amely a felhasználók befektetési preferenciái, történeti adatai és a valós idejű piaci 
+     trendek alapján generálja a személyre szabott ajánlásokat. Továbbá, a rendszer egy 
+     egyedi visszacsatolási mechanizmussal rendelkezik, amely a felhasználók által adott 
+     értékelések és visszajelzések alapján iteratív módon finomítja a modelleket, 
+     így adaptív módon reagálva a piaci környezet változásaira. <br><br>
+
+
+     <div style="text-align: center;">
+        <img src="mestersegesinteligencia.jpg" alt="Mesterséges Intelligencia rendszer" width="1200px" height="400px">
+        </div> <br>
+
 </p> 
 
 <h4 id="alfejezet3.4"><b>3.4 Fiókkezelés</b></h4>
