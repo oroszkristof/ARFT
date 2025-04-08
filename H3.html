@@ -400,33 +400,52 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
 
 <h4 id="alfejezet3.1"><b>3.1 Árfolyamfigyelő </b></h4>
 <p style="text-align: justify;">
-    Az Árfolyamfigyelő funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi 
-    a felhasználók számára, hogy valós idejű piaci adatokat kövessenek nyomon egy átlátható és 
-    egyszerű felületen keresztül. A funkció egy táblázatos nézetben jeleníti meg az adatokat, 
-    ahol a felhasználók olyan népszerű részvények adatait tekinthetik meg, mint az Apple Inc. 
-    (AAPL), Tesla Inc. (TSLA), Microsoft Corp. (MSFT), Amazon Inc. (AMZN) és Alphabet Inc. (GOOGL). 
-    A táblázat oszlopai között szerepel a részvény neve, az aktuális árfolyam (HUF-ban), a napi 
-    árfolyamváltozás százalékban, valamint a kereskedési lehetőségek.
+    Az Árfolyamfigyelő funkció a tőzsdei webalkalmazás egyik alapvető 
+    modulja, melynek célja, hogy a felhasználók számára valós idejű piaci adatokat 
+    biztosítson egy átlátható, egyszerű felületen. A funkció megvalósítása során a 
+    piaci adatok egy jól strukturált, táblázatos nézetben kerülnek megjelenítésre, 
+    amelyben szerepelnek a legnépszerűbb részvények – például az Apple Inc. (AAPL), 
+    Tesla Inc. (TSLA), Microsoft Corp. (MSFT), Amazon Inc. (AMZN) és az Alphabet Inc. (GOOGL) 
+    – adatai. A táblázat oszlopai tartalmazzák a részvény nevét, az aktuális árfolyamot HUF-ban, 
+    a napi árfolyamváltozás százalékos értékét, valamint a kereskedési lehetőségeket, amelyek 
+    segítik a felhasználót a gyors döntéshozatalban és a piac folyamatos monitorozásában.
     <br><br>
-    A fejlesztés során a táblázat minden egyes sorához több funkciógomb integrálása szükséges. 
-    Alapvető tranzakciós funkcióként szerepel a Vásárlás és az Eladás gomb, melyek segítségével a 
-    felhasználók azonnal indíthatnak tranzakciókat. 
-    A Vásárlás gomb zöld színnel jelenik meg, és az adott részvény vételét indítja el, míg az 
-    Eladás gomb piros színnel rendelkezik, elősegítve a részvény eladásának gyors kezdeményezését.
+    Minden egyes táblázatsorból a felhasználó interakcióba 
+    léphet az alapvető tranzakciós funkciók segítségével, amelyek között 
+    szerepel a Vásárlás és az Eladás gomb. A Vásárlás gomb, amely egyértelműen 
+    zöld színnel jelenik meg, a részvény vételi tranzakciójának elindítását 
+    szolgálja, míg az Eladás gomb piros megjelenésével hívja fel a figyelmet a 
+    részvény eladására vonatkozó műveletre. Ezek a funkciók közvetlenül integrálva 
+    vannak az adatmegjelenítési felületbe, így a felhasználók azonnali és zavartalan 
+    tranzakciókat hajthatnak végre. <br><br>
+    
+    A tranzakciós funkciók mellett a rendszer három további, kiegészítő funkciót 
+    is tartalmaz, amelyek célja a felhasználói élmény javítása és a részletes piaci elemzés 
+    támogatása. Az első kiegészítő funkció a Grafikon megjelenítése. Ennek a funkciónak 
+    minden táblázatsorban egy dedikált gombja van, amely megnyomva egy modális ablakot nyit meg. 
+    Ebben az ablakban a felhasználó részletes árfolyamgrafikont lát, amelyen az adott részvény 
+    múltbeli és aktuális ármozgása jelenik meg, beleértve a technikai indikátorok, például 
+    mozgóátlagok alkalmazását is. A grafikon lehetővé teszi a felhasználó számára, hogy 
+    mélyebb piaci elemzést végezzen és azonosítsa a trendeket.
     <br><br>
-    A tranzakciós funkciók mellett a rendszer három további, kiegészítő funkciót is tartalmaz, amelyek javítják a felhasználói élményt és elősegítik a részletes piaci elemzést. Az első kiegészítő funkció a Grafikon megjelenítése, amely minden táblázatsorban egy dedikált gomb formájában jelenik meg. Ennek a gombnak a megnyomása egy modális ablakot indít el, amely részletes árfolyamgrafikonon mutatja be az adott részvény múltbeli és aktuális mozgását, beleértve technikai indikátorok, például mozgóátlagok alkalmazását is.
-    A második kiegészítő funkció az Értesítés beállítása, mely lehetővé teszi, hogy a 
-    felhasználók személyre szabott árfolyamriasztásokat állítsanak be. 
-    Ennek a funkciónak a keretében minden táblázatsorhoz tartozik egy gomb, amely egy 
-    modális űrlapot nyit meg. Az űrlap segítségével a felhasználó megadhatja a minimális 
-    és maximális árküszöböket, melyek elérése esetén a rendszer automatikusan riasztást küld.
+    A második kiegészítő funkció az Értesítés beállítása, amely lehetővé teszi, 
+    hogy a felhasználók személyre szabott árfolyamriasztásokat állítsanak be. Ehhez minden 
+    táblázatsorban található egy gomb, amely aktivál egy modális űrlapot, ahol a felhasználó 
+    megadhatja a minimális és maximális árküszöböket az adott részvényre vonatkozóan. Amennyiben 
+    a piaci ár eléri vagy meghaladja ezeket az előre beállított küszöböket, a rendszer 
+    automatikusan riasztást küld a felhasználónak, így biztosítva, hogy semmilyen fontos 
+    piaci változás ne kerüljön figyelmen kívül.
+    <br><br>
+    A harmadik kiegészítő funkció a Részletes adatok megtekintése, amely részletes 
+    piaci információk elérését teszi lehetővé az adott részvényről. Ennek a funkciónak a 
+    gombja navigációt biztosít egy külön dedikált oldalra vagy egy modális ablakra, ahol 
+    a felhasználó olyan adatokhoz jut, mint a napi kereskedési forgalom, az éves osztalék,
+     a piaci kapitalizáció és egyéb releváns statisztikák. Ez a funkció célzottan támogatja 
+     a mélyebb analitikai igényeket, lehetővé téve a felhasználók számára, hogy komplex 
+     információk alapján hozzanak meg döntéseket a kereskedési stratégiájukról. <br><br>
 
-    <br><br>
-    A további kiegészítő funkció a Részletes adatok megtekintése, amelynek célja, hogy a 
-    felhasználók átfogó piaci információkat érjenek el az adott részvényről. Ennek a 
-    funkciónak a gombja lehetőséget biztosít egy külön oldalra vagy modális ablakra 
-    való navigációra, ahol részletes adatok, mint például a napi kereskedési forgalom, az 
-    éves osztalék, a piaci kapitalizáció és egyéb releváns statisztikák jelennek meg.
+     
+
 
     <div style="text-align: center;">
         <img src="arfolyamfigyelo.jpg" alt="Árfolyamfigyelő rendszer" width="800px" height="400px">
@@ -436,17 +455,81 @@ A platformon megjelenő tőzsdei adatok és hírek külső szolgáltatóktól sz
 
 <h4 id="alfejezet3.2"><b>3.2 Porfóliókezelés </b></h4>
 <p style="text-align: justify;">
-    A Portfóliókezelés funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely lehetővé teszi a felhasználók számára, hogy átlátható módon nyomon kövessék 
-    és kezeljék szimulált befektetéseiket. A "Portfólió összetétele" szekció egy vizuális ábrát – jelen esetben egy narancssárga kördiagramot – jelenít meg, 
-    amely a portfólió eloszlását mutatja. A diagram dinamikusan frissülhet, ha a felhasználó további részvényeket ad hozzá, például Teslát vagy 
-    Microsoftot, így vizuálisan is láthatóvá válik a diverzifikáció mértéke.
-    <br>
-    A "Befektetési jegyek" szekció egy listát biztosít, amely a portfólió konkrét elemeit sorolja fel. Ez a funkció 
-    lehetővé teszi a felhasználók számára, hogy gyorsan áttekintsék, milyen eszközökből áll a portfóliójuk, és szükség esetén módosításokat hajtsanak végre, 
-    például újabb részvényeket vásároljanak vagy meglévőket adjanak el a szimulált környezetben. Későbbiekben bővülni fog és a Portfóliókezelés funkció a jövőben 
-    részletesebb statisztikákat is kínálhat, például a portfólió teljes értékét, a hozamot vagy a kockázati mutatókat, segítve a felhasználókat abban, hogy 
-    jobban megértsék befektetéseik teljesítményét és optimalizálják stratégiájukat.
+    A portfóliókezelés funkció a tőzsdei webalkalmazás egyik alapvető modulját képezi, 
+    amely lehetővé teszi a felhasználók számára, hogy szimulált befektetéseiket átláthatóan 
+    nyomon kövessék és kezeljék. A rendszer két fő részre épül: az első rész a portfólió 
+    összetételét vizuálisan megjelenítő dinamikus, narancssárga kördiagram, míg a második 
+    rész a befektetési jegyek listája. A kördiagram a felhasználó által kiválasztott eszközök 
+    eloszlását mutatja, és folyamatosan frissül, amikor új részvények – például Tesla, Microsoft 
+    vagy más cégek – kerülnek hozzáadásra, vagy meglévő pozíciók módosulnak. Ez a vizuális 
+    ábra segíti a felhasználót abban, hogy egyszerűen megértse portfóliója diverzifikációját és 
+    aktuális állapotát. A befektetési jegyek listája részletesen tartalmazza az egyes befektetések 
+    nevét, mennyiségét, aktuális árfolyamát és értékét, így lehetővé téve a portfólió gyors 
+    áttekintését és szükség szerinti módosítását, mint például új pozíciók nyitását vagy meglévők 
+    eladását. <br><br>
+
+    A rendszer jövőbeni fejlesztései során részletes statisztikák és elemzések is 
+    elérhetővé válnak, amelyek lehetővé teszik a felhasználók számára, hogy még 
+    átfogóbban megértsék befektetéseik teljesítményét, és ennek megfelelően optimalizálják 
+    stratégiájukat. Emellett három új, fejlett funkcióval bővül a portfóliókezelő modul, 
+    melyek közül az első az automatikus portfólió kiegyensúlyozás modulja. Ebben a funkcióban a 
+    felhasználó számára lehetőség nyílik arra, hogy előre definiálja a portfólióban kívánt 
+    eszközarányokat (például 30% részvény, 40% kötvény, 30% készpénz), majd a rendszer 
+    folyamatosan figyelemmel kíséri a portfólió aktuális összetételét. Amennyiben az aktuális 
+    eloszlás eltér a célarányoktól – például a részvények súlya 40%-ra emelkedik – a modul 
+    automatikusan elemzi az egyes eszközök likviditását, árfolyamát és a tranzakciós költségeket, 
+    majd intelligens javaslatokat tesz a kiegyensúlyozás érdekében. Ezek a javaslatok 
+    tartalmazhatják a szükséges részvények eladását vagy újbóli vásárlását, továbbá a 
+    rendszer figyelmeztet a tranzakciós díjakra és egyéb releváns költségekre, így a 
+    felhasználó a lehető legoptimálisabb döntést hozhatja meg a portfólió állapotának 
+    korrigálása érdekében. A modul emellett támogatja a manuális beavatkozást, lehetővé 
+    téve, hogy a felhasználó az automatikus javaslatok alkalmazása előtt részletesen 
+    megvizsgálja a rendszer által ajánlott lépéseket.
+<br><br>
+    A második új funkció a tranzakciós napló modulja, amely részletesen rögzíti a 
+    felhasználó által végrehajtott összes vásárlási és eladási műveletet a rendszerben. 
+    Minden egyes tranzakcióhoz hozzárendelésre kerül egy egyedi azonosító, amely tartalmazza 
+    a művelet pontos időbélyegét, az érintett eszköz szimbólumát, az aktuális árfolyamot, a 
+    tranzakció volumenét, valamint a kapcsolódó díjakat és költségeket. A napló adattárolása 
+    relációs adatbázisban történik, biztosítva ezzel az adatok strukturált és auditálható 
+    kezelését. A felhasználó számára egy intuitív felületet biztosítunk, amely lehetővé 
+    teszi a tranzakciók dátum, eszköztípus vagy tranzakciós típus szerinti szűrését és 
+    rendezését, így könnyedén visszakereshető a befektetéseinek története. Továbbá a rendszer 
+    támogatja az adatok exportálását különböző formátumokba (például CSV vagy JSON), lehetőséget 
+    biztosítva a felhasználóknak, hogy a tranzakciós előzményeket külső elemzési eszközök 
+    segítségével tovább dolgozzák fel. <br><br>
+    
+    A harmadik új funkció a személyre szabható értesítési rendszer, amely a 
+    kritikus portfólióváltozásokról és fontos piaci eseményekről való azonnali tájékoztatás 
+    célját szolgálja. A felhasználók a rendszer felületén egyéni értesítési szabályokat 
+    állíthatnak be, amelyeken keresztül meghatározhatják, hogy mely események 
+    (például egy adott részvény árfolyamának 5%-os csökkenése vagy emelkedése, a portfólió 
+    teljes értékének 10%-os elmozdulása, illetve releváns piaci hírek megjelenése) váltják 
+    ki az értesítési folyamatot. Az értesítéseket többféle csatornán – például e-mail, 
+    push értesítés, vagy akár SMS – érheti el a felhasználó, attól függően, hogy milyen 
+    kommunikációs beállításokat választott. A rendszer háttérben folyamatosan monitorozza a 
+    portfólió és a kapcsolódó piaci adatok változását, és a beállított kritériumok teljesülése 
+    esetén azonnal értesíti a felhasználót, biztosítva ezzel, hogy minden fontos változásról 
+    valós időben tájékoztatást kapjon. Emellett az értesítési modul időzített ellenőrzési 
+    mechanizmussal is rendelkezik, így akár percenként frissítve a rendszer a releváns 
+    adatokat, ezzel minimalizálva a késésekből adódó információvesztést.
     <br><br>
+
+    A Kockázatelemző modul célja, hogy a felhasználók számára átláthatóvá tegye 
+     portfóliójuk kockázati szintjét. A rendszer a valós idejű piaci adatok és a portfólió 
+     összetételének figyelembevételével különböző kockázati mutatókat számol, például a 
+     volatilitást, a várható veszteséget (Value at Risk, VaR) és az egyes eszközök kockázati 
+     hozzájárulását. A modul interaktív grafikonokat és statisztikákat biztosít, melyek 
+     segítségével a felhasználók megtekinthetik a kockázati mutatókat historikus adatok tükrében, 
+     illetve jövőbeni szcenáriók alapján előrejelzéseket kaphatnak a potenciális veszteségekről. 
+     Emellett a modul ajánlásokat fogalmaz meg arra vonatkozóan, hogy miként lehet optimalizálni 
+     a portfóliót a kockázatok csökkentése érdekében. <br><br>
+
+     <div style="text-align: center;">
+        <img src="portfoliokezelo.jpg" alt="Árfolyamfigyelő rendszer" width="800px" height="400px">
+        </div> <br>
+
+
 </p> 
 
 <h4 id="alfejezet3.3"><b>3.3 Mesterséges inteligencia alapú ajánlások</b></h4>
