@@ -217,6 +217,12 @@
         <td>A 1. (Bevezetés), a 4. (Portfoliókezelés), és az 5. (Befektetési szimulátor) fejezeteinek és alfejezeteinek kidolgozása.</td>
         <td>Orosz Kristóf </td>
     </tr>
+    <tr>
+      <td>2025.04.12.</td>
+      <td>1.3</td>
+      <td>A 2-es, 6-os, 7-es, 9-es, 10-es, 11-es fejezetek és alfejezetek kidolgozása.</td>
+      <td>Radvánszky Ádám János </td>
+  </tr>
     </table> <br>
 
     <hr>
@@ -329,11 +335,41 @@
       </div>
     </li>
     <li>
-      <strong>Regisztráció és Bejelentkezés – Ádám</strong>
+      <h4 id="alfejezet2"><b>Regisztráció és Bejelentkezés</b></h4>
       <div class="subchapters">
-        2.1. Felhasználói regisztráció folyamata<br>
-        2.2. Bejelentkezési folyamat ismertetése<br>
-        2.3. Fiókadatok kezelése
+        <h4 id="alfejezet2.1."><b>2.1. Felhasználói regisztráció folyamata</b></h4>
+        <p style="text-align: justify;">
+        A tőzsdei webalkalmazás regisztrációs folyamata a felhasználók számára egyszerű és biztonságos módot kínál arra, hogy új fiókot hozzanak létre, és 
+        elkezdjék használni a platformot. A "Regisztráció" gombra kattintva a felhasználók létrehozhatják fiókjukat, amely hozzáférést biztosít számukra a 
+        szimulált kereskedési környezethez és egyéb funkciókhoz, például a friss tőzsdei hírek olvasásához vagy a hírlevél feliratkozáshoz. A rendszer szigorú 
+        ellenőrzéseket végez a felhasználói adatok validálására: például a jelszónak minimum 8 karakterből kell állnia, tartalmaznia kell kis- és nagybetűket, 
+        valamint számokat, hogy a fiók védve legyen a gyenge jelszavak miatti támadásokkal szemben. Az e-mail-cím egyediségét a Microsoft SQL Server adatbázisban 
+        ellenőrzi a rendszer, és ha a megadott e-mail már regisztrálva van, a felhasználó egy figyelmeztető üzenetet kap: "Ez az e-mail-cím már használatban van". 
+        A jelszó megerősítése mező biztosítja, hogy a felhasználó ne gépelje el a jelszót, és a két jelszó egyezőségét valós időben ellenőrzi a rendszer, például 
+        a "A jelszavak nem egyeznek" üzenettel, ha eltérés van. 
+        </p>
+        <h4 id="alfejezet2.2."><b>2.2. Bejelentkezési folyamat ismertetése</b></h4>
+        <p style="text-align: justify;">
+          A bejelentkezési folyamat szintén a felhasználói élményt és a biztonságot helyezi előtérbe. A bejelentkezési ablak egyszerű felületet kínál, ahol a 
+          felhasználók az e-mail-címüket és jelszavukat adhatják meg, majd a "Belépés" gombra kattintva férhetnek hozzá fiókjukhoz. Az ablak alján található 
+          "Nincs fiókja? Ide kattintva regisztrálhat!" link új felhasználókat irányít a regisztrációs oldalra, míg az "Elfelejtett jelszó?" opció lehetőséget 
+          biztosít a jelszó visszaállítására. A rendszer valós idejű ellenőrzést végez: ha a felhasználó helytelen e-mail-címet vagy jelszót ad meg, egy 
+          "Hibás e-mail vagy jelszó" üzenet jelenik meg, amely segít a hibák gyors javításában. Az "Elfelejtett jelszó?" opcióra kattintva a felhasználók 
+          egy e-mailben kapnak egy linket, amelyen keresztül új jelszót állíthatnak be. A rendszer naplózza 
+          a bejelentkezési kísérleteket, és ha túl sok sikertelen próbálkozás történik – például háromszor egymás után helytelen jelszót adnak meg –, a 
+          fiók ideiglenesen zárolásra kerül, és a felhasználó e-mailben kap értesítést a gyanús tevékenységről. Ez a biztonsági intézkedés védi a fiókot a 
+          brute force támadásokkal szemben, növelve a felhasználók bizalmát a platform iránt.
+        </p>
+        <h4 id="alfejezet2.3."><b>2.3. Fiókadatok kezelése</b></h4>
+        <p style="text-align: justify;">
+          A fiókadatok kezelése lehetővé teszi a felhasználók számára, hogy személyes adataikat és beállításaikat kezeljék. A "Rólam" szekcióban a felhasználók 
+          megtekinthetik alapvető adataikat – például nevüket és e-mail-címüket –, és telefonszámot 
+          vagy preferált nyelvet is hozzáadhatnak. A szerkesztési folyamat intuitív: a "Szerkesztés" gombra kattintva módosíthatják adataikat, amelyeket a 
+          rendszer azonnal ment a Microsoft SQL Server adatbázisban a .NET API segítségével. A "Jelszó megváltoztatása" opció lehetővé teszi a jelszó frissítését, 
+          szigorú követelményekkel (minimum 8 karakter, kis- és nagybetűk, számok), míg a "Fiók törlése" opció a fiók végleges megszüntetését teszi lehetővé, 
+          egy megerősítő ablak után, amely figyelmezteti a felhasználót a művelet véglegességére. A rendszer naplózza a fiókhoz kapcsolódó fontos műveleteket 
+          – például a jelszóváltoztatás időpontját –, amelyeket a felhasználók a "Tevékenységnapló" szekcióban tekinthetnek meg, így átláthatóságot biztosít. 
+        </p><br>
       </div>
     </li>
     <br><br> <li> 
@@ -637,19 +673,93 @@ jelzi a problémát, és biztonságosan kezeli a folyamatot. <br><br>
       <img src="port (2).JPG" alt="Főoldal" width="700px" height="300px">
     </div> <br>
     <li>
-      <strong>EdgeAI modul – Ádám</strong>
+      <h4 id="alfejezet6"><b>  EdgeAI modul </b></h4>
       <div class="subchapters">
-        6.1. EdgeAI bemutatása és funkciói<br>
-        6.2. Döntéstámogatás befektetési lehetőségekhez<br>
-        6.3. AI által generált befektetési javaslatok
+        <h4 id="alfejezet6.1."><b>6.1. EdgeAI bemutatása és funkciói</b></h4>
+        <p style="text-align: justify;">
+          Az EdgeAI modul a tőzsdei webalkalmazás egyik leginnovatívabb eleme, amely mesterséges intelligencia (AI) technológiát használ a felhasználók befektetési 
+          döntéseinek támogatására. Az EdgeAI egy fejlett, gépi tanuláson alapuló rendszer, amely valós idejű piaci adatokat, történelmi trendeket és a 
+          felhasználók szimulált kereskedési tevékenységeit elemzi, hogy személyre szabott javaslatokat kínáljon. A modul célja, hogy a kezdő befektetők 
+          számára is könnyen érthető és hasznos eszközöket biztosítson, miközben a tapasztaltabb felhasználók számára mélyebb elemzéseket nyújt a piaci 
+          lehetőségek kiaknázásához. Az EdgeAI egyik kulcsfunkciója a prediktív analitikák készítése, amely lehetővé teszi a piaci trendek előrejelzését, 
+          például egy technológiai részvény, mint az Apple árfolyamának várható mozgását a következő héten. Emellett a modul integrálható a "Friss tőzsdei 
+          hírek" szekcióval, így a hírek alapján is képes javaslatokat tenni, például egy új iPhone piacra dobásának hatására az Apple részvényeire vonatkozóan. 
+          A felhasználói felület reszponzív, így az EdgeAI modul asztali gépeken, tableteken és mobiltelefonokon egyaránt jól működik, lehetővé téve a 
+          felhasználók számára, hogy útközben is hozzáférjenek a javaslatokhoz.
+        </p>
+        <h4 id="alfejezet6.2."><b>6.2. Döntéstámogatás befektetési lehetőségekhez</b></h4>
+        <p style="text-align: justify;">
+          Az EdgeAI modul döntéstámogató funkciói a felhasználók szimulált kereskedési döntéseit segítik elő, hogy azok megalapozottabbak és hatékonyabbak 
+          legyenek. A rendszer a felhasználó korábbi tevékenységeit – például a gyakran vásárolt részvényeket, a szimulált portfólió összetételét és a 
+          kereskedési szokásokat – elemzi, hogy személyre szabott döntéstámogatást nyújtson. Például, ha egy felhasználó főként technológiai részvényekkel 
+          kereskedik, az EdgeAI figyelmeztetheti, hogy a portfóliója túlságosan egy szektorra koncentrál, és javasolhatja a diverzifikációt, például egészségügyi 
+          részvények, mint a Pfizer vásárlását. A modul interaktív adatvizualizációs eszközöket használ, például testreszabható grafikonokat és táblázatokat, 
+          amelyek bemutatják a piaci trendeket és a lehetséges befektetési lehetőségeket. A felhasználók láthatják egy részvény heti árfolyam-ingadozásait, és 
+          az EdgeAI elemzése alapján megérthetik, hogy egy adott esemény – például egy gazdasági jelentés – hogyan befolyásolhatja az árfolyamot. 
+          A döntéstámogatás során a rendszer kockázatelemzést is végez: például figyelmezteti a felhasználót, ha egy részvény túl volatilis, és javasolhat 
+          alacsonyabb kockázatú alternatívákat. Az EdgeAI emellett figyelembe veszi a felhasználó által beállított preferenciákat, például ha valaki csak 
+          fenntartható befektetések iránt érdeklődik, a rendszer zöld energiával foglalkozó cégeket, mint a Tesla, ajánlhat. A döntéstámogató funkciók különösen 
+          hasznosak a kezdő befektetők számára, akik még nem rendelkeznek mély piaci ismeretekkel, de a tapasztaltabb felhasználók számára is értékes betekintést 
+          nyújtanak a piaci dinamikákba.
+        </p>
+        <h4 id="alfejezet6.3."><b>6.3. AI által generált befektetési javaslatok</b></h4>
+        <p style="text-align: justify;">
+          Az EdgeAI által generált befektetési javaslatok a modul egyik legértékesebb funkciója, amely a mesterséges intelligencia prediktív képességeit 
+          használja fel a felhasználók számára konkrét ajánlások készítésére. A rendszer a valós idejű piaci adatok, történelmi trendek és a felhasználó 
+          szimulált portfóliójának elemzése alapján állít össze javaslatokat, például "Vásárolj Apple részvényeket, mert a legutóbbi termékbejelentés alapján 
+          várhatóan 5%-os árfolyam-növekedés következik be a következő héten". Az AI figyelembe veszi a globális piaci híreket is, amelyeket a "Friss tőzsdei 
+          hírek" szekcióból gyűjt, így például egy amerikai kamatemelés bejelentése után javasolhatja a dollár alapú eszközök vásárlását. A javaslatok személyre 
+          szabottak. A javaslatok mellett 
+          a rendszer magyarázatot is ad, például bemutatja, hogy az ajánlás milyen adatokon alapul, és milyen kockázatokkal járhat, így a felhasználók jobban 
+          megérthetik a döntéseik hátterét. A javaslatok a szimulált kereskedési környezetben tesztelhetők, így a felhasználók kockázat nélkül kipróbálhatják 
+          az AI ajánlásait, például egy új stratégia alkalmazását anélkül, hogy valódi pénzt kockáztatnának. 
+        </p> <br>
       </div>
     </li>
     <li>
-      <strong>Befektetési kalkulátor modul – Ádám</strong>
+      <h4 id="alfejezet7"><b> Befektetési kalkulátor modul</b></h4>
       <div class="subchapters">
-        7.1. Kalkulátor funkció bemutatása<br>
-        7.2. Hozamkalkuláció és előrejelzések<br>
-        7.3. Eredmények exportálása és mentése
+        <h4 id="alfejezet7.1."><b>7.1. Kalkulátor funkció bemutatása</b></h4>
+        <p style="text-align: justify;">
+          A Befektetési kalkulátor modul a tőzsdei webalkalmazás egyik kulcsfontosságú eszköze, amely lehetővé teszi a felhasználók számára, hogy szimulált 
+          befektetéseik hozamát és potenciális eredményeit kiszámítsák, miközben gyakorlati tapasztalatot szereznek a pénzügyi tervezésben. A kalkulátor 
+          egy intuitív, felhasználóbarát felületen érhető el, ahol a felhasználók különböző paramétereket adhatnak meg, például a befektetett összeget, a 
+          befektetés időtartamát (pl. 1 év, 5 év), a várható éves hozamot, valamint a befektetési eszköz típusát (pl. részvények, kötvények). A felület 
+          testreszabható: a felhasználók kiválaszthatják, hogy milyen pénznemben szeretnék 
+          a számításokat elvégezni (pl. forint, dollár), és a rendszer automatikusan átváltja az adatokat a megfelelő árfolyamok alapján. A kalkulátor reszponzív 
+          dizájnnal készül, így asztali gépeken, tableteken és mobiltelefonokon egyaránt jól működik, lehetővé téve a felhasználók számára, hogy útközben is 
+          elvégezhessék a számításokat, például egy okostelefonon keresztül. A kalkulátor integrálható 
+          a szimulált kereskedési környezettel, így a felhasználók közvetlenül alkalmazhatják a számítások eredményeit a virtuális portfóliójukban, például egy 
+          új részvény vásárlásának megtervezéséhez.
+        </p>
+        <h4 id="alfejezet7.2."><b>7.2. Hozamkalkuláció és előrejelzések</b></h4>
+        <p style="text-align: justify;">
+          A hozamkalkuláció a Befektetési kalkulátor modul egyik legfontosabb funkciója, amely segít a felhasználóknak megérteni, hogy befektetéseik milyen hozamot 
+          termelhetnek egy adott időtávon belül. A kalkulátor a megadott paraméterek – például a befektetett összeg, az időtartam és a várható hozam – alapján 
+          kiszámolja a végösszeget, figyelembe véve a kamatos kamat hatását. Például, ha egy felhasználó 1 millió forintot fektet be 5 évre 8%-os éves hozammal, 
+          a kalkulátor megmutatja, hogy a befektetés értéke körülbelül 1,47 millió forintra nőhet. A rendszer emellett előrejelzéseket is készít, amelyeket a 
+          történelmi piaci adatok és a valós idejű trendek elemzésével állít elő. Az előrejelzések során a kalkulátor figyelembe veszi a piaci volatilitást és 
+          a gazdasági eseményeket, például egy kamatemelés hatásait, amelyeket a "Friss tőzsdei hírek" szekcióból gyűjt. A felhasználók számára vizuális 
+          visszajelzést is biztosít: interaktív grafikonok és táblázatok mutatják a befektetés várható növekedését különböző forgatókönyvek szerint, például 
+          optimista (10% hozam), pesszimista (5% hozam) és reális (8% hozam) esetekben. A kalkulátor integrálható az EdgeAI modullal, amely mesterséges 
+          intelligencia segítségével finomhangolja az előrejelzéseket, például egy technológiai részvény, mint a Microsoft árfolyamának várható mozgását elemezve 
+          a legutóbbi piaci hírek alapján. Ez a funkció különösen hasznos a kezdő befektetők számára, akik így jobban megérthetik a hozamok dinamikáját, de a 
+          tapasztaltabb felhasználók számára is értékes, akik pontosabb előrejelzéseket keresnek a szimulált kereskedési stratégiáikhoz.
+        </p>
+        <h4 id="alfejezet7.3."><b>7.3. Eredmények exportálása és mentése</b></h4>
+        <p style="text-align: justify;">
+          A Befektetési kalkulátor modul lehetővé teszi a felhasználók számára, hogy a számítások eredményeit elmentsék és exportálják, így később is könnyen 
+          hozzáférhetnek azokhoz, vagy megoszthatják másokkal. A kalkulátor által generált eredmények – például a végösszeg, a hozamgrafikonok és az előrejelzések 
+          – a felhasználói fiókhoz kapcsolódnak. A felhasználók a "Mentés" gombra 
+          kattintva elmenthetik a számításokat, amelyeket később a "Korábbi számítások" szekcióban tekinthetnek meg, például ha egy korábbi befektetési 
+          forgatókönyvet szeretnének újra átnézni. Az exportálási funkció lehetővé teszi, hogy a felhasználók PDF vagy CSV formátumban töltsék le az 
+          eredményeket, így azokat könnyen megoszthatják, például egy pénzügyi tanácsadóval, vagy importálhatják más alkalmazásokba, például egy 
+          Excel-táblázatba további elemzés céljából. Az exportált fájl tartalmazza a bemeneti paramétereket (pl. befektetett összeg, időtartam), a 
+          kiszámított hozamokat és az előrejelzéseket, valamint a grafikonok képeit, így a felhasználók teljes körű dokumentációt kapnak. A rendszer 
+          biztosítja az adatok biztonságát: a mentett és exportált eredmények csak a jogosult felhasználók számára érhetők el. Ez a funkció különösen hasznos azok 
+          számára, akik hosszú távú befektetési stratégiákat terveznek, és szeretnék nyomon 
+          követni a különböző forgatókönyvek eredményeit, például egy diverzifikált portfólió hozamának elemzéséhez.
+        </p>
       </div>
     </li> <br>
     <li>
@@ -721,24 +831,97 @@ jelzi a problémát, és biztonságosan kezeli a folyamatot. <br><br>
       </div>
     </li>
     <li>
-      <strong>Értesítések és riasztások kezelése – Ádám</strong>
+      <h4 id="alfejezet9"><b>  Értesítések és riasztások kezelése</b></h4>
       <div class="subchapters">
-        9.1. Árfolyam- és eseményriasztások beállítása<br>
-        9.2. Testreszabott értesítési beállítások
+        <h4 id="alfejezet9.1."><b>9.1. Árfolyam- és eseményriasztások beállítása</b></h4>
+        <p style="text-align: justify;">
+          Az Értesítések és riasztások kezelése funkció a tőzsdei webalkalmazás egyik kulcsfontosságú eleme, amely lehetővé teszi a felhasználók számára, 
+          hogy valós idejű figyelmeztetéseket kapjanak a piaci eseményekről és árfolyamváltozásokról, így időben reagálhatnak a szimulált kereskedési környezetben. 
+          Az árfolyam- és eseményriasztások beállítása egy intuitív felületen keresztül történik, ahol a felhasználók meghatározhatják, hogy mely részvényekre 
+          vagy piaci eseményekre szeretnének értesítést kapni. Például egy felhasználó beállíthat egy riasztást, hogy értesítést kapjon, ha az Apple részvénye 
+          5%-kal emelkedik vagy esik egy adott napon, így azonnal dönthet a szimulált portfóliójának módosításáról. Az eseményriasztások esetében a rendszer a 
+          "Friss tőzsdei hírek" szekcióból gyűjtött adatok alapján figyelmezteti a felhasználót fontos gazdasági eseményekre, például egy amerikai kamatemelésre 
+          vagy egy nagy technológiai vállalat, mint a Microsoft új termékbejelentésére. A riasztások beállítása során a felhasználók kiválaszthatják az értesítés 
+          típusát – például e-mail, push-értesítés a böngészőben, vagy mobilalkalmazáson keresztül –, valamint a riasztás gyakoriságát, például egyszeri vagy 
+          ismétlődő figyelmeztetést. Ez különösen hasznos egy gyorsan változó piaci helyzetben, 
+          például egy tőzsdei zuhanás esetén, amikor a felhasználók azonnal értesülhetnek a változásokról, és ennek megfelelően módosíthatják stratégiájukat.
+        </p>
+        <h4 id="alfejezet9.2."><b>9.2. Testreszabott értesítési beállítások</b></h4>
+        <p style="text-align: justify;">
+          A testreszabott értesítési beállítások lehetővé teszik a felhasználók számára, hogy az értesítéseket saját igényeikhez igazítsák, így csak a számukra 
+          releváns információkról kapnak figyelmeztetést. A beállítások a felhasználói fiók részeként érhetők el, és a "Fiókadatok kezelése" szekcióban 
+          módosíthatók. A felhasználók részletesen meghatározhatják, hogy milyen típusú értesítéseket szeretnének kapni: például csak árfolyamváltozásokról, 
+          csak piaci hírekről, vagy a szimulált portfóliójuk teljesítményéről. Egy felhasználó, aki főként technológiai részvényekkel kereskedik, beállíthatja, 
+          hogy csak az olyan hírekről kapjon értesítést, amelyek a technológiai szektort érintik, például egy új iPhone piacra dobását. A testreszabás során a 
+          felhasználók kiválaszthatják az értesítések gyakoriságát (pl. azonnali, napi összefoglaló) és formátumát (e-mail, push-értesítés), valamint azt, hogy 
+          mely eszközökön szeretnék megkapni őket, például csak mobiltelefonon. A rendszer naplózza az értesítéseket, amelyeket a felhasználók a "Tevékenységnapló" 
+          szekcióban tekinthetnek meg, így nyomon követhetik, hogy milyen riasztásokat kaptak, például egy árfolyamváltozásról szóló figyelmeztetést. 
+          A testreszabott értesítések integrálhatók a "Hírlevél feliratkozás" funkcióval, így a felhasználók a napi vagy heti hírlevelekben is megkaphatják a 
+          legfontosabb riasztásokat.
+
+        </p>
       </div>
     </li>
     <li>
-      <strong>Súgó, támogatás és hibakezelés – Ádám</strong>
+      <h4 id="alfejezet10"><b> Súgó, támogatás és hibakezelés </b></h4>
       <div class="subchapters">
-        10.1. Gyakran ismételt kérdések (GYIK)<br>
-        10.2. Ügyfélszolgálati elérhetőségek
+        <h4 id="alfejezet10.1."><b>10.1. Gyakran ismételt kérdések (GYIK)</b></h4>
+        <p style="text-align: justify;">
+          A Súgó, támogatás és hibakezelés funkció a tőzsdei webalkalmazás egyik alapvető eleme, amely biztosítja, hogy a felhasználók gyorsan választ kapjanak 
+          kérdéseikre, és zökkenőmentesen használhassák a platformot. A "Gyakran ismételt kérdések" (GYIK) szekció egy dedikált oldalon érhető el, ahol a 
+          leggyakoribb felhasználói kérdésekre találhatók válaszok, kategorizálva a könnyebb navigáció érdekében. A GYIK olyan témákat fed le, mint a regisztráció 
+          és bejelentkezés folyamata, például "Hogyan állíthatom vissza a jelszavamat, ha elfelejtettem?", vagy a szimulált kereskedési környezet használata, 
+          például "Hogyan vásárolhatok részvényeket a virtuális pénzzel?". Emellett a "Friss tőzsdei hírek" és a "Hírlevél feliratkozás" funkciókhoz kapcsolódó 
+          kérdésekre is válaszol, például "Hogyan szűrhetem a híreket szektor szerint?" vagy "Hogyan iratkozhatok le a hírlevélről?". A GYIK szekció a kezdő 
+          befektetők számára különösen hasznos, akik még nem ismerik a platform minden funkcióját, de a tapasztaltabb felhasználók számára is gyors segítséget 
+          nyújt, például az EdgeAI modul használatával kapcsolatos kérdésekben, mint "Hogyan értelmezzem az AI által generált befektetési javaslatokat?". 
+          A GYIK tartalma dinamikusan frissül a felhasználói visszajelzések alapján, így a leggyakrabban felmerülő problémákra mindig releváns válaszok állnak 
+          rendelkezésre. 
+        </p>
+        <h4 id="alfejezet10.2."><b>10.2. Ügyfélszolgálati elérhetőségek</b></h4>
+        <p style="text-align: justify;">
+          Az ügyfélszolgálati elérhetőségek biztosítják, hogy a felhasználók közvetlenül kapcsolatba léphessenek a támogatási csapattal, ha a GYIK szekcióban 
+          nem találnak választ a problémájukra, vagy technikai hibát tapasztalnak. Az ügyfélszolgálat több csatornán keresztül érhető el: a felhasználók 
+          küldhetnek e-mailt egy dedikált címre (pl. support@tozsdeapp.hu), vagy használhatják a webalkalmazásban található élő csevegő funkciót, amely valós 
+          idejű segítséget nyújt, például ha a "Befektetési kalkulátor" modulban hibát észlelnek a hozamkalkuláció során. Az élő csevegés a SignalR technológia 
+          segítségével működik, így a válaszok azonnaliak, és a felhasználók gyorsan megoldhatják problémáikat, például egy elakadt regisztrációs folyamat esetén. 
+          Az ügyfélszolgálat telefonos elérhetőséget is biztosít munkanapokon 9:00 és 17:00 között, így a felhasználók közvetlenül beszélhetnek egy támogatási 
+          szakértővel, például ha a szimulált portfóliójuk adatai nem frissülnek megfelelően. A hibakezelés során a rendszer naplózza a technikai problémákat, 
+          amelyeket a "Tevékenységnapló" szekcióban a felhasználók is megtekinthetnek, így nyomon követhetik, hogy mikor jelentették a hibát, például egy értesítés 
+          elmaradása esetén.
+        </p>
       </div>
     </li>
     <li>
-      <strong>Biztonság és adatvédelem – Ádám</strong>
+      <h4 id="alfejezet11"><b> Biztonság és adatvédelem</b></h4>
       <div class="subchapters">
-        11.1. Fiók- és adatvédelem<br>
-        11.2. Adatvédelmi tájékoztató és adatkezelési információk
+        <h4 id="alfejezet11.1."><b>11.1. Fiók- és adatvédelem</b></h4>
+        <p style="text-align: justify;">
+          A tőzsdei webalkalmazás számára kiemelt fontosságú a felhasználók fiókjainak és adatainak védelme, hogy biztosítsa a platform biztonságos használatát 
+          és a bizalom fenntartását. A fiókvédelem érdekében a rendszer JWT (JSON Web Token) autentikációs rendszert használ, amely garantálja, hogy csak a 
+          jogosult felhasználók férjenek hozzá fiókjukhoz, például a "Regisztráció és Bejelentkezés" során megadott e-mail-cím és jelszó alapján. A jelszavak 
+          titkosítva kerülnek tárolásra a Microsoft SQL Server adatbázisban, így azok még a rendszeradminisztrátorok 
+          számára sem hozzáférhetők. A "Fiókadatok kezelése" szekcióban a felhasználók szigorú jelszókövetelmények mellett változtathatják meg jelszavukat – 
+          például minimum 8 karakter, kis- és nagybetűk, valamint számok használata –, hogy a fiók védve legyen a jogosulatlan hozzáférésekkel szemben. 
+          A rendszer naplózza a fiókhoz kapcsolódó fontos műveleteket, például a bejelentkezési kísérleteket, amelyeket a "Tevékenységnapló" szekcióban a 
+          felhasználók megtekinthetnek, így észlelhetik, ha gyanús tevékenység történik, például egy ismeretlen eszközről való belépés. A "Bejelentkezés és 
+          Regisztráció" során a rendszer zárolja a fiókot, ha túl sok sikertelen bejelentkezési kísérlet történik, és e-mailben értesíti a felhasználót a 
+          gyanús tevékenységről, védve a brute force támadások ellen. Az "Értesítések és riasztások kezelése" funkcióval a felhasználók azonnali figyelmeztetést 
+          kaphatnak fiókjukkal kapcsolatos eseményekről, például egy jelszóváltoztatásról. Az adatvédelem érdekében a rendszer titkosított csatornákon (HTTPS) 
+          keresztül kommunikál, így a felhasználók adatai – például a "Hírlevél feliratkozás" során megadott e-mail-cím – biztonságban maradnak.
+        </p>
+        <h4 id="alfejezet11.2."><b>11.2. Adatvédelmi tájékoztató és adatkezelési információk</b></h4>
+        <p style="text-align: justify;">
+          Az adatvédelmi tájékoztató és adatkezelési információk átlátható módon biztosítják, hogy a felhasználók megértsék, hogyan kezeli a tőzsdei webalkalmazás 
+          az adataikat, és milyen jogaik vannak azokkal kapcsolatban. Az adatvédelmi tájékoztató egy külön oldalon érhető el, amely részletesen ismerteti, hogy 
+          a rendszer milyen adatokat gyűjt – például a "Regisztráció és Bejelentkezés" során megadott nevet, e-mail-címet, vagy a "Befektetési kalkulátor" 
+          modulban mentett számításokat –, és hogyan használja fel azokat, például személyre szabott hírlevelek küldésére a "Hírlevél feliratkozás" funkció 
+          keretében. A felhasználók számára biztosított a lehetőség, hogy hozzáférjenek, 
+          módosítsák vagy töröljék adataikat a "Fiókadatok kezelése" szekcióban, például ha egy másik e-mail-címet szeretnének megadni a hírlevelekhez. A 
+          rendszer megfelel az adatvédelmi előírásoknak, például a GDPR-nak, és a tájékoztatóban szerepel, hogy a felhasználók hogyan tiltakozhatnak az adatkezelés 
+          ellen, például a hírlevélről való leiratkozással. Az adatkezelési információk kitérnek arra is, hogy a rendszer harmadik felekkel – például a Finnhub 
+          API-val – csak a szükséges adatokat osztja meg, például a piaci hírek lekérdezéséhez, és ezt is anonimizált formában teszi. 
+        </p>
       </div>
     </li>
   </ol>
