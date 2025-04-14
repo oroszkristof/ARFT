@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>H4 - Rendszertervezés</title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .center {
+            text-align: center;
+        } 
+        
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+        .vmi{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left
+        }
+        .alap{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; 
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Rendszertervezés - H4</h1>
+
+    <hr>
+    
+    <h4 class="center">Történet</h4> <br>
+
+    <table border="2" class="center">
+        <tr>
+            <td><b>Dátum</b></td>
+            <td><b>Verzió</b></td>
+            <td><b>Leírás</b></td>
+            <td><b>Szerző</b></td>
+        </tr>
+        <tr>
+            <td>2025.04.14.</td>
+            <td>1.0</td>
+            <td>Dokumentum létrehozása, fejezetek felosztása egymás között.</td>
+            <td>Orosz Kristóf <br>Radvánszky Ádám János</td>
+        </tr>
+
+             
+    </table> <br>
+
+    <hr>
+
+    1. Bevezetés <br><br><br>
+
+    2. Felhasználói felület <br><br><br>
+
+    2.1 Főoldal funkciói <br><br><br>
+            2.2 Árfolyamfigyelő <br><br><br>
+            2.3 Hírlevél és Tőzsdei Hírek <br><br><br>
+            2.4 Portfoliókezelés <br><br><br>
+            2.4.1 Befektetési szimulátor <br><br><br>
+            2.5 EdgeAl <br><br><br>
+            2.6 Felhasználói fiók <br><br><br>
+            2.7 ÁSZF, Adatvédelmi Tájékoztató, Rólunk felületek <br><br><br>
+            2.8 Súgórendszer <br><br><br>
+    
+    3. Adatmodellek <br><br><br>
+    
+    3.1. Adatbázis kezelő kiválasztása <br><br><br>
+    
+    3.2. Szemantikai adatmodell <br><br><br>
+    
+    3.3 Relációs adatmodell <br><br><br>
+    
+    3.4. Az adatbázis kezelővel kapcsolatot tartó osztályok <br><br><br>
+    
+    4. A funkcionális modell kiegészítése <br><br><br>
+
+<br><br><br><br><br>
+
+<div class="bottom-left">
+    <a href="H4.html">◀</a>
+    <span>Előző oldal</span>
+</div>
+
+<div class="bottom-center">
+    <a href="tartalomjegyzek.html">📋</a>
+    <span>Tartalomjegyzék</span>
+</div>
+
+<div class="bottom-right">
+    <a href="#">▶</a>
+    <span>Következő oldal</span>
+</div>
+
+<script>
+    const prevButton = document.querySelector('.bottom-left');
+    const tartalomLink = document.querySelector('.bottom-center');
+    const nextButton = document.querySelector('.bottom-right');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight - 50) {
+            prevButton.classList.add('visible');
+            tartalomLink.classList.add('visible');
+            nextButton.classList.add('visible');
+        } else {
+            prevButton.classList.remove('visible');
+            tartalomLink.classList.remove('visible');
+            nextButton.classList.remove('visible');
+        }
+    });
+</script>
+
+
+    
+</body>
+</html>
