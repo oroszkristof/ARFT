@@ -215,6 +215,12 @@
             <td>A 2.4 (Portfoliókezelés), 2.4.1 (Befektetési szimulátor), 2.5 (EdgeAl), 2.6 (Felhasználói fiók), 2.7 (ÁSZF, Adatvédelmi Tájékoztató, Rólunk felületek), 2.8 (Súgórendszer), 2.9 (Közösségi Fórum) alfejezetek kidolgozása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+        <tr>
+            <td>2025.04.15.</td>
+            <td>1.3</td>
+            <td>3.-as fejezet és alfejezeteinek kidolgozása(3.1; 3.2; 3.3; 3.4)</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
              
 
 
@@ -224,7 +230,36 @@
 
     <hr>
 
-    1. Bevezetés <br><br>
+    <h4 id="alfejezet1"><b>1. Bevezetés</b></h4>
+    <p style="text-align: justify;">
+        A tőzsdei webalkalmazás rendszertervezési dokumentuma a szoftver teljes fejlesztési folyamatának alapvető pillére, amely a felhasználói felület (UI) és az 
+        adatmodellek tervezését foglalja magában, biztosítva a rendszer funkcionalitásának és hatékonyságának szilárd alapjait. A modul célja, hogy a korábban 
+        részletezett funkciók – mint a "Regisztráció és Bejelentkezés", a "Friss tőzsdei hírek", az "EdgeAI" vagy a "Befektetési kalkulátor" – zökkenőmentesen 
+        működjenek együtt egy jól strukturált, felhasználóbarát és adatvezérelt környezetben. A rendszertervezés két fő területre oszlik: a felhasználói felület 
+        tervezésére.
+        <br><br>
+        A felhasználói felület tervezése során a webalkalmazás kezelőfelületének kidolgozására fókuszál, amely magában foglalja a főoldal funkcióit, az 
+        árfolyamfigyelőt, a hírlevelek és tőzsdei hírek kezelését, a portfóliókezelést, valamint a befektetési szimulátort. A főoldal például egy áttekintő 
+        dashboardot kínál, ahol a felhasználók gyorsan hozzáférhetnek a szimulált portfóliójukhoz és a legfrissebb hírekhez. Az árfolyamfigyelő lehetővé teszi 
+        valós idejű piaci adatok megjelenítését, például az Apple részvényeinek mozgását, míg a hírlevelek és tőzsdei hírek szekció a "Friss tőzsdei hírek" 
+        funkcióval összhangban biztosít testreszabható tartalmat. A portfóliókezelés és a befektetési szimulátor a "Portfóliókezelés" és az "EdgeAI" modulok 
+        integrálását tükrözi, lehetővé téve a felhasználók számára, hogy szimulált környezetben teszteljék befektetési stratégiáikat. A felhasználói fiókkezelés, 
+        az adatvédelem, valamint a súgórendszer (ASZF, tájékoztatók, GYIK) szintén a felület részei, biztosítva, hogy a "Fiókadatok kezelése" és a "Súgó, támogatás 
+        és hibakezelés" funkciók könnyen elérhetők legyenek, például egy reszponzív GYIK szekció formájában.
+        <br><br>
+        Az adatmodellek tervezése a rendszer háttérstruktúrájának alapjait teremti meg, amely az adatok hatékony kezelését és tárolását szolgálja. Ez a folyamat az 
+        adatbázis kezelő kiválasztásával kezdődik, a Microsoft SQL Server használatával, amely a "Regisztráció és Bejelentkezés" során megadott felhasználói 
+        adatokat titkosítva tárolja. A szemantikai és relációs adatmodellek kialakítása biztosítja, hogy a rendszer entitásai – például a "Felhasználó", "Hír", 
+        "Portfólió" vagy "Kalkuláció" – logikusan kapcsolódjanak egymáshoz, például egy felhasználóhoz több tranzakció tartozhat. Az adatbázis kezelővel kapcsolatos 
+        osztályok, mint a "Tranzakció" vagy "Értesítés", lehetővé teszik, hogy a "Befektetési kalkulátor" eredményei vagy az "Értesítések és riasztások" adatai 
+        strukturáltan tárolódjanak. Ez a struktúra támogatja a "Biztonság és adatvédelem" követelményeit is, például az adatkezelési naplók vezetését, hogy a 
+        felhasználók adatai GDPR-kompatibilis módon legyenek kezelve.
+        <br><br>
+        Összességében a rendszertervezés modul a tőzsdei webalkalmazás alapvető vázát alkotja, amely a felhasználói élményt és az adatkezelés hatékonyságát 
+        egyaránt biztosítja, lehetővé téve, hogy a különböző funkciók – a hírektől a szimulált befektetésekig – zökkenőmentesen működjenek együtt egy egységes 
+        rendszerben.
+        <br>
+    </p>
 
     
     <div style="text-align: justify;">
@@ -654,17 +689,97 @@ A felhasználói élmény fokozása érdekében a fórum több közösségi és 
 
     </div>
        
-    3. Adatmodellek <br><br><br>
+    <h4 id="alfejezet3"><b>3. Adatmodellek</b></h4>
+    <p style="text-align: justify;">
+        Az adatmodellek tervezése a tőzsdei webalkalmazás rendszertervezési moduljának egyik alapvető része, amely a rendszer adatstruktúrájának alapjait 
+        teremti meg, biztosítva az adatok hatékony tárolását, kezelését és lekérdezését a Microsoft SQL Server adatbázis segítségével. A Microsoft SQL Server 
+        egy robusztus relációs adatbázis-kezelő rendszer, amely lehetővé teszi a webalkalmazás entitásainak – például a "Felhasználó", "Portfólió", "Hír" vagy 
+        "Kalkuláció" – strukturált tárolását és gyors elérését, például a "Regisztráció és Bejelentkezés" során megadott adatok titkosított formában történő 
+        mentését. Az adatmodellezés során először a szemantikai adatmodell kerül kialakításra, amely az entitások közötti logikai kapcsolatokat definiálja, 
+        például egy felhasználóhoz több tranzakció tartozhat a "Tranzakció" osztályon keresztül, vagy egy hírlevél-feliratkozás több értesítést generálhat a 
+        "Hírlevél" és "Értesítés" osztályok összekapcsolásával. Ezt követi a relációs adatmodell létrehozása, amely a Microsoft SQL Server tábláit és 
+        kapcsolatait határozza meg, például a "Felhasználó" tábla egyedi azonosítóval (ID) és e-mail mezőkkel, amelyeket a "Fiókadatok kezelése" során 
+        módosíthat a felhasználó. Az adatbázis kezelővel kapcsolatos osztályok, mint a "RiasztásBeállítás" vagy "ExportáltEredmény", lehetővé teszik, hogy 
+        az "Értesítések és riasztások" vagy a "Befektetési kalkulátor" adatai hatékonyan tárolódjanak és lekérdezhetők legyenek, például egy árfolyamriasztás 
+        gyors értesítéséhez. A Microsoft SQL Server biztosítja az adatok integritását és biztonságát, például a "Biztonság és adatvédelem" követelményeinek 
+        megfelelően, az adatkezelési naplók vezetésével és a GDPR-kompatibilis adatkezeléssel.
+    </p>
     
-    3.1. Adatbázis kezelő kiválasztása <br><br><br>
+    <h4 id="alfejezet3.1."><b>3.1. Adatbázis kezelő kiválasztása </b></h4>
+    <p style="text-align: justify;">
+        Az adatbázis kezelő kiválasztása a tőzsdei webalkalmazás rendszertervezési folyamatának egyik kulcsfontosságú lépése, amely biztosítja az adatok 
+        hatékony, biztonságos és skálázható tárolását, ezért a Microsoft SQL Server mellett döntöttünk. A Microsoft SQL Server egy elismert relációs 
+        adatbázis-kezelő rendszer, amely tökéletesen megfelel a webalkalmazás igényeinek, például a "Regisztráció és Bejelentkezés" során gyűjtött felhasználói 
+        adatok – mint a név, e-mail és jelszó – titkosított tárolására. A választás során figyelembe vettük a rendszer által kezelt adatok komplexitását, 
+        például a "Portfólió" és "Tranzakció" osztályok közötti kapcsolatokat, amelyek nagy mennyiségű adatot és gyors lekérdezéseket igényelnek a szimulált 
+        kereskedési környezetben. A Microsoft SQL Server előnye, hogy támogatja a relációs adatmodelleket, így könnyen kezelhetők az olyan entitások, mint a 
+        "Hír" vagy "Értesítés", amelyek a "Friss tőzsdei hírek" és az "Értesítések és riasztások" funkciókhoz kapcsolódnak. Emellett a rendszer biztosítja az 
+        adatok integritását és a tranzakciók konzisztenciáját, például a "Befektetési kalkulátor" számításainak mentésekor, ahol az "ExportáltEredmény" osztály 
+        adatai pontosan tárolódnak. A Microsoft SQL Server skálázhatósága lehetővé teszi a jövőbeli bővítéseket, például a "Hírlevél feliratkozás" során gyűjtött 
+        adatok növekedését, míg a beépített biztonsági funkciók – például a titkosítás és a hozzáférés-vezérlés – megfelelnek a "Biztonság és adatvédelem" 
+        követelményeinek, biztosítva a GDPR-kompatibilis adatkezelést. A választás során a .NET API-val való kompatibilitás is döntő szerepet játszott, mivel 
+        a két technológia zökkenőmentes integrációt biztosít a back-end fejlesztéshez.
+        
+    </p>
     
-    3.2. Szemantikai adatmodell <br><br><br>
+    <h4 id="alfejezet3.2."><b>3.2. Szemantikai adatmodell </b></h4>
+    <p style="text-align: justify;">
+        A szemantikai adatmodell a tőzsdei webalkalmazás rendszertervezési folyamatának egyik kulcsfontosságú lépése, amely a rendszer entitásainak és 
+        kapcsolataiknak logikai struktúráját határozza meg, előkészítve az adatbázis megvalósítását a Microsoft SQL Server segítségével. Ez a modell 
+        absztrakt szinten írja le az alkalmazás főbb entitásait, például a "Felhasználó", "Portfólió", "Hír" és "Értesítés" osztályokat, valamint azok 
+        attribútumait és kapcsolatait, hogy a rendszer adatai értelmezhetők és összefüggéseik átláthatók legyenek. Például a "Felhasználó" entitás 
+        attribútumai között szerepelhet a név, e-mail és jelszó, amelyeket a "Regisztráció és Bejelentkezés" során gyűjt a rendszer, míg a "Portfólió" 
+        entitás a szimulált részvényeket és egyenleget tartalmazza, összekapcsolva a "Tranzakció" entitással, amely a vásárlásokat és eladásokat tárolja. 
+        A szemantikai modell meghatározza a kapcsolatokat is: egy felhasználóhoz több portfólió tartozhat, egy portfólióhoz pedig több tranzakció, amelyeket 
+        a "Portfóliókezelés" és "Befektetési szimulátor" funkciók használnak. Hasonlóképpen, a "Hír" entitás a "Friss tőzsdei hírek" adatait reprezentálja, 
+        például a címet és összefoglalót, és kapcsolódik a "Kategória" entitáshoz, amely a szűrési lehetőségeket biztosítja, például technológiai vagy pénzügyi 
+        hírek szétválasztását. A "Hírlevél" és "Feliratkozás" entitások a "Hírlevél feliratkozás" testreszabását támogatják, például a felhasználó preferenciáinak 
+        tárolásával. A szemantikai adatmodell tehát az alkalmazás logikai vázát adja, amely később a relációs adatmodell alapjául szolgál, biztosítva, hogy a 
+        Microsoft SQL Server adatbázisban az adatok hatékonyan és konzisztensen tárolódjanak, például az "Értesítések és riasztások" gyors lekérdezéséhez.
+        <div style="text-align: center;">
+            <img src="3.2modell.png" alt="Szemantikai adatmodell" width="1400px" height="900px">
+            </div> <br>
+    </p>
     
-    3.3 Relációs adatmodell <br><br><br>
+    <h4 id="alfejezet3.3."><b>3.3 Relációs adatmodell</b></h4>
+    <p style="text-align: justify;">
+        A relációs adatmodell a tőzsdei webalkalmazás rendszertervezési folyamatának következő lépése, amely a szemantikai adatmodell alapján az entitásokat és 
+        kapcsolataikat konkrét adatbázis-táblákká alakítja, hogy azokat a Microsoft SQL Server hatékonyan kezelje. Ez a modell táblák formájában definiálja a 
+        rendszer adatait, ahol minden tábla egy entitást reprezentál, például a "Felhasználó" tábla oszlopai az azonosító (ID), név, e-mail és titkosított jelszó 
+        mezőket tartalmazzák, amelyeket a "Regisztráció és Bejelentkezés" során gyűjt a rendszer. A "Portfólió" tábla a szimulált portfóliók adatait tárolja, 
+        például a felhasználó azonosítóját (külkulcs), az egyenleget és a részvényeket, míg a "Tranzakció" tábla a portfólióhoz kapcsolódó vásárlásokat és 
+        eladásokat rögzíti, szintén külkulcsokkal összekötve a "Portfólió" táblával, támogatva a "Portfóliókezelés" funkciót. A "Hír" tábla a "Friss tőzsdei 
+        hírek" adatait tartalmazza, például a címet, összefoglalót és forrást, és egy kapcsolótáblán keresztül kapcsolódik a "Kategória" táblához, amely a 
+        hírek szűrhetőségét biztosítja, például technológiai vagy pénzügyi kategóriák szerint. Az "Értesítés" tábla a "Felhasználó" és a "RiasztásBeállítás" 
+        táblákhoz kapcsolódik, lehetővé téve az "Értesítések és riasztások" funkció adatainak kezelését, például egy árfolyamváltozásról szóló riasztás tárolását. 
+        A relációs adatmodell elsődleges és idegen kulcsokkal biztosítja az adatok konzisztenciáját és integritását, például a "Hírlevél" és "Feliratkozás" 
+        táblák összekapcsolásával, hogy a Microsoft SQL Server gyorsan lekérdezhesse a felhasználók preferenciáit a "Hírlevél feliratkozás" testreszabásához, 
+        miközben a "Biztonság és adatvédelem" követelményeinek megfelelően titkosítva tárolja az érzékeny adatokat.
+        <div style="text-align: center;">
+            <img src="3.3modell.png" alt="Relációs adatmodell" width="800px" height="400px">
+            </div> <br>
+    </p>
     
-    3.4. Az adatbázis kezelővel kapcsolatot tartó osztályok <br><br><br>
+    <h4 id="alfejezet3.4."><b>3.4. Az adatbázis kezelővel kapcsolatot tartó osztályok </b></h4>
+    <p style="text-align: justify;">
+        Az adatbázis kezelővel kapcsolatot tartó osztályok a tőzsdei webalkalmazás rendszertervezési folyamatában kulcsfontosságú szerepet játszanak, mivel ezek 
+        biztosítják a Microsoft SQL Server adatbázissal való kommunikációt, lehetővé téve az adatok hatékony kezelését és lekérdezését a .NET API-n keresztül. 
+        Ezek az osztályok, amelyeket gyakran Data Access Layer (DAL) osztályoknak neveznek, a relációs adatmodellben definiált táblákhoz kapcsolódnak, és olyan 
+        műveleteket végeznek, mint az adatok olvasása, írása, frissítése és törlése. Például a "UserRepository" osztály a "Felhasználó" táblával lép kapcsolatba, 
+        hogy a "Regisztráció és Bejelentkezés" során a felhasználói adatokat – például nevet, e-mailt, jelszót – mentse vagy lekérdezze, biztosítva a titkosítást 
+        a "Biztonság és adatvédelem" követelményeinek megfelelően. Hasonlóképpen, a "PortfolioRepository" osztály a "Portfólió" tábla adatait kezeli, például a 
+        szimulált portfólió egyenlegét és részvényeit, amelyeket a "Portfóliókezelés" funkció használ, míg a "TransactionRepository" a "Tranzakció" tábla adatait 
+        frissíti, például egy új részvényvásárlás rögzítésekor. A "NewsRepository" osztály a "Hír" táblával kommunikál, hogy a "Friss tőzsdei hírek" adatait – 
+        például a hírek címét és összefoglalóját – lekérdezze a Finnhub API-ból származó információk tárolásához. Az "NotificationRepository" az "Értesítés" 
+        táblával dolgozik, hogy az "Értesítések és riasztások" során generált riasztásokat, például egy árfolyamváltozásról szóló értesítést, mentse és 
+        lekérdezze. A "CalculationRepository" osztály a "Befektetési kalkulátor" számításait tárolja, például a hozamkalkuláció eredményeit, biztosítva, 
+        hogy a "Korábbi számítások" szekcióban a felhasználók később is hozzáférjenek adataikhoz.
+        <div style="text-align: center;">
+            <img src="3.4modell.png" alt="osztály adatmodell" width="800px" height="400px">
+            </div> <br>
+    </p>
     
-    4. A funkcionális modell kiegészítése <br><br><br>
+    
 
 <br><br><br><br><br>
 
