@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/135.0.0.0 Safari/537.36" version="26.2.12">
+  <diagram name="1 oldal" id="APVldbE_g4x2g2QFhf-f">
+    <mxGraphModel dx="1027" dy="451" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IUs32gTtmgZRwza9JKNG-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="20" y="30" width="870" height="430" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-2" value="&lt;b&gt;ÁSZF&lt;/b&gt;&lt;div&gt;&lt;b&gt;Adatvédelem&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;Rólunk&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="30" y="40" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-3" value="Felhasználó" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="70" y="215" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-6" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="180" y="246" as="sourcePoint" />
+            <mxPoint x="110" y="245.74253731343276" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-7" value="&lt;b&gt;Megnyitja az alkalmazás&lt;/b&gt;&lt;div&gt;&lt;b&gt;főoldalát.&lt;/b&gt;&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="190" y="215" width="100" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-8" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="200" as="sourcePoint" />
+            <mxPoint x="300" y="230" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-9" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="260.1033333333334" as="sourcePoint" />
+            <mxPoint x="390" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-10" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="290" as="sourcePoint" />
+            <mxPoint x="390" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-11" value="&lt;b&gt;Rólunk&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="300" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-13" value="&lt;b&gt;Adatvédelmi Tájékozató&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="230" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-14" value="&lt;b&gt;ÁSZF&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="405" y="160" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-15" value="Rendszer" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="810" y="240" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-19" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="800" y="269.76" as="sourcePoint" />
+            <mxPoint x="730" y="269.50253731343275" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-20" value="&lt;b&gt;Megjeleníti az oldalakat&lt;/b&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="237.5" width="100" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-21" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="530" y="200" as="sourcePoint" />
+            <mxPoint x="600" y="240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-22" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="267.5" as="sourcePoint" />
+            <mxPoint x="590" y="272.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IUs32gTtmgZRwza9JKNG-23" value="" style="endArrow=none;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="300" as="sourcePoint" />
+            <mxPoint x="530" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
