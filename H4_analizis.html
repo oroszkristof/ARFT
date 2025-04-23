@@ -242,7 +242,90 @@
 
 2.1 Osztálydiagram <br><br><br>
 
-2.2 Osztályok felsorolása <br><br><br>
+<h4>2.2 Osztályok felsorolása</h4>
+
+<h4>2.2.1. Felhasználó</h4>
+A Felhasználó osztály az alkalmazásba belépő személyek adatait kezeli. Tárolja az egyedi azonosítót, az e-mail címet és a titkosított jelszót. Az osztály lehetőséget biztosít a regisztrációra és a kijelentkezésre is. Ezzel az alapvető hitelesítési funkciók biztosítottak a rendszerben. Fontos szerepet tölt be a hozzáférés-vezérlésben és a személyre szabott működésben.
+<br><br>
+<h4>2.2.2. Fiók</h4>
+A Fiók osztály a felhasználóhoz tartozó beállításokat tartalmazza. Többek között tárolja a preferált nyelvet és az utolsó bejelentkezés időpontját. Segítségével módosíthatók az adatok vagy akár törölhető is a fiók. Ez az osztály kapcsolódik a Felhasználó osztályhoz, kiegészítve annak funkcionalitását. Használatával testreszabott élmény biztosítható minden egyes felhasználónak.
+<br><br>
+<h4>2.2.3. Tevékenységnapló</h4>
+A Tevékenységnapló osztály a felhasználók által végrehajtott műveleteket rögzíti. Minden naplóbejegyzéshez hozzátartozik egy felhasználói azonosító és egy részletes leírás. A rendszer átláthatósága és biztonsága érdekében hasznos eszköz. Segítségével nyomon követhető, ki mit és mikor végzett az oldalon. A bejegyzések később elemzések alapjául szolgálhatnak.
+<br><br>
+<h4>2.2.4. Hír</h4>
+A Hír osztály a rendszer híreit kezeli, minden rekord tartalmazza a címet és a forrást. Frissíthető külső API segítségével, így mindig naprakész lehet. A hírek külön oldalon jeleníthetők meg a felhasználóknak. Fontos kommunikációs eszköz a felhasználók tájékoztatására. Segítségével az alkalmazás hírtartalma dinamikusan változhat.
+<br><br>
+<h4>2.2.5. Hírlevél</h4>
+A Hírlevél osztály az e-mailben kiküldött tartalmakat rögzíti. A tárolt adatok közé tartozik a hírlevél szövege és a küldés időpontja. Lehetőség van új tartalom generálására is a rendszerből. A hírlevelek automatizált módon juttathatók el a feliratkozókhoz. Ezáltal a kommunikáció folyamatos és egyszerűen menedzselhető.
+<br><br>
+<h4>2.2.6. Feliratkozás</h4>
+A Feliratkozás osztály a hírlevélre való jelentkezést kezeli. Minden rekord tartalmazza az e-mail címet, valamint a feliratkozás állapotát. A felhasználók új címként hozzáadhatók vagy leiratkoztathatók. Ez az osztály gondoskodik arról, hogy csak aktív előfizetők kapjanak üzeneteket. Így biztosítható a GDPR-kompatibilis működés is.
+<br><br>
+<h4>2.2.7. BefektetésiJavaslat</h4>
+A BefektetésiJavaslat osztály pénzügyi ajánlásokat tartalmaz részvényekre vonatkozóan. Minden javaslat rendelkezik egy egyedi azonosítóval és tartalmazza a részvényhez kapcsolódó adatokat. A javaslat kockázati szintje is tárolásra kerül. A felhasználók részletesen megtekinthetik az ajánlott befektetéseket. Az osztály segítségével automatizált javaslatokat lehet generálni.
+<br><br>
+<h4>2.2.8. Kockázatelemzés</h4>
+A Kockázatelemzés osztály a portfóliók kockázati szintjét számolja ki. Minden elemzés kapcsolódik egy portfólióhoz és egyedi azonosítóval rendelkezik. A számítás alapján később jelentés is készülhet. Ez fontos döntéstámogató eszköz a befektetők számára. Az osztály segítségével optimalizálható a pénzügyi stratégia.
+<br><br>
+<h4>2.2.9. TrendElőrejelzés</h4>
+A TrendElőrejelzés osztály célja, hogy előrejelezze a részvények várható árfolyamát. A rendszer a részvények múltbeli teljesítményéből dolgozik. Az előrejelzések frissíthetők, így mindig aktuális információ áll rendelkezésre. Az osztály a befektetők tájékozott döntéshozatalát segíti. Grafikonos vagy szöveges formában is megjeleníthető.
+<br><br>
+<h4>2.2.10. Kalkuláció</h4>
+A Kalkuláció osztály különböző pénzügyi számításokat végez. Ide tartozik például a hozam és a veszteség kiszámítása. A számítások eredménye riportként is elérhető. Az osztály nélkülözhetetlen a portfóliók pénzügyi elemzéséhez. Segítségével a felhasználók gyorsan áttekinthetik eredményeiket.
+<br><br>
+
+<h4>2.2.11. Kalkuláció</h4>
+Ez a második Kalkuláció osztály előrejelzésekhez kapcsolódó értékeket tartalmaz. Rögzíti az előrejelzés időpontját, az előrejelzett értéket és annak azonosítóját. Az osztály célja hosszú távú pénzügyi előrejelzések generálása. A megjelenítés során részletesen látható az érték alakulása. Hasznos eszköz az elemzési és döntéshozatali folyamatokban.
+<br><br>
+<h4>2.2.12. Kalkuláció</h4>
+A harmadik Kalkuláció osztály az eredmények exportálásához kapcsolódik. Tárolja az exportált fájl nevét, az exportálás dátumát és annak azonosítóját. Lehetőséget nyújt a PDF formátumú fájlok generálására és letöltésére. Ez megkönnyíti az adatok archiválását és megosztását. Az osztály különösen hasznos jelentések készítésekor.
+<br><br>
+<h4>2.2.13. Értesítés</h4>
+Az Értesítés osztály célja a felhasználók automatikus értesítése. Minden értesítéshez tartozik egy felhasználói azonosító, egy szöveg és egy egyedi ID. Az értesítések elküldhetők és törölhetők a rendszerből. Ez a funkció segíti a felhasználói aktivitás visszajelzését. Fontos szerepet játszik a kommunikáció gyorsaságában és személyességében.
+<br><br>
+<h4>2.2.14. RiasztásBeállítás</h4>
+A RiasztásBeállítás osztály célja, hogy a részvényekhez árfolyamriasztásokat rendelhessünk. Beállítható célárfolyam alapján figyelmezteti a felhasználót, ha az adott értéket eléri a piac. A rendszer automatikusan ellenőrzi a riasztások feltételeit. Ez segíti a felhasználót, hogy ne maradjon le a fontos pénzügyi eseményekről. Az osztály így hasznos befektetési eszközzé válik.
+<br><br>
+<h4>2.2.15. GYIK</h4>
+A GYIK osztály a gyakran ismételt kérdéseket tárolja. Minden bejegyzéshez tartozik egy kérdés, egy válasz és egy azonosító. A felhasználók kulcsszavak alapján kereshetnek a bejegyzésekben. Az új kérdések és válaszok könnyedén hozzáadhatók. Az osztály segít csökkenteni az ügyfélszolgálati terhelést.
+<br><br>
+<h4>2.2.16. ÜgyfélszolgálatiKérés</h4>
+Az ÜgyfélszolgálatiKérés osztály a felhasználók által benyújtott kérések rögzítésére szolgál. Minden kéréshez kapcsolódik egy azonosító, egy felhasználó és az aktuális állapot. Új kérések rögzíthetők, illetve az állapotuk frissíthető. Ez lehetővé teszi a bejelentések nyomon követését. Az osztály támogatja a gyors és hatékony ügyintézést.
+<br><br>
+<h4>2.2.17. HibaNapló</h4>
+A HibaNapló osztály a rendszerben előforduló hibákat dokumentálja. Tartalmazza a hiba leírását, az időpontját és az azonosítóját. A hibák naplózása későbbi elemzést és javítást tesz lehetővé. A rendszeradminisztrátorok számára értékes információkat nyújt. Az osztály javítja a rendszer megbízhatóságát.
+<br><br>
+<h4>2.2.18. AdatvédelmiTájékoztató</h4>
+Az AdatvédelmiTájékoztató osztály a felhasználók adatkezeléséről szóló dokumentumot tárolja. Tartalmazza a tájékoztató szövegét, annak azonosítóját és az utolsó frissítés idejét. A dokumentum bármikor megjeleníthető és frissíthető. Ezzel biztosítható a törvényi megfelelés és az átláthatóság. Az osztály a GDPR betartásának egyik eszköze.
+<br><br>
+<h4>2.2.19. AdatkezelésiNapló</h4>
+Ez az osztály az adatkezelési műveleteket rögzíti. Minden művelethez tartozik egy felhasználó, egy leírás és egy azonosító. A rendszer minden változtatást naplóz, így azok utólag visszakereshetők. A naplóbejegyzések listázása lehetővé teszi az ellenőrzést. Ez az osztály kulcsfontosságú a biztonsági és jogi követelmények teljesítésében.
+<br><br>
+<h4>2.2.20. Portfólió</h4>
+A Portfólió osztály a felhasználók befektetési portfólióját tárolja. Minden portfólió tartalmaz egy aktuális értéket és egy felhasználói azonosítót. Frissíthető, és megjeleníthető bármikor az értékek változása alapján. Az osztály segíti a felhasználót, hogy kövesse befektetései alakulását. Alapja lehet a kockázatkezelésnek és a pénzügyi tervezésnek.
+<br><br>
+<h4>2.2.21. Tranzakció</h4>
+A Tranzakció osztály a részvények vásárlását és eladását rögzíti. Minden rekord tartalmazza a részvény azonosítóját, a mennyiséget és az egyedi tranzakció azonosítót. A vásárlások és eladások külön funkcióként kezelhetők. A felhasználók nyomon követhetik a pénzügyi mozgásaikat. Az osztály fontos része a befektetési modulnak.
+<br><br>
+<h4>2.2.22. Tranzakció</h4>
+A második Tranzakció osztály a részvényekhez kapcsolódó adatok frissítésére és lekérdezésére szolgál. Minden részvényhez tartozik egy ticker azonosító és egy aktuális árfolyam. Ezek az adatok bármikor frissíthetők. A felhasználók lekérhetik az egyes részvények adatait. Ez lehetővé teszi a valós idejű információk megjelenítését.
+<br><br>
+<h4>2.2.23. Kategória</h4>
+A Kategória osztály a rendszerben elérhető témaköröket írja le. Tartalmazza a kategória nevét, leírását és azonosítóját. Az új kategóriák egyszerűen hozzáadhatók. A kategóriák segítségével rendszerezhetők a tartalmak. Ezáltal a felhasználók könnyebben eligazodnak az oldalon.
+<br><br>
+<h4>2.2.24. Pénznem</h4>
+A Pénznem osztály a különféle devizákat írja le. Minden pénznemhez tartozik egy azonosító, kód és átváltási árfolyam. Az árfolyam értéke frissíthető és konvertálható más valutára. A felhasználók könnyedén átválthatják összegeiket. Ez megkönnyíti a nemzetközi tranzakciók kezelését.
+<br><br>
+<h4>2.2.25. Beállítás</h4>
+A Beállítás osztály a felhasználói értesítési preferenciákat tárolja. Tartalmazza a felhasználó azonosítóját, a beállítás azonosítóját és az értesítési módot. Az értesítések módosíthatók igény szerint. A rendszer ez alapján képes személyre szabottan kommunikálni. Az osztály segíti a felhasználói élmény finomhangolását.
+<br><br>
+
+
+
+
+
+
 
 <h4 id="alfejezet2.3."><b>2.3. Alrendszerek</b></h4> 
 <p style="text-align: justify;">
@@ -266,13 +349,882 @@
     komponensekkel jeleníti meg az információkat a felhasználók számára.
 </p>
 
-3. Az első alrendszer modellje <br><br><br>
 
-3.1 Statikus modell <br><br><br>
 
-3.1.1 Kapcsolatok pontosítása <br><br><br>
+<h4>3. Az első alrendszer modellje</h4>
+<h4>3.1 Statikus modell</h4> 
+A statikus modell azt mutatja be, hogy a rendszerben milyen fogalmi elemek (osztályok) léteznek, ezek milyen adatokat tárolnak, és milyen logikai viszonyban állnak egymással.
+Első lépésben azonosítottuk a legfontosabb üzleti objektumokat, például a Felhasználó, Fiók, Portfólió, Tranzakció, Részvény, Hír és Értesítés osztályokat.
+Mindegyik osztály valós életbeli fogalmat reprezentál, ezért egyértelmű, beszédes nevet kaptak, hogy a kód és a dokumentáció gyorsan érthető legyen.
+Az attribútumokat úgy választottuk meg, hogy csak a működéshez elengedhetetlen adatot tároljuk; így elkerülhető a redundancia és a felesleges adatsokaság.
+Minden osztály attribútumaihoz pontos típust rendeltünk (például int, string, DateTime), mert ez megalapozza az adatbázissémát és a típus-biztonságos kódolást.
+<br><br>
+A metódusok szintén csak a legalapvetőbb keretet adják: például a Felhasználó csak regisztrálni, be- és kijelentkezni tud, így a magasabb rétegek könnyebben kezelhetik a jogosultságokat.
+A rendszer központi eleme a Felhasználó, akinek több Fiókja lehet; ez a felépítés támogatja a többnyelvű felületet és a személyre szabott beállításokat.
+Minden Fiókhoz több Portfólió rendelhető, hogy a felhasználó akár eltérő befektetési stratégiákat is párhuzamosan kezelhessen.
+A Portfólió kompozícióban tartalmaz Tranzakció-objektumokat, mert a tranzakciók értelme csak a hozzájuk tartozó portfólión belül áll fenn.
+Minden Tranzakció pontosan egy Részvényhez kapcsolódik; ezzel tisztán követhető, mely értékpapír mozgását rögzítettük.
+A Hír osztály globális információt hordoz, így nincs közvetlen felhasználói kötődése, ellenben az Értesítés mindig egyetlen Felhasználóhoz tartozik, hogy elérjük a személyre szabott kommunikációt.
+Riasztás-objektumok figyelik a Részvények árfolyamát, és szükség esetén Értesítést generálnak; a logika így jól szeparált, könnyen bővíthető.
 
-3.1.2 Attribútumok azonosítása <br><br><br>
+<br><br>
+A statikus modell megengedi, hogy a számítási modul (Kalkuláció, Kockázatelemzés, TrendElőrejelzés) független legyen a felhasználói felülettől, így az algoritmusok akár külön szolgáltatásként is futtathatók.
+Az öröklődési hierarchiát minimálisan alkalmaztuk: csak akkor vezettünk be bázisosztályt, ha több alosztály részére közös viselkedés vagy adat kellett (például azonosító, létrehozási dátum).
+Ez a statikus szerkezet biztosítja, hogy a fejlesztőcsapat minden tagja ugyanarra a fogalmi alapra építhet, és a későbbi módosítások is könnyen beilleszthetők a rendszerbe.
+
+
+
+
+
+
+ <br><br>
+
+<h4>3.1.1 Kapcsolatok pontosítása</h4> 
+<b>Az alábbiakban részletezzük az elemzési osztályok közötti kapcsolatokat. </b><br><br>
+
+
+- A Felhasználó osztály központi szerepet tölt be, hiszen minden funkció valamely felhasználói művelethez kapcsolódik. Egy Felhasználó egy vagy több Fiókkal rendelkezhet (1:N kapcsolat), ahol a fiók tárolja a beállításokat, nyelvet, profiladatokat.
+<br><br>
+- Egy Fiók több Portfólió-t is kezelhet (1:N), melyek a felhasználó befektetéseit tartalmazzák. Minden portfólióhoz kapcsolódhat több Tranzakció is, amelyek egy-egy részvény vásárlását vagy eladását rögzítik – ez egy erős, kompozíció jellegű 1:N kapcsolat.
+<br><br>
+- Minden Tranzakció kapcsolódik egy Részvény osztályhoz, amely a piacon forgalmazott részvény adatait tartalmazza. Itt N:1 asszociáció figyelhető meg.
+<br><br>
+- Egy Portfólió több Kalkuláció és Kockázatelemzés eredményét is tárolhatja, amelyek segítik a döntéstámogatást.
+<br><br>
+- A Felhasználó beállíthat Riasztásokat, amelyek egy Részvény megfigyelésére szolgálnak – ezek 1:N kapcsolatban állnak egymással.
+<br><br>
+- A Hír osztály nem közvetlenül kapcsolódik egy adott felhasználóhoz, hanem globálisan jelenik meg mindenki számára. Ezzel szemben a Hírlevél osztályhoz való Feliratkozás kapcsolat 1:1, vagy legfeljebb 1:N, a választott modell szerint.
+<br><br>
+- A Felhasználó értesítéseket kap különféle eseményekről (Értesítés), amelyek 1:N kapcsolattal valósulnak meg.
+<br><br>
+- Az ÜgyfélszolgálatiKérés, GYIK, AdatvédelmiTájékoztató és AdatkezelésiNapló osztályok adminisztratív és dokumentációs funkciókat látnak el, és vagy passzívan tárolnak adatokat, vagy események hatására jönnek létre.
+<br><br>
+- Lehetséges öröklődési kapcsolat, például egy Admin és egy Felhasználó között, ha jogosultságkezelést is bevezetünk, ilyenkor az Admin örökölheti a Felhasználó osztály attribútumait.
+<br><br>
+
+<h4>3.1.2 Attribútumok azonosítása</h4>
+
+<h4><b>1.Felhasználó</b></h4> 
+<p style="text-align: justify;">
+    A Felhasználó osztály a rendszer felhasználóinak adatait kezeli, például a nevüket, e-mail-címüket és jelszavukat. Felelős a fiók létrehozásáért, 
+    módosításáért és törléséért. A .NET API-val biztosítja az autentikációt és az autorizációt.
+    
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>userID</td>
+        <td>int</td>
+        <td>A felhasználó egyedi azonosítója</td>
+    </tr>
+    <tr>
+        <td>userID</td>
+        <td>int</td>
+        <td>A felhasználó egyedi azonosítója</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>string</td>
+        <td>A felhasználó e-mail-címe a bejelentkezéshez</td>
+    </tr>
+    <tr>
+        <td>jelszo</td>
+        <td>string</td>
+        <td>A felhasználó titkosított jelszava</td>
+    </tr>
+</table>
+
+<h4><b>2.Fiók</b></h4>
+<p style="text-align: justify;">
+    A Fiók osztály a felhasználók fiókjához kapcsolódó beállításokat tárolja, például a preferált nyelvet vagy értesítési opciókat. Kapcsolatot biztosít a Felhasználó 
+    és a Portfólió osztályok között. Támogatja a fiókkezelési műveleteket, például a jelszó-visszaállítást.
+
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>fiokID</td>
+        <td>int</td>
+        <td>A fiók egyedi azonosítója</td>
+    </tr>
+    <tr>
+        <td>nyelv</td>
+        <td>string</td>
+        <td>A felhasználó preferált nyelve</td>
+    </tr>
+    <tr>
+        <td>utolsoBejelentkezes</td>
+        <td>DateTime</td>
+        <td>A legutóbbi bejelentkezés időpontja</td>
+    </tr>
+</table>
+
+<br><br>
+
+<h4><b>3.Tevékenységnapló</b></h4>
+<p style="text-align: justify;">
+    A Tevékenységnapló osztály a felhasználói műveletek naplózását végzi, például a bejelentkezési kísérleteket vagy jelszóváltoztatásokat. Segít a gyanús tevékenységek 
+    észlelésében, például többszöri sikertelen bejelentkezés esetén. A naplókat időrendben tárolja, és a Felhasználó osztályhoz kapcsolódik.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>naploId</td>
+        <td>int</td>
+        <td>A naplóbejegyzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>string</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+    <tr>
+        <td>tevekenyseg</td>
+        <td>string</td>
+        <td>A végrehajtott tevékenység leírása</td>
+    </tr>
+</table>
+
+<br><br>
+
+
+<h4><b>4.Hír</b></h4>
+<p style="text-align: justify;">
+    A Hír osztály a tőzsdei hírek adatait reprezentálja, például a címet, összefoglalót és forrást. Külső API-k, például a Finnhub adatait dolgozza fel. 
+    Lehetővé teszi a hírek megjelenítését a Friss tőzsdei hírek szekcióban.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>hirId</td>
+        <td>int</td>
+        <td>A hír egyedi azonosítója</td>
+    </tr>
+    <tr>
+        <td>cim</td>
+        <td>string</td>
+        <td>A hír címe</td>
+    </tr>
+    <tr>
+        <td>forras</td>
+        <td>string</td>
+        <td>A hír forrása</td>
+    </tr>
+</table>
+
+<br><br>
+
+<h4><b>5.Hírlevél</b></h4>
+<p style="text-align: justify;">
+    A Hírlevél osztály a hírlevél feliratkozásokat kezeli, tárolva a felhasználók e-mail-címeit és preferenciáit. Lehetővé teszi a napi vagy heti hírlevelek küldését, 
+    például piaci összefoglalókkal. A .NET API-val integrálódik az e-mail-küldéshez.
+</p>
+<table>
+        <h4>Attribútumok</h4>
+        <tr>
+            <th>Név</th>
+            <th>Típus</th>
+            <th>Leírás</th>
+        </tr>
+        <tr>
+            <td>hirlevelId</td>
+            <td>int</td>
+            <td>A hírlevél azonosítója</td>
+        </tr>
+        <tr>
+            <td>tartalom</td>
+            <td>string</td>
+            <td>A hírlevél tartalma</td>
+        </tr>
+        <tr>
+            <td>kuldesIdopont</td>
+            <td>DateTime</td>
+            <td>A küldés időpontja</td>
+        </tr>
+    </table>
+
+    
+
+    <br><br>
+
+
+<h4><b>6.Feliratkozás</b></h4>
+<p style="text-align: justify;">
+    A Feliratkozás osztály a hírlevélre való feliratkozások adminisztrációját végzi, például a feliratkozás állapotát (aktív/lejárt). Támogatja a 
+    leiratkozási folyamatot egy link generálásával. Kapcsolatot tart a Hírlevél és Felhasználó osztályokkal.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>feliratkozasId</td>
+        <td>int</td>
+        <td>A feliratkozás azonosítója</td>
+    </tr>
+    <tr>
+        <td>email</td>
+        <td>string</td>
+        <td>A feliratkozó e-mail-címe</td>
+    </tr>
+    <tr>
+        <td>aktiv</td>
+        <td>bool</td>
+        <td>A feliratkozás állapota</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+<h4 ><b>7.BefektetésiJavaslat</b></h4>
+<p style="text-align: justify;">
+    A BefektetésiJavaslat osztály mesterséges intelligencia alapú ajánlásokat generál, például részvényvásárlási ötleteket. A felhasználó szimulált tranzakciói 
+    alapján javasol stratégiákat, például diverzifikációt. A Portfólió és Részvény osztályokkal működik együtt.
+
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>javaslatId</td>
+        <td>int</td>
+        <td>A javaslat azonosítója</td>
+    </tr>
+    <tr>
+        <td>reszvenyId</td>
+        <td>int</td>
+        <td>A javasolt részvény azonosítója</td>
+    </tr>
+    <tr>
+        <td>kockazat</td>
+        <td>float</td>
+        <td>A javaslat kockázati szintje</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>8.Kockázatelemzés</b></h4>
+<p style="text-align: justify;">
+    A Kockázatelemzés osztály a szimulált portfóliók kockázati szintjét értékeli, például volatilitási mutatók alapján. Segít a felhasználóknak megérteni befektetéseik 
+    kockázatát, például egy technológiai részvény esetében. A Portfólió osztály adatait használja fel.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>elemzesId</td>
+        <td>int</td>
+        <td>Az elemzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>portolioId</td>
+        <td>int</td>
+        <td>A portfólió azonosítója</td>
+    </tr>
+    <tr>
+        <td>kockazatiSzint</td>
+        <td>float</td>
+        <td>A portfólió kockázati szintje</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>9.TrendElőrejelzés</b></h4>
+<p style="text-align: justify;">
+    A TrendElőrejelzés osztály piaci trendeket elemez, például árfolyammozgásokat előrejelző algoritmusokkal. Támogatja a felhasználókat a szimulált kereskedési 
+    döntésekben, például egy részvény várható emelkedésének jelzésével. Külső API-k adatait, például az Alpha Vantage-t használja.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>elorejelzesId</td>
+        <td>int</td>
+        <td>Az előrejelzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>reszvenyId</td>
+        <td>int</td>
+        <td>A részvény azonosítója</td>
+    </tr>
+    <tr>
+        <td>varhatoArfolyam</td>
+        <td>float</td>
+        <td>A várható árfolyam értéke</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+
+<h4><b>10.Kalkuláció</b></h4>
+<p style="text-align: justify;">
+    A Kalkuláció osztály pénzügyi számításokat végez, például a szimulált portfólió hozamát vagy veszteségét. Lehetővé teszi a felhasználók számára, 
+    hogy megértsék befektetéseik teljesítményét. A Portfólió és Tranzakció osztályokkal működik együtt.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>kalkulacioId</td>
+        <td>int</td>
+        <td>A kalkuláció azonosítója</td>
+    </tr>
+    <tr>
+        <td>hozam</td>
+        <td>float</td>
+        <td>A portfólió hozama százalékban</td>
+    </tr>
+    <tr>
+        <td>veszteseg</td>
+        <td>float</td>
+        <td>A portfólió vesztesége</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+<h4 ><b>11.Előrejelzés</b></h4>
+<p style="text-align: justify;">
+    Az Előrejelzés osztály hosszú távú piaci előrejelzéseket készít, például egy részvény jövőbeli árfolyamára. Gépi tanulási modelleket használ a trendek 
+    elemzésére, például a technológiai szektorban. A TrendElőrejelzés osztályt egészíti ki.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>elorejelzesId</td>
+        <td>int</td>
+        <td>Az előrejelzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>datum</td>
+        <td>DateTime</td>
+        <td>Az előrejelzés időpontja</td>
+    </tr>
+    <tr>
+        <td>ertek</td>
+        <td>float</td>
+        <td>Az előrejelzett érték</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+<h4 ><b>12.ExportáltEredmény</b></h4>
+<p style="text-align: justify;">
+    Az ExportáltEredmény osztály a szimulált portfólió adatait exportálja, például PDF vagy CSV formátumban. Lehetővé teszi a felhasználók számára, hogy mentsék 
+    eredményeiket, például egy havi jelentést. A Portfólió és Tranzakció osztályok adatait használja.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>exportId</td>
+        <td>int</td>
+        <td>Az export azonosítója</td>
+    </tr>
+    <tr>
+        <td>fajlNev</td>
+        <td>string</td>
+        <td>Az exportált fájl neve</td>
+    </tr>
+    <tr>
+        <td>letoltesDatum</td>
+        <td>DateTime</td>
+        <td>Az exportálás időpontja</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>13.Értesítés</b></h4>
+<p style="text-align: justify;">
+    Az Értesítés osztály a felhasználói értesítéseket kezeli, például e-mailes vagy push-értesítéseket egy piaci eseményről. Támogatja a személyre szabott 
+    értesítéseket, például egy részvény árfolyamváltozásáról. A Felhasználó és Hír osztályokkal működik együtt.
+
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>ertesitesId</td>
+        <td>int</td>
+        <td>Az értesítés azonosítója</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>int</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+    <tr>
+        <td>uzenet</td>
+        <td>string</td>
+        <td>Az értesítés szövege</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>14.RiasztásBeállítás</b></h4>
+<p style="text-align: justify;">
+    A RiasztásBeállítás osztály lehetővé teszi a felhasználók számára, hogy riasztásokat állítsanak be, például egy részvény árfolyamának emelkedésére. 
+    Tárolja a riasztási feltételeket és időzítéseket. Az Értesítés és Részvény osztályokkal kommunikál.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>riasztasId</td>
+        <td>int</td>
+        <td>A riasztás azonosítója</td>
+    </tr>
+    <tr>
+        <td>reszvenyId</td>
+        <td>int</td>
+        <td>A részvény azonosítója</td>
+    </tr>
+    <tr>
+        <td>celArfolyam</td>
+        <td>float</td>
+        <td>A riasztás cél árfolyama</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>15.GYIK</b></h4>
+<p style="text-align: justify;">
+    A GYIK osztály a gyakran ismételt kérdések és válaszok kezelésére szolgál, például a rendszer használatával kapcsolatban. Segíti a felhasználókat az 
+    alapvető problémák megoldásában, például a regisztrációval. Tartalmaz egy kereshető adatbázist.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>gyikId</td>
+        <td>int</td>
+        <td>A GYIK bejegyzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>kerdes</td>
+        <td>string</td>
+        <td>A feltett kérdés szövege</td>
+    </tr>
+    <tr>
+        <td>valasz</td>
+        <td>string</td>
+        <td>A válasz szövege</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+
+<h4 ><b>16.ÜgyfélszolgálatiKérés</b></h4>
+<p style="text-align: justify;">
+    Az ÜgyfélszolgálatiKérés osztály a felhasználók ügyfélszolgálati kéréseit rögzíti, például hibajelentéseket. Lehetővé teszi a kérések állapotának nyomon 
+    követését, például "folyamatban" vagy "megoldva". A Felhasználó osztályhoz kapcsolódik.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>keresId</td>
+        <td>int</td>
+        <td>A kérés azonosítója</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>int</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+    <tr>
+        <td>allapot</td>
+        <td>string</td>
+        <td>A kérés állapota (pl. "folyamatban")</td>
+    </tr>
+</table>
+
+
+<br><br>
+
+
+<h4><b>17.HibaNapló</b></h4>
+<p style="text-align: justify;">
+    A HibaNapló osztály a rendszer hibáit naplózza, például egy API-hívás sikertelenségét. Segíti a fejlesztőket a hibák azonosításában és javításában, 
+    például egy adatbázis-kapcsolati probléma esetén. Időrendi sorrendben tárolja az eseményeket.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>hibaId</td>
+        <td>int</td>
+        <td>A hiba azonosítója</td>
+    </tr>
+    <tr>
+        <td>leiras</td>
+        <td>string</td>
+        <td>A hiba leírása</td>
+    </tr>
+    <tr>
+        <td>idopont</td>
+        <td>DateTime</td>
+        <td>A hiba időpontja</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>18.AdatvédelemTájékoztató</b></h4>
+<p style="text-align: justify;">
+    Az AdatvédelemTájékoztató osztály a felhasználók számára biztosít adatvédelmi információkat, például az adatkezelési szabályzatot. Tartalmazza a jogi 
+    szövegeket és frissítési dátumokat. A Felhasználó osztályhoz kapcsolódik a regisztráció során.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>tajekoztatoId</td>
+        <td>int</td>
+        <td>A tájékoztató azonosítója</td>
+    </tr>
+    <tr>
+        <td>szoveg</td>
+        <td>string</td>
+        <td>A tájékoztató szövege</td>
+    </tr>
+    <tr>
+        <td>utolsoFrissites</td>
+        <td>DateTime</td>
+        <td>A legutóbbi frissítés időpontja</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>19.AdatkezelésiNapló</b></h4>
+<p style="text-align: justify;">
+    Az AdatkezelésiNapló osztály az adatkezelési műveleteket naplózza, például a felhasználói adatok módosítását. Biztosítja az adatkezelés átláthatóságát, 
+    például egy e-mail-cím változtatásakor. A Felhasználó és Tevékenységnapló osztályokkal működik együtt.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>naploId</td>
+        <td>int</td>
+        <td>A naplóbejegyzés azonosítója</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>int</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+    <tr>
+        <td>muvelet</td>
+        <td>string</td>
+        <td>Az adatkezelési művelet leírása</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>20.Portfólió</b></h4>
+<p style="text-align: justify;">
+    A Portfólió osztály a felhasználók szimulált portfólióját kezeli, például a részvények mennyiségét és értékét. Lehetővé teszi a portfólió összetételének 
+    megjelenítését, például egy kördiagramban. Kapcsolatot tart a Részvény és Tranzakció osztályokkal.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>portfolioId</td>
+        <td>int</td>
+        <td>A portfólió azonosítója</td>
+    </tr>
+    <tr>
+        <td>ertek</td>
+        <td>float</td>
+        <td>A portfólió aktuális értéke</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>int</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4><b>21.Tranzakció</b></h4>
+<p style="text-align: justify;">
+    A Tranzakció osztály a szimulált tranzakciók adatait tárolja, például a vásárlás időpontját és mennyiségét. Támogatja a tranzakciók listázását és elemzését, 
+    például egy havi összefoglalóban. A Portfólió és Részvény osztályokkal működik együtt.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>tranzakcioId</td>
+        <td>int</td>
+        <td>A tranzakció azonosítója</td>
+    </tr>
+    <tr>
+        <td>reszvenyId</td>
+        <td>int</td>
+        <td>A részvény azonosítója</td>
+    </tr>
+    <tr>
+        <td>mennyiseg</td>
+        <td>int</td>
+        <td>A vásárolt/eladott mennyiség</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4><b>22.Részvény</b></h4>
+<p style="text-align: justify;">
+    A Részvény osztály a részvények adatait reprezentálja, például nevét, tickerét és aktuális árfolyamát. Külső API-kból, például az Alpha Vantage-ból 
+    származó adatokat kezel. Alapvető szerepet játszik az Árfolyamfigyelő funkcióban.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>reszvenyId</td>
+        <td>int</td>
+        <td>A részvény azonosítója</td>
+    </tr>
+    <tr>
+        <td>ticker</td>
+        <td>string</td>
+        <td>A részvény tőzsdei azonosítója</td>
+    </tr>
+    <tr>
+        <td>arfolyam</td>
+        <td>float</td>
+        <td>A részvény aktuális árfolyama</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>23.Kategória</b></h4>
+<p style="text-align: justify;">
+    A Kategória osztály a fórumbejegyzések kategorizálását végzi, például "Kezdőknek" vagy "Stratégiák". Segíti a tartalom rendszerezését a Közösségi Fórumon belül. 
+    Kapcsolatot tart a Beállítás osztályokkal.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>kategoriaId</td>
+        <td>int</td>
+        <td>A kategória azonosítója</td>
+    </tr>
+    <tr>
+        <td>nev</td>
+        <td>string</td>
+        <td>A kategória neve (pl. "Kezdőknek")</td>
+    </tr>
+    <tr>
+        <td>leiras</td>
+        <td>string</td>
+        <td>A kategória leírása</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4><b>24.Pénznem</b></h4>
+<p style="text-align: justify;">
+    A Pénznem osztály a különböző pénznemek kezelésére szolgál, például HUF vagy USD árfolyamok megjelenítésére. Támogatja a valutaátváltást a tranzakciók során. 
+    A Részvény és Kalkuláció osztályokkal működik együtt.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>penznemId</td>
+        <td>int</td>
+        <td>A pénznem azonosítója</td>
+    </tr>
+    <tr>
+        <td>kod</td>
+        <td>string</td>
+        <td>A pénznem kódja (pl. "HUF")</td>
+    </tr>
+    <tr>
+        <td>atvaltasiArfolyam</td>
+        <td>float</td>
+        <td>Az átváltási árfolyam értéke</td>
+    </tr>
+</table>
+
+
+
+<br><br>
+
+<h4 ><b>25.Beállítás</b></h4>
+<p style="text-align: justify;">
+    A Beállítás osztály a felhasználói beállításokat tárolja, például a preferált értesítési módokat vagy a fórum szűrési opciókat. Lehetővé teszi a rendszer 
+    testreszabását, például a hírlevél gyakoriságának beállítását. A Felhasználó és Értesítés osztályokkal kommunikál.
+</p>
+<table>
+    <h4>Attribútumok</h4>
+    <tr>
+        <th>Név</th>
+        <th>Típus</th>
+        <th>Leírás</th>
+    </tr>
+    <tr>
+        <td>beallitasId</td>
+        <td>int</td>
+        <td>A beállítás azonosítója</td>
+    </tr>
+    <tr>
+        <td>userId</td>
+        <td>int</td>
+        <td>A felhasználó azonosítója</td>
+    </tr>
+    <tr>
+        <td>ertesitesMod</td>
+        <td>string</td>
+        <td>Az értesítési mód (pl. "e-mail")</td>
+    </tr>
+</table>
+
+
+
 
 3.1.3 Bázisosztályok keresése <br><br><br>
 
