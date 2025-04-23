@@ -1226,8 +1226,29 @@ Ez a statikus szerkezet biztosítja, hogy a fejlesztőcsapat minden tagja ugyana
 
 
 
-3.1.3 Bázisosztályok keresése <br><br><br>
+<h4>3.1.3 Bázisosztályok keresése</h4>
 
+<p style="text-align: justify;">
+A statikus modell esetében kiderült, hogy több osztály ismétlődő adatmezőket és azonos viselkedést hordoz, ezért érdemes közös bázisosztályokat kialakítani.
+Elsőként szembeötlő, hogy minden tartósan tárolt objektum rendelkezik egy id elsődleges kulccsal, valamint létrehozási- és módosítási időbélyegekkel; ezek egy Entitas nevű absztrakt szülő­osztályba kerülhetnek.
+Az Entitas örökli majd a legtöbb tartalom-, beállítás- és napló-típusú elem (például Hír, Értesítés, HibaNapló-bejegyzés), így az audit-mezők validálása és a kulcskezelés egyetlen helyen valósul meg.
+A felhasználóhoz kötődő objektumok – mint a Fiók, Feliratkozás, Beállítás vagy Értesítés – mind tartalmazzák a userId mezőt, ezért célszerű ezeket egy FelhasznaloEntitas közbenső osztályba szervezni; itt helyezhető el a jogosultság-ellenőrzés vagy a „tartozik-e a felhasználóhoz?” segédfüggvény.
+A pénzügyi számításokkal foglalkozó komponensek (Kalkuláció, Kockázat­elemzés, TrendElőrejelzés) közös célt szolgálnak – mindegyik valamilyen numerikus eredményt állít elő a portfólió vagy egy részvény alapján. Ez indokolja egy PenzugyiSzamitas interfész vagy absztrakt osztály bevezetését, amely előírja a szamitas() és getEredmeny() metódusokat, sőt tartalmazhat egy egységes hibakezelő sablont is.
+<br><br>
+A Tranzakció és a Részvény kapcsolatánál felmerül, hogy a piaci azonosító (ticker) és az aktuális árfolyam-lekérdezés logikája több helyen ismétlődik; ezért érdemes egy ArfolyamEntitas bázisosztályt létrehozni, ahonnan a Részvény mellett akár később egy Kripto­Valuta vagy ETF osztály is örökölhet.
+További általánosítási lehetőség a különféle naplóbejegyzések között adódik: a Tevékenységnapló, HibaNapló és AdatkezelésiNapló mind hasonló felépítésű. Ezek egy Naplobejegyzes absztrakt szülőt alkothatnak, amely tartalmazza az időbélyeget, a felhasználó- vagy rendszer-azonosítót és a bejegyzés szövegét.
+Az öröklési fa úgy lett kialakítva, hogy csak a valóban közös részek kerüljenek a szülőbe; ha egy mező vagy viselkedés mindössze két osztályban fordul elő, inkább kompozíciót vagy interfészt használunk, elkerülve a túlmély hierarchiát.
+Mivel a Felhasználó és egy esetleges Admin szerepkör között jelenleg csak jogosultságbeli különbség van, elegendő egy szerepkor attribútum a Felhasználóban; külön Admin-osztály csak akkor jön létre, ha új, kizárólag adminisztrátorra jellemző metódusok jelennek meg.
+
+<br><br>
+A tervezett bázisosztályok bevezetésével egységesítjük a kulcs- és időbélyeg-kezelést, egyszerűsítjük a kódot, és csökkentjük a duplikációt.
+A közös auditmezők egyetlen helyre kerülnek, így minden entitáson automatikusan érvényesül a változás-követés.
+Az interfészek révén a számítási modul és a naplózási modul laza csatolású marad, ami megkönnyíti a későbbi bővítést vagy moduláris szolgáltatások kiemelését.
+Figyeltünk arra is, hogy az öröklés ne fedjen el semmilyen lényeges eltérést: ha két osztály viselkedése a jövőben markánsan különválik, a szülő-gyermek viszony lecserélhető interfész-alapú kompozícióra.
+Ezzel a bázisosztály-struktúrával stabil és karbantartható alapot kap a modell, amelyre biztonsággal épülhetnek az adatbázis-táblák, a szerver-oldali logika és az esetleges REST-vagy gRPC-szerződések.
+Maga az osztálydiagram így áttekinthető marad: kevés nagy blokk, sok konkrét gyerek, és mindenhol világos, honnan öröklődik azonosító, audit, felhasználó-kapcsolat vagy pénzügyi számítási képesség.
+<br><br>
+</p>
 3.2. Dinamikus modell <br><br><br>
 
 3.3. Funkcionális modell <br><br><br>
