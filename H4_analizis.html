@@ -221,6 +221,34 @@
             <td>3.6; 2.3; 1. és 4. +azok alfejezeteinek kidolgozása</td>
             <td>Radvánszky Ádám János</td>
         </tr>
+
+        <tr>
+            <td>2025.04.23.</td>
+            <td>1.2</td>
+            <td>Három hosszabb fejezet (2.,3.1) és alfejezetek kidolgozása</td>
+            <td>Orosz Kristóf</td>
+        </tr>
+
+        <tr>
+            <td>2025.04.24.</td>
+            <td>1.3</td>
+            <td>3.5.fejezet</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
+
+        <tr>
+            <td>2025.04.26.</td>
+            <td>1.3</td>
+            <td>Statikus modell, dinamukis modell, funkcionális modell fejezetek és alfejezeteknek a kidolgozása.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
+
+        <tr>
+            <td>2025.04.26.</td>
+            <td>1.4</td>
+            <td>Dokumentum átnézése, hibák kijavítása.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
              
     </table> <br>
 </div>
@@ -242,65 +270,60 @@
 
 </p>
 
-2. Kezdeti osztálydiagram <br> <br>
-2.1 Osztálydiagram <br><br><br>
+<h4 id="alfejezet2.">2. Kezdeti osztálydiagram</h4>
+<h4 id="alfejezet2.1.">2.1 Osztálydiagram </h4><br>
 
-<h4>2.2 Osztályok felsorolása</h4>
+A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
+
+<div style="text-align: center;">
+    <img src="DIAGRAMMOK/Dia1.JPG" alt="Portfolió kezelő rendszer" width="900px" height="500px">
+    </div> <br>
+
+
+<h4 id="alfejezet2.2.">2.2 Osztályok felsorolása</h4>
 
 <div >
 
-    <table>
-<thead><tr><th>Osztály</th><th>Rövid leírás</th></tr></thead><tbody>
-<tr><td>Felhasználó</td><td>Felhasználói adatok (ID, e‑mail, jelszó) kezelése; regisztráció és kijelentkezés biztosítása.</td></tr>
-<tr><td>Fiók</td><td>Felhasználói beállítások (nyelv, utolsó bejelentkezés) tárolása és módosítása.</td></tr>
-<tr><td>Tevékenységnapló</td><td>Felhasználói műveletek naplózása az átláthatóság és biztonság érdekében.</td></tr>
-<tr><td>Hír</td><td>Rendszerhírek címmel és forrással; külső API‑ról frissíthető tartalom.</td></tr>
-<tr><td>Hírlevél</td><td>E‑mail hírlevelek tartalmának és küldési időpontjának kezelése.</td></tr>
-<tr><td>Feliratkozás</td><td>Hírlevél‑feliratkozások e‑mail‑címekkel és aktív/lejárt állapottal.</td></tr>
-<tr><td>BefektetésiJavaslat</td><td>Részvényekre vonatkozó AI‑alapú befektetési ajánlások, kockázati szinttel.</td></tr>
-<tr><td>Kockázatelemzés</td><td>Portfóliók kockázati szintjének kiszámítása és jelentéskészítés.</td></tr>
-<tr><td>TrendElőrejelzés</td><td>Részvényárfolyam‑trendek előrejelzése múltbeli adatok alapján.</td></tr>
-<tr><td>Kalkuláció</td><td>Pénzügyi számítások (hozam, veszteség) és riportkészítés.</td></tr>
-<tr><td>Kalkuláció (Előrejelzés)</td><td>Hosszú távú pénzügyi előrejelzési értékek tárolása.</td></tr>
-<tr><td>Kalkuláció (Export)</td><td>Eredmények exportálása (fájlnév, dátum) PDF‑be.</td></tr>
-<tr><td>Értesítés</td><td>Automatikus felhasználói értesítések kezelése (küldés, törlés).</td></tr>
-<tr><td>RiasztásBeállítás</td><td>Részvényárfolyam‑riasztások beállítása és ellenőrzése.</td></tr>
-<tr><td>GYIK</td><td>Gyakran ismételt kérdések kereshető adatbázisa.</td></tr>
-<tr><td>ÜgyfélszolgálatiKérés</td><td>Felhasználói kérések rögzítése és állapotkezelése.</td></tr>
-<tr><td>HibaNapló</td><td>Rendszerhibák naplózása fejlesztői elemzéshez.</td></tr>
-<tr><td>AdatvédelmiTájékoztató</td><td>Adatkezelési tájékoztató szövegének tárolása és frissítése.</td></tr>
-<tr><td>AdatkezelésiNapló</td><td>Adatkezelési műveletek naplózása biztonsági okokból.</td></tr>
-<tr><td>Portfólió</td><td>Felhasználói befektetési portfólió értékeinek tárolása és frissítése.</td></tr>
-<tr><td>Tranzakció</td><td>Részvények vásárlási/eladási tranzakcióinak rögzítése.</td></tr>
-<tr><td>Tranzakció (Részvény)</td><td>Részvényadatok frissítése és lekérdezése (ticker, árfolyam).</td></tr>
-<tr><td>Kategória</td><td>Témakörök (kategóriák) kezelése a tartalom rendszerezéséhez.</td></tr>
-<tr><td>Pénznem</td><td>Devizák és átváltási árfolyamuk kezelése, konvertálása.</td></tr>
-<tr><td>Beállítás</td><td>Felhasználói értesítési módok és rendszerbeállítások tárolása.</td></tr>
-</tbody></table>
-
-
+    <table border="2">
+        <thead>
+        </thead>
+        <tbody>
+            <tr><td>Felhasználó</td><td>Felhasználói adatok (ID, e‑mail, jelszó) kezelése; regisztráció és kijelentkezés biztosítása.</td></tr>
+            <tr><td>Fiók</td><td>Felhasználói beállítások (nyelv, utolsó bejelentkezés) tárolása és módosítása.</td></tr>
+            <tr><td>Tevékenységnapló</td><td>Felhasználói műveletek naplózása az átláthatóság és biztonság érdekében.</td></tr>
+            <tr><td>Hír</td><td>Rendszerhírek címmel és forrással; külső API‑ról frissíthető tartalom.</td></tr>
+            <tr><td>Hírlevél</td><td>E‑mail hírlevelek tartalmának és küldési időpontjának kezelése.</td></tr>
+            <tr><td>BefektetésiJavaslat</td><td>Részvényekre vonatkozó AI‑alapú befektetési ajánlások, kockázati szinttel.</td></tr>
+            <tr><td>Kockázatelemzés</td><td>Portfóliók kockázati szintjének kiszámítása és jelentéskészítés.</td></tr>
+            <tr><td>Portfólió</td><td>Felhasználói befektetési portfólió értékeinek tárolása és frissítése.</td></tr>
+            <tr><td>Tranzakció</td><td>Részvények vásárlási/eladási tranzakcióinak rögzítése.</td></tr>
+            <tr><td>Kalkuláció</td><td>Pénzügyi számítások (hozam, veszteség) és riportkészítés.</td></tr>
+            <tr><td>Értesítés</td><td>Automatikus felhasználói értesítések kezelése (küldés, törlés).</td></tr>
+           
+        </tbody>
+    </table>
 </div> <br><br>
 
 <h4 id="alfejezet2.3."><b>2.3. Alrendszerek</b></h4> 
 <p style="text-align: justify;">
-    A tőzsdei webalkalmazás fejlesztése során a rendszert több jól elkülöníthető alrendszerre bontottuk, hogy biztosítsuk a modularitást, a karbantarthatóságot és 
-    a skálázhatóságot. Az alrendszerek azonosítása és definiálása kulcsfontosságú lépés volt a kezdeti osztálydiagram kidolgozásában, mivel lehetővé tette a rendszer 
-    funkcióinak logikus csoportosítását és a komponensek közötti kapcsolatok átláthatóbb kezelését. A .NET API-val és C# nyelvvel készült platform esetében az 
-    alrendszerek a felhasználói élmény, az adatkezelés és a közösségi interakciók szempontjából kerültek meghatározásra, figyelembe véve az általános felhasználók 
-    igényeit, akik a tőzsdei kereskedés alapjait szeretnék elsajátítani egy szimulált környezetben.
-    <br><br>
-    Az első alrendszer a Felhasználókezelési alrendszer, amely a felhasználók fiókjával kapcsolatos műveleteket kezeli, például a bejelentkezést, regisztrációt, 
-    fiókadatok módosítását és törlését. Ez az alrendszer felelős az autentikációért és az autorizációért, biztosítva, hogy csak jogosult felhasználók férjenek hozzá a 
-    szimulált kereskedési funkciókhoz, például a portfóliókezeléshez. A második alrendszer a Kereskedési alrendszer, amely a szimulált tranzakciók lebonyolítását és az 
-    árfolyamfigyelést támogatja. Ez az alrendszer integrálja a valós idejű piaci adatokat – az Alpha Vantage API-n keresztül – és lehetővé teszi a felhasználók számára, 
-    hogy virtuális részvényeket vásároljanak vagy adjanak el, miközben nyomon követhetik a piaci trendeket.
-    <br><br>
-    A harmadik alrendszer a Közösségi alrendszer, amely a Közösségi Fórum és egyéb interakciós funkciók működését biztosítja. Ez az alrendszer lehetővé teszi a 
-    felhasználók számára, hogy megosszák szimulált kereskedési stratégiáikat, kérdéseket tegyenek fel, és tanuljanak egymástól, például egy technológiai részvényekkel 
-    kapcsolatos vita során. Végül, a Hír- és értesítési alrendszer felelős a friss tőzsdei hírek megjelenítéséért és a hírlevél feliratkozások kezeléséért, biztosítva, 
-    hogy a felhasználók naprakész információkat kapjanak, például egy kamatemelés piaci hatásairól. Az alrendszerek közötti kommunikáció a .NET API-n keresztül történik, 
-    amely RESTful végpontokat biztosít az adatok cseréjéhez, például a felhasználói adatok és a szimulált tranzakciók szinkronizálásához, míg a front-end React 
-    komponensekkel jeleníti meg az információkat a felhasználók számára.
+    <table border="2">
+        <tbody>
+            <tr><td>GYIK</td><td>Gyakran ismételt kérdések kereshető adatbázisa.</td></tr>
+            <tr><td>ÜgyfélszolgálatiKérés</td><td>Felhasználói kérések rögzítése és állapotkezelése.</td></tr>
+            <tr><td>HibaNapló</td><td>Rendszerhibák naplózása fejlesztői elemzéshez.</td></tr>
+            <tr><td>AdatvédelmiTájékoztató</td><td>Adatkezelési tájékoztató szövegének tárolása és frissítése.</td></tr>
+            <tr><td>AdatkezelésiNapló</td><td>Adatkezelési műveletek naplózása biztonsági okokból.</td></tr>
+            <tr><td>Tranzakció (Részvény)</td><td>Részvényadatok frissítése és lekérdezése (ticker, árfolyam).</td></tr>
+            <tr><td>Kategória</td><td>Témakörök (kategóriák) kezelése a tartalom rendszerezéséhez.</td></tr>
+            <tr><td>Pénznem</td><td>Devizák és átváltási árfolyamuk kezelése, konvertálása.</td></tr>
+            <tr><td>Beállítás</td><td>Felhasználói értesítési módok és rendszerbeállítások tárolása.</td></tr>
+            <tr><td>Kalkuláció (Előrejelzés)</td><td>Hosszú távú pénzügyi előrejelzési értékek tárolása.</td></tr>
+            <tr><td>Kalkuláció (Export)</td><td>Eredmények exportálása (fájlnév, dátum) PDF‑be.</td></tr>
+            <tr><td>TrendElőrejelzés</td><td>Részvényárfolyam‑trendek előrejelzése múltbeli adatok alapján.</td></tr>
+            <tr><td>RiasztásBeállítás</td><td>Részvényárfolyam‑riasztások beállítása és ellenőrzése.</td></tr>
+            <tr><td>Feliratkozás</td><td>Hírlevél‑feliratkozások e‑mail‑címekkel és aktív/lejárt állapottal.</td></tr>
+        </tbody>
+    </table>
 </p>
 
 
@@ -312,7 +335,14 @@ Első lépésben azonosítottuk a legfontosabb üzleti objektumokat, például a
 Mindegyik osztály valós életbeli fogalmat reprezentál, ezért egyértelmű, beszédes nevet kaptak, hogy a kód és a dokumentáció gyorsan érthető legyen.
 Az attribútumokat úgy választottuk meg, hogy csak a működéshez elengedhetetlen adatot tároljuk; így elkerülhető a redundancia és a felesleges adatsokaság.
 Minden osztály attribútumaihoz pontos típust rendeltünk (például int, string, DateTime), mert ez megalapozza az adatbázissémát és a típus-biztonságos kódolást.
-<br><br>
+
+
+<div style="text-align: center;">
+    <img src="DIAGRAMMOK/Dia2.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    </div> <br>
+
+
+<br>
 
 
 
@@ -342,7 +372,7 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 - Lehetséges öröklődési kapcsolat, például egy Admin és egy Felhasználó között, ha jogosultságkezelést is bevezetünk, ilyenkor az Admin örökölheti a Felhasználó osztály attribútumait.
 <br><br>
 
-<h4 id="alfejezet3.2.2.">3.1.2 Attribútumok azonosítása</h4>
+<h4 id="alfejezet3.1.2.">3.1.2 Attribútumok azonosítása</h4>
 
   <table>
     <thead><tr><th>Osztály</th><th>Attribútum</th><th>Típus</th></tr></thead>
@@ -424,7 +454,16 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
     <tr><td>ertesitesMod</td><td>string</td></tr>
 </table>
 
-3.2. Dinamikus modell <br><br><br>
+<h4 id="alfejezet3.2.">3.2. Dinamikus modell </h4>
+
+<p style="text-align: justify;">Ez a dinamikus diagram egy összetett rendszer adatbázisának szerkezetét mutatja be, ahol az egyes entitások között logikus kapcsolatok figyelhetők meg. A táblák egymáshoz kapcsolódva modellezik a felhasználók, portfóliók, tranzakciók, számítások, értesítések, kockázatelemzések, hírek, hírlevelek és tevékenységek adatait. A rendszer felépítése rugalmas, mivel minden fontos művelethez és állapothoz külön táblát rendel, lehetővé téve az adatok naprakész kezelését és a gyors bővíthetőséget. A táblák közötti kapcsolatok megteremtik az adatáramlás és adatfrissítés lehetőségét is, így a felhasználók aktivitásai és a piaci események dinamikusan követhetők. A diagram tiszta hierarchiát mutat: egy felhasználó több portfóliót is kezelhet, amelyekhez több tranzakció és elemzés kapcsolódhat. A rendszer automatikusan értesítéseket generálhat és rögzíti a fontos műveleteket a naplóban. A hírek és hírlevelek moduláris módon kapcsolódnak a rendszerhez, így aktuális információk is folyamatosan beépíthetők. </p>
+
+<div style="text-align: center;">
+    <img src="DIAGRAMMOK/Dia3.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    </div> <br>
+
+
+
 
 <h4 id="alfejezet3.3.">3.3. Funkcionális modell </h4>
 
