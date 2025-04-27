@@ -1,0 +1,304 @@
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OMT objektum tervezés - H5 </title>
+    <style>
+        .red {
+            color: red;
+        }
+        .blue {
+            color: blue;
+        }
+        .center {
+            text-align: center;
+        } 
+        
+        h1 {
+            text-align: center;
+        }
+
+        p {
+            font-weight: normal;
+            text-align: left;
+        }
+
+        .p1 {
+            color: red;
+        }
+
+        .p2 {
+            color: blue;
+        }
+
+        h3 {
+            color: red;
+            text-align: center;
+        }
+
+        td {
+            text-align: center;
+            font-weight: normal;
+            padding: 8px;
+        }
+
+       
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        
+        .responsive-table {
+            width: 100%;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .center {
+            text-align: center;
+            margin: 0 auto;
+        }
+
+        .bottom-left {
+            position: fixed;
+            bottom: 20px;
+            left: 40%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-left a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-left span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-center {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-center a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-center span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .bottom-right {
+            position: fixed;
+            bottom: 20px;
+            left: 60%;
+            transform: translateX(-50%);
+            text-align: center;
+            display: none;
+        }
+
+        .bottom-right a {
+            text-decoration: none;
+            color: black;
+            font-size: 30px;
+        }
+
+        .bottom-right span {
+            display: block;
+            font-size: 16px;
+        }
+
+        .visible {
+            display: block;
+        }
+        .vmi{
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left
+        }
+        .alap{
+            width: 80%;
+            border-collapse: collapse;
+        }
+        /* Media Queries */
+        @media (max-width: 600px) {
+            p {
+                font-size: 18px;
+            }
+            table {
+                font-size: 14px; /* kisebb betűméret mobilon */
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 24px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 14px;
+            }
+            .bottom-left {
+                left: 35%;
+            }
+            .bottom-right {
+                left: 65%;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            p {
+                font-size: 19px;
+            }
+            table {
+                font-size: 16px; 
+            }
+            .bottom-left a,
+            .bottom-center a,
+            .bottom-right a {
+                font-size: 26px;
+            }
+            .bottom-left span,
+            .bottom-center span,
+            .bottom-right span {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+-->    
+
+
+    <h1 style="text-align: center;">OMT objektum tervezés - H5</h1>
+
+<!--    
+
+    <hr>
+    
+    <h4 class="center">Történet</h4> <br>
+
+    <table border="2" class="center">
+        <tr>
+            <td><b>Dátum</b></td>
+            <td><b>Verzió</b></td>
+            <td><b>Leírás</b></td>
+            <td><b>Szerző</b></td>
+        </tr>
+        <tr>
+            <td>2025.04.28.</td>
+            <td>1.0</td>
+            <td>Dokumentum létrehozása, fejezetek felosztása egymás között.</td>
+            <td>Orosz Kristóf <br>Radvánszky Ádám János</td>
+        </tr>
+     
+    </table> <br>
+
+    <hr>
+</head>
+<body>
+   
+
+1. Bevezetés - Kristóf <br><br>
+
+
+2. OMT Objektumtervezés - Ádám <br><br>
+
+2.1 A rendszer vezérlésének kidolgozása <br><br>
+
+2.2 Vezérlő objektumok meghatározása <br><br>
+
+2.3 Aktív és passzív objektumok azonosítása <br><br>
+
+
+2.4 Üzenetváltások és láthatóság biztosítása <br><br>
+
+
+3. Implementációs Fázis - Kristóf <br><br>
+
+3.1 Prototípus implementációs lépések <br><br>
+
+------------------------------------------- <br><br>
+
+4. Tesztelési Terv - Kristóf <br><br>
+
+4.1 Tesztesetek definiálása <br><br>
+
+------------------------------------------- <br><br>
+
+4.2 Tesztelhető implementációs elemek - Ádám <br><br>
+
+4.3 Tesztelési folyamat gyakorlati megvalósítása <br><br>
+
+------------------------------------------- <br><br>
+
+5. Dokumentáció és Forráskód - Kristóf <br><br>
+
+5.1 Dokumentációs követelmények <br><br>
+
+5.2 Forráskód mennyisége és típusa <br><br>
+
+6 Egyéb Megjegyzések - Kristóf <br><br>
+
+6.1 Változások követése és verziókezelés <br><br>
+
+6.2 Mellékletek <br><br>
+
+<br><br><br><br><br>
+
+<div class="bottom-left">
+    <a href="H4_rendszertervezes.html">◀</a>
+    <span>Előző oldal</span>
+</div>
+
+<div class="bottom-center">
+    <a href="tartalomjegyzek.html">📋</a>
+    <span>Tartalomjegyzék</span>
+</div>
+
+<div class="bottom-right">
+    <a href="#">▶</a>
+    <span>Következő oldal</span>
+</div>
+
+<script>
+    const prevButton = document.querySelector('.bottom-left');
+    const tartalomLink = document.querySelector('.bottom-center');
+    const nextButton = document.querySelector('.bottom-right');
+
+    window.addEventListener('scroll', () => {
+        const scrollPosition = window.scrollY + window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+
+        if (scrollPosition >= documentHeight - 50) {
+            prevButton.classList.add('visible');
+            tartalomLink.classList.add('visible');
+            nextButton.classList.add('visible');
+        } else {
+            prevButton.classList.remove('visible');
+            tartalomLink.classList.remove('visible');
+            nextButton.classList.remove('visible');
+        }
+    });
+</script>
+
+</body>
+</html>
+-->

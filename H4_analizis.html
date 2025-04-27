@@ -350,27 +350,86 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
  <br><br>
 
 <h4 id="alfejezet3.1.1.">3.1.1 Kapcsolatok pontosítása</h4> 
-<b>Az alábbiakban részletezzük az elemzési osztályok közötti kapcsolatokat. </b><br><br>
+<b>Az alábbiakban részletezzük az osztályok közötti kapcsolatokat. </b><br><br>
 
-
-- A Felhasználó osztály központi szerepet tölt be, hiszen minden funkció valamely felhasználói művelethez kapcsolódik. Egy Felhasználó egy vagy több Fiókkal rendelkezhet (1:N kapcsolat), ahol a fiók tárolja a beállításokat, nyelvet, profiladatokat.
-<br><br>
-- Egy Fiók több Portfólió-t is kezelhet (1:N), melyek a felhasználó befektetéseit tartalmazzák. Minden portfólióhoz kapcsolódhat több Tranzakció is, amelyek egy-egy részvény vásárlását vagy eladását rögzítik – ez egy erős, kompozíció jellegű 1:N kapcsolat.
-<br><br>
-- Minden Tranzakció kapcsolódik egy Részvény osztályhoz, amely a piacon forgalmazott részvény adatait tartalmazza. Itt N:1 asszociáció figyelhető meg.
-<br><br>
-- Egy Portfólió több Kalkuláció és Kockázatelemzés eredményét is tárolhatja, amelyek segítik a döntéstámogatást.
-<br><br>
-- A Felhasználó beállíthat Riasztásokat, amelyek egy Részvény megfigyelésére szolgálnak – ezek 1:N kapcsolatban állnak egymással.
-<br><br>
-- A Hír osztály nem közvetlenül kapcsolódik egy adott felhasználóhoz, hanem globálisan jelenik meg mindenki számára. Ezzel szemben a Hírlevél osztályhoz való Feliratkozás kapcsolat 1:1, vagy legfeljebb 1:N, a választott modell szerint.
-<br><br>
-- A Felhasználó értesítéseket kap különféle eseményekről (Értesítés), amelyek 1:N kapcsolattal valósulnak meg.
-<br><br>
-- Az ÜgyfélszolgálatiKérés, GYIK, AdatvédelmiTájékoztató és AdatkezelésiNapló osztályok adminisztratív és dokumentációs funkciókat látnak el, és vagy passzívan tárolnak adatokat, vagy események hatására jönnek létre.
-<br><br>
-- Lehetséges öröklődési kapcsolat, például egy Admin és egy Felhasználó között, ha jogosultságkezelést is bevezetünk, ilyenkor az Admin örökölheti a Felhasználó osztály attribútumait.
-<br><br>
+<table>
+    <thead>
+        <tr>
+            <th>Forrás</th>
+            <th>Cél</th>
+            <th>Kardinalitás</th>
+            <th>FK mező</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Fiók</td>
+            <td>Felhasználó</td>
+            <td>1:1</td>
+            <td>Fiók.userID → Felhasználó.userID</td>
+        </tr>
+        <tr>
+            <td>Felhasználó</td>
+            <td>Tevékenységnapló</td>
+            <td>1:N</td>
+            <td>Tevékenységnapló.userID → Felhasználó.userID</td>
+        </tr>
+        <tr>
+            <td>Felhasználó</td>
+            <td>Értesítés</td>
+            <td>1:N</td>
+            <td>Értesítés.userID → Felhasználó.userID</td>
+        </tr>
+        <tr>
+            <td>Felhasználó</td>
+            <td>Portfólió</td>
+            <td>1:1</td>
+            <td>Portfólió.userID → Felhasználó.userID</td>
+        </tr>
+        <tr>
+            <td>Portfólió</td>
+            <td>Kockázatelemzés</td>
+            <td>1:N</td>
+            <td>Kockázatelemzés.portfolioId → Portfólió.portfolioId</td>
+        </tr>
+        <tr>
+            <td>Portfólió</td>
+            <td>Tranzakció</td>
+            <td>1:N</td>
+            <td>Tranzakció.portfolioId → Portfólió.portfolioId</td>
+        </tr>
+        <tr>
+            <td>Felhasználó</td>
+            <td>BefektetésiJavaslat</td>
+            <td>1:N</td>
+            <td>BefektetésiJavaslat.userID (implicit) → Felhasználó.userID</td>
+        </tr>
+        <tr>
+            <td>BefektetésiJavaslat</td>
+            <td>Tranzakció</td>
+            <td>1:N</td>
+            <td>Tranzakció.javaslatId (implicit) → BefektetésiJavaslat.javaslatId</td>
+        </tr>
+        <tr>
+            <td>BefektetésiJavaslat</td>
+            <td>Kalkuláció</td>
+            <td>1:N</td>
+            <td>Kalkuláció.javaslatId (implicit) → BefektetésiJavaslat.javaslatId</td>
+        </tr>
+        <tr>
+            <td>Felhasználó</td>
+            <td>Hírlevél</td>
+            <td>N:M</td>
+            <td>Köztes tábla: Felhasználó_Hírlevél</td>
+        </tr>
+        <tr>
+            <td>Hírlevél</td>
+            <td>Hír</td>
+            <td>1:N</td>
+            <td>Hír.hirlevelId → Hírlevél.hirlevelId</td>
+        </tr>
+    </tbody>
+</table>
 
 <h4 id="alfejezet3.1.2.">3.1.2 Attribútumok azonosítása</h4>
 
