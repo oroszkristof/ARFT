@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -102,6 +102,9 @@
         .bottom-center span {
             display: block;
             font-size: 16px;
+        }
+        .center {
+            text-align: center;
         }
 
         .bottom-right {
@@ -211,7 +214,14 @@
         <tr>
             <td>2025.04.28.</td>
             <td>1.1</td>
-            <td> Az 5.2 (Forráskód mennyisége és típusa) fejezet kidolgozása, GitHub repository létrehozása a forráskódoknak.</td>
+            <td> Az 5. (Dokumentumok és Forráskódok), 6. (Mellékletek), 2. (Tesztelési Terv) fejezet kidolgozása, GitHub repository létrehozása a forráskódoknak.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
+     
+        <tr>
+            <td>2025.04.29.</td>
+            <td>1.2</td>
+            <td> A 4. (Protopípus elkészítése) című fejezetének elkészítése.</td>
             <td>Orosz Kristóf</td>
         </tr>
      
@@ -224,10 +234,204 @@
    
 
 1. Bevezetés - Ádám <br><br><br>
-2. Tesztelési Terv - Kristóf <br><br><br>
-2.1 Tesztesetek definiálása <br><br><br>
-2.2 Tesztelhető implementációs elemek <br><br><br>
-2.3 Tesztelési folyamat gyakorlati megvalósítása <br><br><br>
+
+<h4 id="alfejezet2.">2. Tesztelési Terv</h4>
+
+<p style="text-align: justify;">
+A tesztelési terv célja a weboldal funkcionalitásának és megbízhatóságának átfogó ellenőrzése. 
+A dokumentum részletesen leírja a tesztelési módszereket, eszközöket és környezeteket. A terv kiterjed 
+a fő navigációs és lábléc-menüpontok megfelelő működésére. A tesztelés során manuális és automatizált 
+megoldásokat alkalmazunk, ha indokolt. Minden teszteset esetében rögzítjük az előfeltételeket, a 
+lépéseket és az elvárt eredményeket. A tesztek futtatása előtt gondoskodunk a tesztkörnyezet 
+előkészítéséről, beleértve a különböző böngészők és eszközök konfigurálását. Hibák felmerülése 
+esetén dokumentáljuk a reprodukciós lépéseket, a konzol- és hálózati naplókat, valamint 
+képernyőmentéseket készítünk. <br><br> A teszteseteket prioritások szerint csoportosítjuk, hogy először 
+a legkritikusabb funkciókat vizsgálhassuk. A regressziós tesztek azt biztosítják, hogy a korábbi 
+javítások ne idézzenek elő új problémákat. A tesztelések állapotát folyamatosan naplózzuk és nyomon 
+követjük egy központi hibakövető rendszerben.  <br><br> A teszt gyakorlati elvégzése jelentés összesíti a lefuttatott teszteket, a 
+talált és javított hibákat, valamint ezek súlyossági szintjét. A terv iteratív frissítése lehetővé ű
+teszi a változó követelmények és új funkciók rugalmas kezelését. <br><br> </p>
+
+<h4 id="alfejezet2.1.">2.1 Tesztesetek definiálása</h4>
+<table class="center">
+    <thead>
+      <tr>
+        <th>Teszteset</th>
+        <th>Leírás</th>
+        <th>Előfeltétel</th>
+        <th>Elvárt eredmény</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>TK00</td>
+        <td>Böngésző megnyitása</td>
+        <td>–</td>
+        <td>A böngésző elindul, és egy üres vagy kezdőoldal jelenik meg</td>
+      </tr>
+      <tr>
+        <td>TK01</td>
+        <td>Árfolyamfigyelő oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik az <code>arfolyamfigyelo.html</code>, és megjelenik a grafikon-felület</td>
+      </tr>
+      <tr>
+        <td>TK02</td>
+        <td>Hírek oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>news.html</code>, és látható a hírlista</td>
+      </tr>
+      <tr>
+        <td>TK03</td>
+        <td>Portfóliókezelés oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>portfoliokezelo.html</code>, és megjelenik a portfólió-táblázat</td>
+      </tr>
+      <tr>
+        <td>TK04</td>
+        <td>EdgeAl oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik az <code>edgeal.html</code>, és látható az EdgeAl-panel</td>
+      </tr>
+      <tr>
+        <td>TK05</td>
+        <td>Közösségi Fórum oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>közösség.html</code>, és megjelennek a fórumbejegyzések</td>
+      </tr>
+      <tr>
+        <td>TK06</td>
+        <td>Fiókom oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>rolam.html</code>, és látható a felhasználói adatlap</td>
+      </tr>
+      <tr>
+        <td>TK07</td>
+        <td>Belépés modál megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Megjelenik a bejelentkező modál (<code>#loginModal</code>)</td>
+      </tr>
+      <tr>
+        <td>TK08</td>
+        <td>Regisztrációs modál megnyitása</td>
+        <td>TK07 – Belépés modál megnyitva</td>
+        <td>Bezárul a bejelentkező modál, és megnyílik a regisztrációs modál (<code>#registerModal</code>)</td>
+      </tr>
+      <tr>
+        <td>TK09</td>
+        <td>Jelszó-visszaállítás modál megnyitása</td>
+        <td>TK07 – Belépés modál megnyitva</td>
+        <td>Bezárul a bejelentkező modál, és megnyílik a jelszó-visszaállító modál (<code>#passwordResetModal</code>)</td>
+      </tr>
+      <tr>
+        <td>TK10</td>
+        <td>Hírlevél-feliratkozás modál megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Megjelenik a hírlevél-feliratkozó modál (<code>#newsletterModal</code>)</td>
+      </tr>
+      <tr>
+        <td>TK11</td>
+        <td>ÁSZF oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik az <code>aszf.html</code>, és olvashatók az általános szerződési feltételek</td>
+      </tr>
+      <tr>
+        <td>TK12</td>
+        <td>Adatvédelmi tájékoztató oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik az <code>adatvedelem.html</code>, és megjelennek a GDPR tájékoztató szövegek</td>
+      </tr>
+      <tr>
+        <td>TK13</td>
+        <td>Rólunk oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>rolunk.html</code>, és megjelenik a szerződésbemutató oldal</td>
+      </tr>
+      <tr>
+        <td>TK14</td>
+        <td>Súgó oldal megnyitása</td>
+        <td>Böngésző nyitva, index.html betöltve</td>
+        <td>Betöltődik a <code>sugo.html</code>, és elérhetővé válik a segítségoldal</td>
+      </tr>
+    </tbody>
+  </table>
+  
+<h4 id="alfejezet2.2.">2.2 Tesztelhető implementációs elemek</h4>
+
+<table>
+    <thead>
+      <tr>
+        <th>Implementációs elem</th>
+        <th>Fájl / Lokáció</th>
+        <th>Leírás</th>
+        <th>Tesztelendő szempont</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><code>&lt;nav&gt; … &lt;ul&gt;&lt;li&gt;&lt;a href="…"&gt;</code></td>
+        <td><code>index.html</code>, &lt;header&gt;</td>
+        <td>A fejlécben lévő menüpont-linkek (Árfolyamfigyelő, Hírek, …, BELÉPÉS)</td>
+        <td><ul><li>Helyes <code>href</code> attribútum</li><li>Kattinthatóság</li><li>Responsive viselkedés</li></ul></td>
+      </tr>
+      <tr>
+        <td><code>.cta-button</code></td>
+        <td><code>index.html</code>, &lt;div class="left-side"&gt;</td>
+        <td>A „VÁGJ BELE!” gomb, amely a bejelentkező modált nyitja</td>
+        <td><ul><li>Eseménykezelő regisztrálása</li><li><code>openModal(loginModal)</code> hívása</li></ul></td>
+      </tr>
+      <tr>
+        <td><code>footer &gt; a</code> linkek</td>
+        <td><code>index.html</code>, &lt;footer&gt;</td>
+        <td>ÁSZF, Adatvédelem, Rólunk, Hírlevél, Súgó linkek</td>
+        <td><ul><li><code>href</code> vagy <code>newsletter-link</code> esemény</li><li>Oldalbetöltés vagy modálnyitás</li></ul></td>
+      </tr>
+      <tr>
+        <td><code>#loginModal</code>, <code>#registerModal</code>, <code>#passwordResetModal</code>, <code>#newsletterModal</code></td>
+        <td><code>index.html</code>, lap alja</td>
+        <td>A modálablakok konténerei, mindegyik <code>.modal</code> és belső <code>.modal-content</code></td>
+        <td><ul><li>Megjelenítés (<code>style.display="block"</code>)</li><li>Eltűnés (<code>style.display="none"</code>)</li></ul></td>
+      </tr>
+      <tr>
+        <td><code>openModal(modal)</code> / <code>closeModal(modal)</code></td>
+        <td>index.html &lt;script&gt; blokk</td>
+        <td>Az adott modál láthatóvá/tüntethető el, stílusmanipuláció</td>
+        <td><ul><li>Paraméter-átadás</li><li>Stílusváltoztatás hatékonysága</li></ul></td>
+      </tr>
+      <tr>
+        <td>Eseménykezelők</td>
+        <td>index.html &lt;script&gt; blokk</td>
+        <td><code>loginButton</code>, <code>ctaButton</code>, <code>close</code> gombok, <code>registerLink</code>, <code>forgotPasswordLink</code>, <code>newsletterLink</code>, <code>window.onclick</code></td>
+        <td><ul><li><code>e.preventDefault()</code> használata</li><li>Megfelelő modál-megnyitás/-zárás</li><li>Overlay kattintás kezelése</li></ul></td>
+      </tr>
+      <tr>
+        <td>CSS osztályok</td>
+        <td><code>main.css</code>, <code>site.css</code></td>
+        <td><code>.modal</code>, <code>.modal-content</code>, <code>.close</code>, responsive <code>@media</code> szabályok</td>
+        <td><ul><li>Megfelelő stílusalkalmazás</li><li>Breakpointok működése</li></ul></td>
+      </tr>
+      <tr>
+        <td><code>.animated-image</code></td>
+        <td><code>index.html</code></td>
+        <td>A grafikon kép animációja</td>
+        <td><ul><li>Kép betöltése</li><li>CSS-animáció futása</li></ul></td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+  
+<h4 id="alfejezet2.3.">2.3 Tesztelési folyamat gyakorlati megvalósítása</h4>
+
+<p style="text-align: justify;">
+A tesztelési folyamat gyakorlati megvalósításához egy részletes, lépésről lépésre követhető 
+videófelvételt készítettem, amelyben folyamatosan navigáltam a HTML-oldalak között, miközben minden 
+egyes műveletet alaposan dokumentáltam. A tesztesetek definiálásakor a projekt 2.1. fejezetében 
+ismertetett elveket és módszereket alkalmaztam. <br><br>
+
+<a href="https://drive.google.com/file/d/1dJfJVhuMi-D64A3fYHpw3KopNPcN7Elb/view?usp=sharing" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a videót a tesztelési folyamatról!</i></u></b></a>
+<br><br>
+</p>
 3. Osztályok implementálása – Ádám <br><br><br>
  3.6.1 Felhasználó <br><br><br>
  3.6.2 Fiók <br><br><br>
@@ -255,19 +459,162 @@
  3.6.24 Pénznem<br><br><br>
 
  3.6.25 Beállítás <br><br><br>
- 4. Prototípus készítés - Kristóf <br><br><br>
- 4.0. Főoldal funkciói <br><br><br>
- 4.1. Árfolyamfigyelő <br><br><br>
- 4.2. Portfoliókezelés<br><br><br>
- 4.2.1 Befektetési szimulátor<br><br><br>
-4.3. Mesterséges Inteligencia alapú ajánlások<br><br><br>
-4.4. Fiókkezelés<br><br><br>
-4.5. Bejeletkezés és Regisztráció<br><br><br>
-4.6. Friss tőzsdei hírek és Hírlevél feliratkozás<br><br><br>
-4.7. Súgó<br><br><br>
- 4.8. Közösségi Fórum <br><br><br>
-5. Dokumentáció és Forráskód - Kristóf <br><br><br>
-5.1 Dokumentációs követelmények <br><br><br>
+
+ <div style="text-align: justify;">
+ 
+ <h4 id="alfejezet4.">4. Prototípus készítés </h4>
+ 
+ <h4>4.0. Főoldal funkciói </h4>
+ 
+ A prototípus főoldal funkciói áttekinthetően mutatják be az alkalmazás legfontosabb elemeit és gyors hozzáférést biztosítanak a fő modulokhoz.
+<br><br>
+ <a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+ <br><br>
+
+ 
+ <br><br>
+ <h4 id="alfejezet4.1.">4.1. Árfolyamfigyelő</h4>
+ Az árfolyamfigyelő valós időben követi a tőzsdei és devizaárakat, így a felhasználók mindig naprakész információkhoz juthatnak.
+<br><br> <a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/arfolyamfigyelo.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+ <br><br>
+ <h4 id="alfejezet4.2.">4.2. Portfoliókezelés</h4>
+ A portfóliókezelés részben a befektetők egyszerűen nyomon követhetik eszközeik alakulását és hozamait.
+ <br><br>
+ <a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/portfoliokezelo.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+ <br><br>
+ <h4 id="alfejezet4.2.1.">4.2.1 Befektetési szimulátor</h4>
+ A befektetési szimulátor lehetőséget ad arra, hogy kockázat nélkül gyakorolják a kereskedést virtuális tőkével.
+ <br><br>
+ <a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/szimulator.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+ <br><br>
+<h4 id="alfejezet4.3.">4.3. Mesterséges Inteligencia alapú ajánlások</h4>
+
+A mesterséges intelligencia alapú ajánlások személyre szabott tippeket kínálnak a portfólió optimalizálásához.
+<br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/edgeal.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+<h4 id="alfejezet4.4.">4.4. Fiókkezelés</h4>
+
+A fiókkezelés menüpontban a felhasználók szerkeszthetik személyes adataikat és biztonsági beállításaikat.
+<br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/rolam.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+<h4 4id="alfejezet4.5.">4.5. Friss tőzsdei hírek és Hírlevél feliratkozás</h4>
+A friss tőzsdei hírek szekció és a hírlevél feliratkozás révén folyamatosan értesülhetünk a piac legújabb eseményeiről.
+<br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/rolam.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+
+<h4 id="alfejezet4.6.">4.6. Súgó</h4>
+
+A súgó oldalon részletes útmutatók és gyakran ismételt kérdések segítenek eligazodni az alkalmazás használatában.
+<br><br>
+
+
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/news.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+<h4 id="alfejezet4.7.">4.7. Közösségi Fórum </h4>
+
+ A közösségi fórum lehetőséget biztosít a tapasztalatok megosztására, szakmai eszmecserére és kérdések feltevésére.
+ <br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/k%C3%B6zz%C3%B6sseg.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+<h4 id="alfejezet4.8.">4.8 ÁSZF, Adatvédelmi Tájékoztató, Rúlunk</h4>
+
+Az ÁSZF részletesen tárgyalja a szolgáltatás igénybevételének feltételeit, a felhasználók és a szolgáltató jogait, kötelezettségeit, valamint a felelősségkorlátozásokat.
+
+Az Adatvédelmi Tájékoztató átláthatóan bemutatja, milyen személyes adatokat gyűjt az oldal, hogyan tárolja azokat, milyen célokra használja fel, és mik a felhasználók jogai az adatkezeléssel kapcsolatban.
+
+A „Rólunk” szekcióban a fejlesztőcsapat bemutatkozik, ismerteti a projekt küldetését, a kialakított módszertanokat és a jövőbeli terveket, ezáltal személyesebb kapcsolatot teremtve a látogatókkal.
+
+ÁSZF 
+<br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/aszf.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+Adatvédelmi Tájékoztató <br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/adatvedelem.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+Rólunk <br><br>
+<a href="https://oroszkristof.github.io/ARFT-PROTOTIPUS-ELKESZITESE/sugo.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a prototípus oldalát!</i></u></b></a>
+<br><br>
+
+</div>
+
+<h4>5. Dokumentáció és Forráskód</h4>
+<p>
+    A projekthez hét darab különböző tartalmú dokumentum fog készülni. Az dokumentumok típusait és a dokumentumok tartalmait, illetve várható elkészítésének időpontját az alábbi táblázat tartalmazza.
+</p>
+
+<h4>5.1 Dokumentációs követelmények</h4>
+
+
+<div class="responsive-table">
+    <table border="2">
+        <tr>
+            <td><b>Dokumentumtípusok</b></td>
+            <td><b>Tartalma</b></td>
+            <td><b>Várható elkészítési időpont</b></td>
+        </tr>
+        <tr>
+            <td>Projekt terv</td>
+            <td>A projekt terv tartalmazza a csoporttagok adatait, a fejlesztési ütemtervet és az elérendő eredményeket. Meghatározza a programozási nyelveket, technikai eszközöket, valamint a dokumentáció és tesztelés követelményeit.</td>
+            <td>2025.03.03.</td>
+        </tr>
+        <tr>
+            <td>Vízió</td>
+            <td>Fő célja a rendszer általános képének megalkotása, a probléma megértése. Ennek érdekében vizsgálja, kiknek az érdekét szolgálja a probléma megoldása, kik lesznek a használói, melyek lesznek a legfontosabb hatásai.</td>
+
+            <td>2025.03.24.</td>
+
+
+        </tr>
+        <tr>
+            <td>Softwera követelmény analízis</td>
+            <td>A RUP legelső fázisában elkezdett, és a következő fázisban részletesebben kidolgozott dokumentum, amely a tervezéshez szükséges részletességgel foglalja össze a rendszerrel szemben támasztott funkcionális és nem funkcionális követelményeket.</td>
+
+            <td>2025.04.14.</td>
+
+        </tr>
+
+        <tr>
+            <td>Felhasználói Kézikönyv</td>
+            <td>Segítségnyújtás a webalkalmazás használatához.</td>
+            <td>2025.04.14.</td>
+        </tr>
+
+        <tr>
+            <td>Analízis modell</td>
+            <td>Az analizis modellt az alkalmazás követelményeinek és üzleti igényeinek részletes feltérképezésére használjuk. Ez segít abban, hogy minden érintett fél közös megértést kapjon a projekt céljairól és elvárásairól.</td>
+
+            <td>2025.04.28.</td>
+
+        </tr>
+        <tr>
+            <td>Rendszertervezés</td>
+            <td>A rendszertervezési dokumentumok a technikai architektúra és a megoldási stratégia részletezésére szolgálnak. Ezek az útmutatók biztosítják, hogy a fejlesztőcsapat átlássa a rendszer felépítését és integrációs folyamatait a hatékony implementáció érdekében.</td>
+
+            <td>2025.04.28.</td>
+
+        </tr>
+
+        <tr>
+            <td>OMT Objektum tervezés</td>
+            <td>Pototípus jellegű implementációs kezdetek és egy nagyvonalú tesztelési terv,</td>
+
+            <td>2025.05.12.</td>
+
+        </tr>
+
+
+    </table>
+</div>
 
 <h4 id="alfejezet5.2.">5.2 Forráskód mennyisége és típusa</h4>
 
@@ -288,9 +635,22 @@ ARFT - PROTOTIPUS- ELKESZITESE <br>
 <br><br>
 
 
-<br><br><br>
-6. Mellékletek - Kristóf <br><br><br>
+<br>
+<h4>6. Mellékletek</h4>
 
+Az egyik legfontosabb melléklet a <b>Szótár,</b> amely az idegen szavakat és azok magyarázatait tartalmazza. <br>
+<a href="szotar.html" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a mellékletet!</i></u></b></a>
+<br><br>
+A további melléklet a Külső API-k dokumentációjának kivonata, amely a rendszer által használt API-k – például az Alpha Vantage és a Finnhub – legfontosabb 
+végpontjait és használati útmutatóit tartalmazza. Ez a kivonat segít a fejlesztőknek gyorsan eligazodni az API-k 
+integrációjakor, például amikor a Részvény osztály árfolyamfrissítési műveletét implementálják. A Finnhub API kivonata a hírek lekérdezésére fókuszál, például 
+a GET /news végponttal, amely a Hír osztály számára biztosít adatokat.
+
+<br><br>
+A tőzsdei webalkalmazásunkat az alábbi <b>tőzsdei API</b> segíti, a friss tőzsdei hírektől kezdve az árfolyamok változásáig.<br>
+<a href="https://finnhub.io/" target="_blank" style="color: black; text-decoration: none;"><b><u><i>Megtekintem a mellékletet!</i></u></b></a>
+<br>
+<br><br><br><br>
 
 
 <div class="bottom-left">
