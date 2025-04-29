@@ -249,6 +249,21 @@
             <td>Dokumentum átnézése, hibák kijavítása.</td>
             <td>Orosz Kristóf</td>
         </tr>
+
+        <tr>
+            <td>2025.04.29.</td>
+            <td>1.5</td>
+            <td>Hibák kijavítása.</td>
+            <td>Radvánszky Ádám János</td>
+        </tr>
+
+        <tr>
+            <td>2025.04.29.</td>
+            <td>1.6</td>
+            <td>Hibák kijavítása.</td>
+            <td>Orosz Kristóf</td>
+        </tr>
+
              
     </table> <br>
 </div>
@@ -276,7 +291,7 @@
 A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
 
 <div style="text-align: center;">
-    <img src="DIAGRAMMOK/Dia1.JPG" alt="Portfolió kezelő rendszer" width="900px" height="500px">
+    <img src="UJAM/Dia1.JPG" alt="Portfolió kezelő rendszer" width="900px" height="500px">
     </div> <br>
 
 
@@ -299,7 +314,9 @@ A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
             <tr><td>Tranzakció</td><td>Részvények vásárlási/eladási tranzakcióinak rögzítése.</td></tr>
             <tr><td>Kalkuláció</td><td>Pénzügyi számítások (hozam, veszteség) és riportkészítés.</td></tr>
             <tr><td>Értesítés</td><td>Automatikus felhasználói értesítések kezelése (küldés, törlés).</td></tr>
-           
+            <tr><td>ÜgyfélszolgálatiKérés</td><td>Felhasználói kérések rögzítése és állapotkezelése.</td></tr>
+            <tr><td>Feliratkozás</td><td>Hírlevél‑feliratkozások e‑mail‑címekkel és aktív/lejárt állapottal.</td></tr>
+
         </tbody>
     </table>
 </div> <br><br>
@@ -309,7 +326,7 @@ A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
     <table border="2">
         <tbody>
             <tr><td>GYIK</td><td>Gyakran ismételt kérdések kereshető adatbázisa.</td></tr>
-            <tr><td>ÜgyfélszolgálatiKérés</td><td>Felhasználói kérések rögzítése és állapotkezelése.</td></tr>
+
             <tr><td>HibaNapló</td><td>Rendszerhibák naplózása fejlesztői elemzéshez.</td></tr>
             <tr><td>AdatvédelmiTájékoztató</td><td>Adatkezelési tájékoztató szövegének tárolása és frissítése.</td></tr>
             <tr><td>AdatkezelésiNapló</td><td>Adatkezelési műveletek naplózása biztonsági okokból.</td></tr>
@@ -321,7 +338,7 @@ A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
             <tr><td>Kalkuláció (Export)</td><td>Eredmények exportálása (fájlnév, dátum) PDF‑be.</td></tr>
             <tr><td>TrendElőrejelzés</td><td>Részvényárfolyam‑trendek előrejelzése múltbeli adatok alapján.</td></tr>
             <tr><td>RiasztásBeállítás</td><td>Részvényárfolyam‑riasztások beállítása és ellenőrzése.</td></tr>
-            <tr><td>Feliratkozás</td><td>Hírlevél‑feliratkozások e‑mail‑címekkel és aktív/lejárt állapottal.</td></tr>
+            
         </tbody>
     </table>
 </p>
@@ -340,7 +357,7 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 
 
 <div style="text-align: center;">
-    <img src="DIAGRAMMOK/Dia2.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    <img src="UJAM/Dia2.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
     </div> <br>
 
 </div>
@@ -438,9 +455,13 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
   <table>
     <thead><tr><th>Osztály</th><th>Attribútum</th><th>Típus</th></tr></thead>
     <tbody>
-    <tr><td rowspan="3">Felhasználó</td><td>userID</td><td>int</td></tr>
+    <tr><td rowspan="7">Felhasználó</td><td>userID</td><td>int</td></tr>
     <tr><td>email</td><td>string</td></tr>
     <tr><td>jelszo</td><td>string</td></tr>
+    <tr><td>utolsoBejelentkezes</td><td>string</td></tr>
+    <tr><td>Elofizett-e</td><td>string</td></tr>
+    <tr><td>PozitivkereskedésekSzama</td><td>int</td></tr>
+    <tr><td>NegatívkereskedesekSzama</td><td>int</td></tr>
     <tr><td rowspan="3">Fiók</td><td>fiokID</td><td>int</td></tr>
     <tr><td>nyelv</td><td>string</td></tr>
     <tr><td>utolsoBejelentkezes</td><td>DateTime</td></tr>
@@ -520,7 +541,7 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 <p style="text-align: justify;">Ez a dinamikus diagram egy összetett rendszer adatbázisának szerkezetét mutatja be, ahol az egyes entitások között logikus kapcsolatok figyelhetők meg. A táblák egymáshoz kapcsolódva modellezik a felhasználók, portfóliók, tranzakciók, számítások, értesítések, kockázatelemzések, hírek, hírlevelek és tevékenységek adatait. A rendszer felépítése rugalmas, mivel minden fontos művelethez és állapothoz külön táblát rendel, lehetővé téve az adatok naprakész kezelését és a gyors bővíthetőséget. A táblák közötti kapcsolatok megteremtik az adatáramlás és adatfrissítés lehetőségét is, így a felhasználók aktivitásai és a piaci események dinamikusan követhetők. A diagram tiszta hierarchiát mutat: egy felhasználó több portfóliót is kezelhet, amelyekhez több tranzakció és elemzés kapcsolódhat. A rendszer automatikusan értesítéseket generálhat és rögzíti a fontos műveleteket a naplóban. A hírek és hírlevelek moduláris módon kapcsolódnak a rendszerhez, így aktuális információk is folyamatosan beépíthetők. </p>
 
 <div style="text-align: center;">
-    <img src="DIAGRAMMOK/Dia3.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    <img src="UJAM/Dia3.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
     </div> 
 
 
