@@ -291,7 +291,7 @@
 A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
 
 <div style="text-align: center;">
-    <img src="UJAM/Dia1.JPG" alt="Portfolió kezelő rendszer" width="900px" height="500px">
+    <img src="Jav.diagrammok/Dia1.JPG" alt="Portfolió kezelő rendszer" width="900px" height="500px">
     </div> <br>
 
 
@@ -316,7 +316,9 @@ A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
             <tr><td>Értesítés</td><td>Automatikus felhasználói értesítések kezelése (küldés, törlés).</td></tr>
             <tr><td>ÜgyfélszolgálatiKérés</td><td>Felhasználói kérések rögzítése és állapotkezelése.</td></tr>
             <tr><td>Feliratkozás</td><td>Hírlevél‑feliratkozások e‑mail‑címekkel és aktív/lejárt állapottal.</td></tr>
-
+            <tr><td>GYIK</td><td>Gyakran ismételt kérdések kereshető adatbázisa.</td></tr>
+            <tr><td>AdatvédelmiTájékoztató</td><td>Adatkezelési tájékoztató szövegének tárolása és frissítése.</td></tr>
+            <tr><td>AdatkezelésiNapló</td><td>Adatkezelési műveletek naplózása biztonsági okokból.</td></tr>
         </tbody>
     </table>
 </div> <br><br>
@@ -325,11 +327,9 @@ A kezdetleges osztálydiagrammot az alábbi ábra mutatja be. <br><br>
 <p style="text-align: justify;">
     <table border="2">
         <tbody>
-            <tr><td>GYIK</td><td>Gyakran ismételt kérdések kereshető adatbázisa.</td></tr>
+            
 
             <tr><td>HibaNapló</td><td>Rendszerhibák naplózása fejlesztői elemzéshez.</td></tr>
-            <tr><td>AdatvédelmiTájékoztató</td><td>Adatkezelési tájékoztató szövegének tárolása és frissítése.</td></tr>
-            <tr><td>AdatkezelésiNapló</td><td>Adatkezelési műveletek naplózása biztonsági okokból.</td></tr>
             <tr><td>Tranzakció (Részvény)</td><td>Részvényadatok frissítése és lekérdezése (ticker, árfolyam).</td></tr>
             <tr><td>Kategória</td><td>Témakörök (kategóriák) kezelése a tartalom rendszerezéséhez.</td></tr>
             <tr><td>Pénznem</td><td>Devizák és átváltási árfolyamuk kezelése, konvertálása.</td></tr>
@@ -357,7 +357,7 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 
 
 <div style="text-align: center;">
-    <img src="UJAM/Dia2.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    <img src="Jav.diagrammok/Dia2.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
     </div> <br>
 
 </div>
@@ -373,82 +373,106 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 
 <table>
     <thead>
-        <tr>
-            <th>Forrás</th>
-            <th>Cél</th>
-            <th>Kardinalitás</th>
-            <th>FK mező</th>
-        </tr>
+      <tr>
+        <th>Forrás entitás</th>
+        <th>Cél entitás</th>
+        <th>Kapcsolat típusa</th>
+        <th>Kapcsoló kulcs</th>
+      </tr>
     </thead>
     <tbody>
-        <tr>
-            <td>Fiók</td>
-            <td>Felhasználó</td>
-            <td>1:1</td>
-            <td>Fiók.userID → Felhasználó.userID</td>
-        </tr>
-        <tr>
-            <td>Felhasználó</td>
-            <td>Tevékenységnapló</td>
-            <td>1:N</td>
-            <td>Tevékenységnapló.userID → Felhasználó.userID</td>
-        </tr>
-        <tr>
-            <td>Felhasználó</td>
-            <td>Értesítés</td>
-            <td>1:N</td>
-            <td>Értesítés.userID → Felhasználó.userID</td>
-        </tr>
-        <tr>
-            <td>Felhasználó</td>
-            <td>Portfólió</td>
-            <td>1:1</td>
-            <td>Portfólió.userID → Felhasználó.userID</td>
-        </tr>
-        <tr>
-            <td>Portfólió</td>
-            <td>Kockázatelemzés</td>
-            <td>1:N</td>
-            <td>Kockázatelemzés.portfolioId → Portfólió.portfolioId</td>
-        </tr>
-        <tr>
-            <td>Portfólió</td>
-            <td>Tranzakció</td>
-            <td>1:N</td>
-            <td>Tranzakció.portfolioId → Portfólió.portfolioId</td>
-        </tr>
-        <tr>
-            <td>Felhasználó</td>
-            <td>BefektetésiJavaslat</td>
-            <td>1:N</td>
-            <td>BefektetésiJavaslat.userID (implicit) → Felhasználó.userID</td>
-        </tr>
-        <tr>
-            <td>BefektetésiJavaslat</td>
-            <td>Tranzakció</td>
-            <td>1:N</td>
-            <td>Tranzakció.javaslatId (implicit) → BefektetésiJavaslat.javaslatId</td>
-        </tr>
-        <tr>
-            <td>BefektetésiJavaslat</td>
-            <td>Kalkuláció</td>
-            <td>1:N</td>
-            <td>Kalkuláció.javaslatId (implicit) → BefektetésiJavaslat.javaslatId</td>
-        </tr>
-        <tr>
-            <td>Felhasználó</td>
-            <td>Hírlevél</td>
-            <td>N:M</td>
-            <td>Köztes tábla: Felhasználó_Hírlevél</td>
-        </tr>
-        <tr>
-            <td>Hírlevél</td>
-            <td>Hír</td>
-            <td>1:N</td>
-            <td>Hír.hirlevelId → Hírlevél.hirlevelId</td>
-        </tr>
+      <tr>
+        <td>Fiók</td>
+        <td>Felhasználó</td>
+        <td>1:1</td>
+        <td>Fiók.fiókID → Felhasználó.fiókID</td>
+      </tr>
+      <tr>
+        <td>Fiók</td>
+        <td>AdatkezelésiNapló</td>
+        <td>1:N</td>
+        <td>Fiók.fiókID → AdatkezelésiNapló.fiókID</td>
+      </tr>
+      <tr>
+        <td>Fiók</td>
+        <td>AdatvédelemTájékoztató</td>
+        <td>1:N</td>
+        <td>Fiók.fiókID → AdatvédelemTájékoztató.fiókID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>GYIK</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → GYIK.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>ÜgyfélszolgálatiKérés</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → ÜgyfélszolgálatiKérés.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>Tevékenységnapló</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → Tevékenységnapló.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>Értesítés</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → Értesítés.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>Portfólió</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → Portfólió.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>BefektetésiJavaslat</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → BefektetésiJavaslat.userID</td>
+      </tr>
+      <tr>
+        <td>Felhasználó</td>
+        <td>Hírlevél</td>
+        <td>1:N</td>
+        <td>Felhasználó.userID → Hírlevél.userID</td>
+      </tr>
+      <tr>
+        <td>Hírlevél</td>
+        <td>Feliratkozás</td>
+        <td>1:N</td>
+        <td>Hírlevél.hirlevelID → Feliratkozás.hirlevelID</td>
+      </tr>
+      <tr>
+        <td>Hírlevél</td>
+        <td>Hír</td>
+        <td>1:N</td>
+        <td>Hírlevél.hirlevelID → Hír.hirlevelID</td>
+      </tr>
+      <tr>
+        <td>Portfólió</td>
+        <td>Kockázatelemzés</td>
+        <td>1:N</td>
+        <td>Portfólió.portfolioID → Kockázatelemzés.portfolioID</td>
+      </tr>
+      <tr>
+        <td>Portfólió</td>
+        <td>Tranzakció</td>
+        <td>1:N</td>
+        <td>Portfólió.portfolioID → Tranzakció.portfolioID</td>
+      </tr>
+      <tr>
+        <td>BefektetésiJavaslat</td>
+        <td>Kalkuláció</td>
+        <td>1:N</td>
+        <td>BefektetésiJavaslat.javaslatID → Kalkuláció.javaslatID</td>
+      </tr>
     </tbody>
-</table>
+  </table>
 
 <h4 id="alfejezet3.1.2.">3.1.2 Attribútumok azonosítása</h4>
 
@@ -541,7 +565,7 @@ Minden osztály attribútumaihoz pontos típust rendeltünk (például int, stri
 <p style="text-align: justify;">Ez a dinamikus diagram egy összetett rendszer adatbázisának szerkezetét mutatja be, ahol az egyes entitások között logikus kapcsolatok figyelhetők meg. A táblák egymáshoz kapcsolódva modellezik a felhasználók, portfóliók, tranzakciók, számítások, értesítések, kockázatelemzések, hírek, hírlevelek és tevékenységek adatait. A rendszer felépítése rugalmas, mivel minden fontos művelethez és állapothoz külön táblát rendel, lehetővé téve az adatok naprakész kezelését és a gyors bővíthetőséget. A táblák közötti kapcsolatok megteremtik az adatáramlás és adatfrissítés lehetőségét is, így a felhasználók aktivitásai és a piaci események dinamikusan követhetők. A diagram tiszta hierarchiát mutat: egy felhasználó több portfóliót is kezelhet, amelyekhez több tranzakció és elemzés kapcsolódhat. A rendszer automatikusan értesítéseket generálhat és rögzíti a fontos műveleteket a naplóban. A hírek és hírlevelek moduláris módon kapcsolódnak a rendszerhez, így aktuális információk is folyamatosan beépíthetők. </p>
 
 <div style="text-align: center;">
-    <img src="UJAM/Dia3.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
+    <img src="Jav.diagrammok/Dia3.JPG" alt="Portfolió kezelő rendszer" width="1000px" height="500px">
     </div> 
 
 
@@ -662,12 +686,7 @@ kereskedésen át a vagyonoptimalizálásig, miközben minden kritikus lépéshe
 <p style="text-align: justify;">
 Ez az UML-osztály- vagy analízis-modell diagram - leegyszerűsítve - a rendszer 
 „szótárát” és annak logikai kapcsolat­hálóját mutatja be. A diagram megnevezi a rendszerben szereplő alapvető fogalmakat 
-(osztályokat), röviden jelzi, milyen adatokat hordoznak (attribútumok) és milyen viselkedést 
-kínálnak (műveletek), majd vonalakkal érzékelteti, hogyan függenek össze egymással. A nyílhegyek, 
-rombuszok és sokszorossági jelölések azt üzenik, hogy például egy felhasználóhoz hány fiók tartozhat, 
-öröklődik-e valamilyen közös ősosztályból, vagy épp szoros kompozíciós kapcsolatban áll-e egy másik 
-entitással. A láthatósági jelek (+, –, #) azt mesélik el, milyen részek publikusak a külvilág, 
-illetve privátak a belső implementáció számára. <br><br> </p>
+(osztályokat), röviden jelzi, milyen adatokat hordoznak.   <br><br> </p>
 
 <div style="text-align: center;">
     <img src="AMD01.JPG" alt="Főoldal rendszere" width="1200px" height="500px">
